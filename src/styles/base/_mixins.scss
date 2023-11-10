@@ -8,71 +8,71 @@
 
 @mixin bold-72 {
 	font-size: 72px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 }
 
 @mixin bold-72-uppercase {
 	font-size: 72px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
 @mixin bold-70 {
 	font-size: 70px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 110%;
 }
 
 @mixin bold-60-uppercase {
 	font-size: 60px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
 @mixin bold-50 {
 	font-size: 50px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 }
 
 @mixin bold-50-uppercase {
 	font-size: 50px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
 @mixin bold-46 {
 	font-size: 46px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 }
 
 @mixin bold-40 {
 	font-size: 40px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 }
 
 @mixin bold-40-uppercase {
 	font-size: 40px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
 @mixin bold-36 {
 	font-size: 36px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 }
 
 @mixin bold-36-uppercase {
 	font-size: 36px;
-	font-weight: 700;	
+	font-weight: 700;
 	line-height: 100%;
 	text-transform: uppercase;
 }
@@ -134,6 +134,19 @@
 
 @mixin medium-32-uppercase {
 	font-size: 32px;
+	font-weight: 500;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+@mixin medium-24 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 120%;
+}
+
+@mixin medium-24-uppercase {
+	font-size: 24px;
 	font-weight: 500;
 	line-height: 120%;
 	text-transform: uppercase;

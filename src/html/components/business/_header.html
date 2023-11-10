@@ -1,27 +1,32 @@
 <header class="header">
-  <a href="/">
-    <img src="@icons/logo.svg" />
-  </a>
-  <nav class="header__nav">
-    <a class="link">
-      О компании
+  <div class="header__logo" id="logo">
+    <a href="/">
+      <img src="@icons/logo.svg" alt="logo" />
+      <img src="@icons/logo-white.svg" alt="logo" />
     </a>
-    <a class="link" href="#">
-      Решения
-    </a>
-    <a class="link" href="#">
-      Услуги
-    </a>
-    <a class="link" href="#">
-      Проекты
-    </a>
-    <a class="link" href="#">
-      Контакты
-    </a>
-  </nav>
-  <a class="link" href="tel:8 (800) 000-00-00">8 (800) 000-00-00</a>
-  <span class="link">Написать нам</span>
-  <div class="dropdown">
+  </div>
+  <div class="header__menu" id="mobile-menu">
+    <nav class="header__nav">
+      <a class="link">
+        О компании
+      </a>
+      <a class="link" href="#">
+        Решения
+      </a>
+      <a class="link" href="#">
+        Услуги
+      </a>
+      <a class="link" href="#">
+        Проекты
+      </a>
+      <a class="link" href="#">
+        Контакты
+      </a>
+    </nav>
+    <a class="link" href="tel:8 (800) 000-00-00">8 (800) 000-00-00</a>
+    <span class="link">Написать нам</span>
+  </div>
+  <div class="header__lang dropdown">
     <div class="dropdown__button">
       <span>RU</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5" fill="none">
@@ -34,7 +39,78 @@
       </li>
     </ul>
   </div>
-  <div class="header__right-bar">
-
+  <div class="header__right-bar" id="bar">
+    <div class="header__burger" id="menu-button"></div>
   </div>
 </header>
+<nav class="menu" id="menu">
+  <a class="menu__link" href="#">О компании</a>
+  <div class="menu__item">
+    <a class="menu__link menu__link_chevron" href="#">Решения</a>
+    <div class="menu__inner">
+      <a class="link link_small" href="#">ИТС Курсор</a>
+      <a class="link link_small" href="#">АСУ ТП</a>
+      <a class="link link_small" href="#">Центры обработки данных</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Программно-аппаратный комплекс «Протокол»</a>
+      <a class="link link_small" href="#">Система вибромониторинга насосного оборудования</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Комплексная система диспетчерского контроля и мониторинга промышленного
+        оборудования</a>
+      <a class="link link_small" href="#">Готовые решения на базе шкафов собственного производства</a>
+    </div>
+  </div>
+  <div class="menu__item">
+    <a class="menu__link menu__link_chevron" href="#">Услуги</a>
+    <div class="menu__inner">
+      <a class="link link_small" href="#">ИТС Курсор</a>
+      <a class="link link_small" href="#">АСУ ТП</a>
+      <a class="link link_small" href="#">Центры обработки данных</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Программно-аппаратный комплекс «Протокол»</a>
+      <a class="link link_small" href="#">Система вибромониторинга насосного оборудования</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Комплексная система диспетчерского контроля и мониторинга промышленного
+        оборудования</a>
+      <a class="link link_small" href="#">Готовые решения на базе шкафов собственного производства</a>
+    </div>
+  </div>
+  <div class="menu__item">
+    <a class="menu__link menu__link_chevron" href="#">Проекты</a>
+    <div class="menu__inner">
+      <a class="link link_small" href="#">ИТС Курсор</a>
+      <a class="link link_small" href="#">АСУ ТП</a>
+      <a class="link link_small" href="#">Центры обработки данных</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Программно-аппаратный комплекс «Протокол»</a>
+      <a class="link link_small" href="#">Система вибромониторинга насосного оборудования</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Комплексная система диспетчерского контроля и мониторинга промышленного
+        оборудования</a>
+      <a class="link link_small" href="#">Готовые решения на базе шкафов собственного производства</a>
+    </div>
+  </div>
+  <a class="menu__link" href="#">Карьера</a>
+  <div class="menu__item">
+    <a class="menu__link menu__link_chevron" href="#">Медиа</a>
+    <div class="menu__inner">
+      <a class="link link_small" href="#">ИТС Курсор</a>
+      <a class="link link_small" href="#">АСУ ТП</a>
+      <a class="link link_small" href="#">Центры обработки данных</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Программно-аппаратный комплекс «Протокол»</a>
+      <a class="link link_small" href="#">Система вибромониторинга насосного оборудования</a>
+      <a class="link link_small" href="#">Системы технической безопасности</a>
+      <a class="link link_small" href="#">Комплексная система диспетчерского контроля и мониторинга промышленного
+        оборудования</a>
+      <a class="link link_small" href="#">Готовые решения на базе шкафов собственного производства</a>
+    </div>
+  </div>
+  <a class="menu__link" href="#">Контакты</a>
+  <div class="menu__block">
+    <img src="@images/building.png" alt="photo">
+    <a class="menu__link" href="#">35 лет истории успеха</a>
+    <p>Группа компаний «Форт Диалог» – основана в 1989 году и является одной из крупнейших российских региональных
+      компаний, работающих в сфере системной интеграции.</p>
+  </div>
+</nav>

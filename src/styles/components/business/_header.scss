@@ -3,10 +3,128 @@
 	align-items: center;
 	border-bottom: solid 1px $gray10;
 	height: 100px;
+	padding-right: 93px;
+
+	@include tablet {
+		height: 45px;
+		justify-content: space-between;
+		padding-right: 76px;
+	}
+
+	&__logo {
+		min-width: 175px;
+
+		img:nth-child(2) {
+			display: none;
+		}
+
+		@include tablet {
+			min-width: unset;
+			width: 80px;
+		}
+
+		@include min_tablet {
+			&.active {
+				background-color: $green50;
+
+				img:nth-child(1) {
+					display: none;
+				}
+
+				img:nth-child(2) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__menu {
+		display: grid;
+		grid-template-columns: 1fr auto auto;
+		gap: 50px;
+		border-right: solid 1px $gray10;
+		height: 100%;
+		width: 100%;
+		align-items: center;
+		padding-right: 35px;
+		padding-left: 80px;
+
+		@include desktop_large {
+			padding: 0 35px;
+		}
+
+		@include desktop_base {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		@include tablet {
+			position: absolute;
+			left: 0;
+			top: 45px;
+			display: none;
+			flex-direction: column;
+			gap: 10px;
+			justify-content: flex-start;
+			max-height: 482px;
+			align-items: flex-start;
+			padding: 30px 20px;
+			border: none;
+
+			&.active {
+				display: flex;
+			}
+		}
+	}
 
 	&__nav {
 		display: flex;
-		gap: 60px;
+		justify-content: space-between;
+		max-width: 670px;
+		gap: 20px;
+		flex-grow: 1;
+
+		@include desktop_base {
+			display: none;
+		}
+
+		@include tablet {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			justify-content: flex-start;
+			flex-grow: unset;
+			margin-bottom: 50px;
+			width: 100%;
+
+			@include mobile {
+				.link {
+					@include medium-16;
+					width: 100%;
+					position: relative;
+
+					&:after {
+						content: '';
+						width: 100%;
+						position: absolute;
+						bottom: -15px;
+						left: 0;
+						border-bottom: solid 1px $gray10;
+					}
+				}
+			}
+		}
+	}
+
+	&__lang {
+		padding-left: 39px;
+
+		@include tablet {
+			span,
+			a {
+				@include regular-12;
+			}
+		}
 	}
 
 	&__right-bar {
@@ -16,6 +134,52 @@
 		background-color: $green50;
 		height: 100vh;
 		width: 60px;
+
+		@include tablet {
+			height: 45px;
+			background-color: unset;
+			border-left: solid 1px $gray10;
+		}
+
+		&.active {
+			height: 100px;
+
+			@include tablet {
+				height: 45px;
+			}
+		}
+	}
+
+	&__burger {
+		height: 30px;
+		width: 30px;
+		background-image: url(@icons/burger.svg);
+		background-repeat: no-repeat;
+		cursor: pointer;
+		margin: 39px auto 0 auto;
+		background-size: contain;
+
+		&.close {
+			background-image: url(@icons/cross-white.svg);
+
+			@include tablet {
+				background-image: url(@icons/cross-black.svg);
+				width: 16px;
+				height: 16px;
+			}
+		}
+
+		@include tablet {
+			height: 10px;
+			width: 20px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			background-image: url(@icons/burger-black.svg);
+		}
 	}
 }
 

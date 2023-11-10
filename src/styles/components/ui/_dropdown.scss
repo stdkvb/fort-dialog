@@ -1,6 +1,5 @@
 .dropdown {
 	position: relative;
-	min-width: 100px;
 
 	&._disabled {
 		pointer-events: none;
@@ -49,7 +48,7 @@
 
 	&__option {
 		a {
-			@include regular-16;
+			@include regular-18;
 			color: $gray70;
 		}
 

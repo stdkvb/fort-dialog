@@ -19,11 +19,12 @@ import addFormListeners from './listeners/addFormListeners'
 import addModalListener from './listeners/addModalListener'
 
 takeControlDropdown()
+takeControlMenu()
 
 // addPhoneMaskListeners()
 // addRatingListener()
 // addModalListener()
-// takeControlMenu()
+
 // addFormListeners()
 
 // takeControlCustomSelect('custom-select')

@@ -1,0 +1,86 @@
+.menu {
+	padding: 100px 180px 70px 180px;
+	position: relative;
+	display: none;
+	flex-direction: column;
+	gap: 32px;
+
+	&.active {
+		display: flex;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__link {
+		@include regular-20-uppercase;
+		cursor: pointer;
+		@include transition;
+
+		&:hover {
+			color: $green50;
+		}
+
+		&_chevron {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			&::after {
+				content: url(@icons/chevron-right.svg);
+				height: 20px;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		&:hover {
+			.menu__inner {
+				display: flex;
+			}
+		}
+	}
+
+	&__inner {
+		display: none;
+		flex-direction: column;
+		gap: 15px;
+		flex-wrap: wrap;
+		max-height: 325px;
+		position: absolute;
+		top: 100px;
+		left: 445px;
+
+		@include desktop_huge {
+			max-height: unset;
+		}
+
+		.link {
+			max-width: 370px;
+		}
+	}
+
+	&__block {
+		position: absolute;
+		right: 176px;
+		top: 100px;
+		width: 25%;
+		max-width: 425px;
+
+		@include desktop {
+			display: none;
+		}
+
+		img {
+			margin-bottom: 30px;
+		}
+
+		a {
+			@include medium-24-uppercase;
+			margin-bottom: 20px;
+		}
+	}
+}
+

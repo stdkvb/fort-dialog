@@ -34,44 +34,18 @@ body {
 
 main {
 	flex: 1 0 auto;
-
-	@include tablet {
-		overflow-x: hidden;
-	}
-
-	&._offset {
-		margin-top: 70px;
-
-		@include tablet {
-			margin-top: 30px;
-		}
-	}
 }
 
 h1 {
 	@include bold-50;
-
-	@include tablet_small {
-		@include bold-26;
-		line-height: 110% !important;
-	}
 }
 
 h2 {
 	@include bold-50;
-
-	@include tablet_small {
-		@include bold-26;
-		margin-bottom: 30px;
-	}
 }
 
 h3 {
 	@include bold-30;
-
-	@include tablet_small {
-		@include bold-20;
-	}
 }
 
 h4 {
@@ -80,13 +54,10 @@ h4 {
 
 p {
 	@include regular-18;
-
-	@include tablet_small {
-		@include regular-14;
-	}
 }
 
 a {
+	display: block;
 	cursor: pointer;
 	text-decoration: none;
 	width: fit-content;
@@ -104,6 +75,12 @@ button {
 	:disabled {
 		cursor: default;
 	}
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 input {
