@@ -1,0 +1,16 @@
+.close-btn {
+	display: none;
+}
+
+*._active .close-btn {
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+	width: 20px;
+	height: 20px;
+	background-image: url(@icons/close.svg);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}

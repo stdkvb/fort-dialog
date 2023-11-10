@@ -1,0 +1,13 @@
+.link {
+	@include regular-18;
+	@include transition;
+	color: $gray70;
+	min-width: fit-content;
+	height: fit-content;
+	cursor: pointer;
+
+	&:hover {
+		color: $green50;
+	}
+}
+

@@ -1,0 +1,16 @@
+@@for(let i = 0; i < accordionItems.length; i++) {
+	<div class="accordion__item @@if(context.active) {accordion__item_active}">
+		<div class="accordion__toggle">
+			<h4>`+accordionItems[i].title+`</h4>
+			<div>
+				<button class="accordion-icon"></button>
+			</div>
+		</div>
+		<div class="accordion__content">
+			`+accordionItems[i].text+`
+			@@if (context.button) {
+				@@include('components/ui/_button-link.html', {children: 'Отправить отклик', class: 'btn_black', href: '#work-request'})
+			}			
+		</div>
+	</div>
+}

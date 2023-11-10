@@ -1,0 +1,89 @@
+.accordion__list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	position: relative;
+
+	.accordion__item {
+		
+		.accordion__toggle {
+			cursor: pointer;
+
+			.accordion-icon {
+				transition: all 0.4s ease;
+				background-image: url(@icons/chevron-down.svg);
+				background-repeat: no-repeat;
+				width: 23px;
+				height: 23px;
+				background-color: transparent;
+				border: none;
+				background-position: center;
+				transition: $transitionDuration;
+			}
+		}
+		.accordion__content {
+			height: 0;
+    		max-height: 0;
+			transition: all $transitionDuration;
+			overflow: hidden;
+
+			
+
+			h4:not(:first-of-type) {
+				margin-top: 20px;
+
+				@include tablet_small {
+					margin-top: 10px;
+				}
+			}
+
+			li {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				&::before {
+					content: "•";
+				}
+			}
+
+			.btn {
+				margin-top: 30px;
+
+				@include tablet_small {
+					margin-top: 10px;
+				}
+			}
+		}
+		&_active {
+			.accordion__toggle {
+				padding-bottom: 25px;
+				@include mobile {
+					padding-bottom: 15px;
+				}
+			}
+			
+			.accordion__content {
+				height: unset;
+				max-height: 1000px;
+				border-top: solid 1px rgba(37, 37, 37, 0.30);
+				padding-top: 25px;
+				
+				@include tablet {
+					a:first-of-type {
+						margin-top: 0.75em;
+					}
+				}
+
+				@include tablet_small {
+					padding-top: 15px;
+				}
+				
+			}
+
+			.accordion-icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

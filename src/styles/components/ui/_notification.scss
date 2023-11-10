@@ -1,0 +1,62 @@
+.notification {
+	width: 360px;
+	background-color: $success50;
+	padding: 16px 20px;
+	position: fixed;
+	top: 44px;
+	right: 44px;
+	z-index: 100;
+	display: none;
+	@include mobile {
+		width: 100%;
+		top: 0;
+		right: 0;
+	}
+
+	&_error {
+		background-color: $error50;
+	}
+
+	h4 {
+		max-width: 290px;
+		@include medium-20;
+		color: $white;
+	}
+
+	p {
+		margin-top: 16px;
+		@include regular-16;
+		color: $white;
+	}
+
+	&__close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		height: 24px;
+		width: 24px;
+		z-index: 1000;
+		border: none;
+		padding: 0;
+		background: none;
+
+		&:hover {
+
+			scale: 1.2;
+		}
+
+		&:before {
+			content: url("@icons/close-notification.svg");
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&_active {
+		display: block;
+	}
+}

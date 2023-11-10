@@ -1,0 +1,11 @@
+<div class="form-group input__container input__container_date">
+	@@if (context.label) {
+		@@if (context.id) {
+			<label class="input__label" for="@@id">@@label@@if (context.required) {*}</label>
+		}
+		@@if (!context.id) {
+			<span class="input__label">@@label@@if (context.required) {*}</span>
+		}
+	}
+	<input class="form-control" @@if (context.placeholder) {placeholder="@@placeholder"} @@if (context.required) {required} @@if (context.id) {id="@@id"} @@if (context.name) {name="@@name"} @@if (context.value) {value="@@value"} @@if (context.min) {minlength="@@min"} @@if (context.max) {max="@@max"} data-type="date" type="date"  @@if (context.errorMessage) {data-pristine-required-message="@@errorMessage"}>
+</div>

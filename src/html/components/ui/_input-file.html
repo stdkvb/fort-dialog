@@ -1,0 +1,6 @@
+<div class="form-group input__container input__container_file">
+	<input class="form-control"  @@if (context.required) {required} @@if (context.id) {id="@@id"} @@if (context.name) {name="@@name"} data-type="file" type="file" @@if (context.errorMessage) {data-pristine-required-message="@@errorMessage"}>
+	@@if (context.button) {
+		<span class="file-button">@@button</span>
+	}
+</div>

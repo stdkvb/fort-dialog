@@ -1,0 +1,9 @@
+<div id="@@if (context.id) {@@id}" class="notification notification_active@@if (context.class) { @@class}">
+	@@include('components/ui/_button.html', {class: 'notification__close'})
+	@@if (context.title) {
+		<h4>@@title</h4>
+	}
+	@@if (context.subtitle) {
+		<p>@@subtitle</p>
+	}
+</div>

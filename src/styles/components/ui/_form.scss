@@ -1,0 +1,22 @@
+form {
+	& > *:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	& > .btn {
+		margin-top: 30px;
+	}
+
+	.link {
+		border-bottom: 1px solid $black25;
+		@include regular-16;
+
+		&:hover {
+			border-color: $green22;
+		}
+
+		@include tablet_small {
+			@include regular-14;
+		}
+	}
+}

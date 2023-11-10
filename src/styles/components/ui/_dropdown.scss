@@ -1,0 +1,77 @@
+.dropdown {
+	position: relative;
+	min-width: 100px;
+
+	&._disabled {
+		pointer-events: none;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		max-width: fit-content;
+
+		span {
+			min-width: fit-content;
+			@include regular-18;
+			color: $gray70;
+			@include transition;
+			user-select: none;
+		}
+
+		svg {
+			@include transition;
+			path {
+				@include transition;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__options {
+		position: absolute;
+		margin-top: 6px;
+		height: 0;
+		overflow: hidden;
+		@include transition;
+		opacity: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		width: fit-content;
+		background-color: $white;
+		z-index: 10;
+	}
+
+	&__option {
+		a {
+			@include regular-16;
+			color: $gray70;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&.active {
+		.dropdown__button {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		.dropdown__options {
+			height: auto;
+			opacity: 1;
+		}
+		.dropdown__content {
+			height: auto;
+			opacity: 1;
+		}
+	}
+}
+

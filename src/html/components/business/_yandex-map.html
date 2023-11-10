@@ -1,0 +1,23 @@
+<script type="text/javascript">
+
+	if (document.getElementById('yandex-map') !== null) {
+		function init() {
+			let map = new ymaps.Map('yandex-map', {
+				center: [54.738435, 55.983600],
+				zoom: 14,
+				type: 'yandex#map',
+				controls: []
+			});
+
+			let placemark = new ymaps.Placemark([54.741301, 55.985946], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemark);
+		}
+		ymaps.ready(init);
+	};
+	
+</script>

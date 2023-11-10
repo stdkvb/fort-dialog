@@ -1,0 +1,7 @@
+<h2>Оставить отзыв</h2>
+<div class="review__form">
+	<form novalidate>
+		@@include('components/ui/_input-text.html', {label: 'Ваше имя', placeholder: 'Введите имя', errorMessage: 'Введите ваше имя', name: 'name', required: false}) @@include('components/ui/_textarea.html', {label: 'Ваш отзыв', placeholder: 'Оставьте ваш отзыв', errorMessage: 'Введите текст отзыва', name: 'message', required: true}) @@include('components/ui/_rating.html', {label: 'Оцените товар', required: true, class: 'rating_dynamic'}) @@include('components/ui/_checkbox.html', {class:
+		'checkbox_white', label: 'Нажимая на кнопку “Отправить”, я даю согласие на <a href="#" target="_blank" class="link">обработку персональных данных</a> и соглашаюсь с <a href="#" target="_blank" class="link">политикой конфиденциальности</a>', id: 'agreement', name: 'agreement', required: true}) @@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_black', type: 'submit'})
+	</form>
+</div>

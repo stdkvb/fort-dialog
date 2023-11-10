@@ -1,0 +1,48 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	grid-area: pagination;
+
+	@include tablet_small {
+		display: none;
+	}
+
+	a {
+		@include FontFamilyZurichRegular;
+		&,
+		&:focus,
+		&:visited {
+			color: $black25;
+			background-color: $white;
+			width: 32px;
+			height: 32px;
+			padding: 12px;
+			@include regular-18;
+			line-height: 0;
+			border: 1px solid $black25;
+			transition: all $transitionDuration ease-in-out;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}		
+
+		&:hover {
+			color: $white;
+			background-color: $green22;
+			border-color: $green22;
+		}
+		
+		&.active {
+			color: $white;
+			background-color: $black25;
+		}
+
+		&.active,
+		&.disabled {
+			pointer-events: none;
+			user-select: none;
+		}
+	}
+}

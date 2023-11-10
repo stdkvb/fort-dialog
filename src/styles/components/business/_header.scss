@@ -1,0 +1,21 @@
+.header {
+	display: flex;
+	align-items: center;
+	border-bottom: solid 1px $gray10;
+	height: 100px;
+
+	&__nav {
+		display: flex;
+		gap: 60px;
+	}
+
+	&__right-bar {
+		position: fixed;
+		top: 0;
+		right: 0;
+		background-color: $green50;
+		height: 100vh;
+		width: 60px;
+	}
+}
+
