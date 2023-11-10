@@ -1,2 +1,32 @@
 .footer {
+	background-color: $gray90;
+	padding: 140px 0 30px 0;
+
+	&__logo {
+		width: 160px;
+	}
+
+	&__phone {
+		@include medium-20;
+		color: $gray04;
+	}
+
+	&__write-us {
+	}
+
+	&__bottom {
+		padding-top: 30px;
+		display: flex;
+		justify-content: space-between;
+		border-top: solid 1px $gray70;
+
+		span {
+			@include regular-16;
+		}
+
+		.link {
+			@include regular-16;
+		}
+	}
 }
+

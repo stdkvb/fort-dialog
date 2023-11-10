@@ -13,5 +13,23 @@
 	@include mobile {
 		@include regular-16;
 	}
+
+	&_green-arrow {
+		@include medium-18-uppercase;
+		color: $green50;
+		display: flex;
+		gap: 10px;
+		width: fit-content;
+
+		&:after {
+			content: url(@icons/arrow-green.svg);
+			width: 23px;
+			display: inline-block;
+		}
+
+		&:hover {
+			color: $green60;
+		}
+	}
 }
 
