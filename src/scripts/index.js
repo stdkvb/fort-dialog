@@ -28,6 +28,32 @@ takeControlAccordion('.footer__top', '.accordion__list', {
 	accordionItemActiveClass: 'accordion__item_active'
 })
 
+//swipers init
+new Swiper('.partners__first', {
+	slidesPerView: 'auto',
+	watchOverflow: true,
+	autoplay: {
+		delay: 0,
+		disableOnInteraction: false
+	},
+	autoHeight: true,
+	loop: true,
+	speed: 4000
+})
+
+new Swiper('.partners__second', {
+	slidesPerView: 'auto',
+	watchOverflow: true,
+	autoplay: {
+		delay: 0,
+		disableOnInteraction: false,
+		reverseDirection: true
+	},
+	autoHeight: true,
+	loop: true,
+	speed: 4000
+})
+
 // addPhoneMaskListeners()
 // addRatingListener()
 // addModalListener()

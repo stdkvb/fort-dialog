@@ -1,0 +1,26 @@
+.partners {
+	.swiper-wrapper {
+		transition-timing-function: linear;
+	}
+
+	.swiper-slide {
+		width: 233px;
+		height: 115px;
+		padding: 16px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: solid 1px $gray10;
+
+		@include mobile {
+			width: 128px;
+			height: 63px;
+		}
+
+		img {
+			width: unset;
+			height: unset;
+		}
+	}
+}
+
