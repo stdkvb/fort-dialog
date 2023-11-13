@@ -2,16 +2,147 @@
 	background-color: $gray90;
 	padding: 140px 0 30px 0;
 
+	@include tablet {
+		padding: 80px 0;
+	}
+
+	&__top {
+		padding-bottom: 48px;
+		display: grid;
+		grid-template-areas:
+			'logo accordion'
+			'info accordion';
+		grid-template-columns: minmax(210px, 525px) minmax(690px, 1fr);
+		grid-template-rows: 164px auto;
+		justify-content: space-between;
+		gap: 20px;
+
+		@include desktop_huge {
+			grid-template-columns: 20% 80%;
+		}
+
+		@include tablet {
+			padding-bottom: 60px;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas:
+				'logo'
+				'accordion'
+				'info';
+		}
+	}
+
 	&__logo {
-		width: 160px;
+		max-width: 160px;
+		max-height: 94px;
+		grid-area: logo;
+
+		@include tablet {
+			max-width: 80px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__info {
+		grid-area: info;
 	}
 
 	&__phone {
 		@include medium-20;
 		color: $gray04;
+		margin-bottom: 12px;
+
+		@include tablet {
+			@include regular-16;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__write-us {
+		margin-bottom: 53px;
+
+		@include tablet {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__social {
+		color: $white;
+		@include medium-20;
+		margin-bottom: 15px;
+	}
+
+	&__socials {
+		display: flex;
+		gap: 12px;
+		margin-bottom: 200px;
+
+		@include tablet {
+			margin-bottom: 60px;
+
+			a {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+
+	&__association {
+		color: $gray20;
+		max-width: 377px;
+		display: inline;
+
+		.link {
+			display: inline;
+
+			@include tablet {
+				@include regular-14;
+			}
+		}
+
+		@include tablet {
+			@include regular-14;
+		}
+	}
+
+	&__accordion {
+		grid-area: accordion;
+		display: grid;
+		grid-template-columns: minmax(195px, 363px) minmax(195px, 317px) 195px;
+		justify-content: space-between;
+		gap: 20px;
+
+		@include tablet {
+			display: block;
+		}
+
+		.accordion__list {
+			@include min_tablet {
+				gap: 40px !important;
+			}
+		}
+
+		.accordion__toggle {
+			@include medium-20;
+			color: $white;
+			margin-bottom: 20px;
+
+			@include tablet {
+				margin-bottom: 0;
+			}
+
+			@include min_tablet {
+				cursor: default !important;
+			}
+		}
+
+		.accordion__content {
+			@include min_tablet {
+				gap: 15px !important;
+				height: unset !important;
+				max-height: unset !important;
+			}
+		}
 	}
 
 	&__bottom {
@@ -26,6 +157,17 @@
 
 		.link {
 			@include regular-16;
+		}
+
+		@include tablet {
+			padding-top: 20px;
+			flex-direction: column;
+			gap: 15px;
+			@include regular-14;
+
+			.link {
+				@include regular-14;
+			}
 		}
 	}
 }

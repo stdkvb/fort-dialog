@@ -14,6 +14,14 @@
 		@include regular-16;
 	}
 
+	&_green {
+		color: $green50;
+
+		&:hover {
+			color: $green60;
+		}
+	}
+
 	&_green-arrow {
 		@include medium-18-uppercase;
 		color: $green50;
@@ -30,6 +38,10 @@
 		&:hover {
 			color: $green60;
 		}
+	}
+
+	&_gray {
+		color: $gray20;
 	}
 }
 

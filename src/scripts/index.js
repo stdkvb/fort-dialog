@@ -1,4 +1,3 @@
-
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from './ElementsControllers/DropdownController'
 import takeControlCustomSelect from './ElementsControllers/CustomSelectController'
@@ -21,6 +20,14 @@ import addModalListener from './listeners/addModalListener'
 takeControlDropdown()
 takeControlMenu()
 
+// accordions init
+takeControlAccordion('.footer__top', '.accordion__list', {
+	accordionItemSelector: '.accordion__item',
+	accordionItemTogglerSelector: '.accordion__toggle',
+	accordionItemContentSelector: '.accordion__content',
+	accordionItemActiveClass: 'accordion__item_active'
+})
+
 // addPhoneMaskListeners()
 // addRatingListener()
 // addModalListener()
@@ -37,7 +44,7 @@ takeControlMenu()
 // takeControlComments()
 // addFileNameListeners()
 
-// /* Код ниже для возвращения исходной высоты мобильному меню (100vh) 
+// /* Код ниже для возвращения исходной высоты мобильному меню (100vh)
 // после ресайза экрана */
 
 // // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -165,8 +172,6 @@ takeControlMenu()
 // 	})
 // }
 
-
-
 // // catalog tab's Slider
 // const CatalogTabsSwiper = new Swiper('.catalog__tabs', {
 // 	slidesPerView: 'auto',
@@ -248,14 +253,6 @@ takeControlMenu()
 // 	}
 // })
 
-// // accordions init
-// takeControlAccordion('.history__accordion', '.accordion__list', {
-// 	accordionItemSelector: '.accordion__item',
-// 	accordionItemTogglerSelector: '.accordion__toggle',
-// 	accordionItemContentSelector: '.accordion__content',
-// 	accordionItemActiveClass: 'accordion__item_active'
-// })
-
 // takeControlAccordion('.course__accordion', '.accordion__list', {
 // 	accordionItemSelector: '.accordion__item',
 // 	accordionItemTogglerSelector: '.accordion__toggle',
@@ -311,3 +308,4 @@ takeControlMenu()
 // 	let numberWithSpace = elem.outerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
 // 	elem.innerHTML = numberWithSpace
 // })
+
