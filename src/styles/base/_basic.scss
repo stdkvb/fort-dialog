@@ -17,7 +17,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	color: $gray70;
 	overflow-y: overlay;
 	overflow-x: hidden;
 	touch-action: pan-x pan-y;
@@ -37,7 +36,15 @@ main {
 }
 
 h1 {
-	@include bold-50;
+	@include bold-80-uppercase;
+
+	@include tablet {
+		@include bold-40-uppercase;
+	}
+
+	@include mobile {
+		@include bold-28-uppercase;
+	}
 }
 
 h2 {

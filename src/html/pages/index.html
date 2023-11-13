@@ -2,10 +2,23 @@
 <html lang='ru'>
 @@include('meta/_head.html', {title: 'Форт Диаолог'})
 
-<body>	
+<body>
 	@@include('components/business/_header.html')
 	<main>
+		<section class="title">
+			<div class="container">
+				<h1>
+					<span>ваш технологический партнер</span>
+					<span>
+						для внедрения <b>масштабных</b></span>
+					<div>
+						<span>it-решений</span>
+						@@include('components/ui/_button-link.html', {class: 'btn_round btn_arrow',children:'подробнее'})
+					</div>
+				</h1>
+			</div>
 
+		</section>
 	</main>
 	@@include('components/business/_footer.html')
 

@@ -1,10 +1,8 @@
 .btn {
-	@include regular-14;
-	height: 45px;
-	padding: 10px 25px;
+	height: 65px;
+	padding: 20px 48px;
 	background-color: transparent;
-	color: $black25;
-	border: 1px solid $black25;
+	color: $green50;
 	position: relative;
 	cursor: pointer;
 	transition: all $transitionDuration;
@@ -13,11 +11,16 @@
 	justify-content: center;
 	background: transparent;
 	min-width: fit-content;
+	background-color: $white;
+
+	@include mobile {
+		padding: 16px 24px;
+	}
 
 	&:hover {
-		background-color: $green22;
+		background-color: transparent;
 		color: $white;
-		border-color: $green22;
+		border: 1px solid $white;
 	}
 
 	.children {
@@ -25,138 +28,49 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		@include regular-18;
+		@include medium-20-uppercase;
 		line-height: 0;
+	}
 
-		@include tablet_small {
-			@include regular-14;
-			line-height: 0;
+	&_arrow {
+		svg {
+			margin-left: 10px;
+		}
+		&:hover {
+			svg {
+				path {
+					stroke: $white;
+				}
+			}
 		}
 	}
 
-	&_black {
-		background-color: $black25;
-		color: $white;
+	&_round {
+		border: solid 1px $black;
+		background: transparent;
+		border-radius: 60px;
+		color: $black;
+		height: 51px;
+		padding: 20px 24px;
+
+		@include mobile {
+			height: 40px;
+			padding: 16px 24px;
+		}
 
 		&:hover {
-			background-color: $green22;
+			border: solid 1px $green50;
+			background: $green50;
 			color: $white;
-			border-color: $green22;
-		}
-	}
-
-	&_more {
-		@include min_tablet_small {
-			height: unset;
-			align-self: center;
-			padding: 0;
-			border: none;
-			border-bottom: 1px dashed $grayB9;
-
-			&:hover {
-				background-color: transparent;
-				color: $green22;
-			}
-
-			&._disabled {
-				pointer-events: none;
-				user-select: none;
-				background-color: transparent;
-				color: $grayB9;
-			}
-
-			.children {
-				line-height: 120%;
-			}
-		}		
-
-		@include tablet_small {
-			margin: 0 auto;
-			padding: 10px 25px;
-		}
-	}
-
-	&_border {
-		height: unset;
-		padding: 0;
-		border: none;
-		border-bottom: 1px dashed $grayB9;
-
-		&:hover {
-			background-color: transparent;
-			color: $green22;
-		}
-
-		&._disabled {
-			pointer-events: none;
-			user-select: none;
-			background-color: transparent;
-			color: $grayB9;
 		}
 
 		.children {
-			line-height: 120% !important;
+			@include medium-18-uppercase;
+
+			@include tablet {
+				@include medium-12-uppercase;
+			}
 		}
-	}
-
-	&_white {
-		background-color: $white;
-		border-color: $white;
-
-		&:hover {
-			border-color: $green22;
-		}
-	}
-
-	&_brown {
-		background-color: transparent;
-		color: $white;
-		border-color: $white;
-		transition: all $transitionDuration ease-in-out;
-
-		&:hover {
-			background-color: $white;
-			color: $red3D;
-			border-color: $white;
-		}
-
-		&._disabled {
-			pointer-events: none;
-			user-select: none;
-			background-color: transparent;
-			color: $grayB9;
-			border-color: $grayB9;
-		}
-	}
-
-	&_black-border {
-		background-color: $white;
-		color: $black25;
-
-		&:hover {
-			background-color: $green22;
-			color: $white;
-			border-color: $green22;
-		}
-	}
-
-	&_white-border {
-		background-color: transparent;
-		color: $white;
-		border: 1px solid $white;
-
-		&:hover {
-			background-color: $green22;
-			color: $white;
-			border-color: $green22;
-		}
-	}
-
-	&._disabled {
-		pointer-events: none;
-		user-select: none;
-		background-color: $grayB9;
-		border-color: $grayB9;
-		color: $white;
 	}
 }
+
