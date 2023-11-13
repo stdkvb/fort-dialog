@@ -13,6 +13,7 @@ html {
 }
 
 body {
+	color: $gray70;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -126,14 +127,6 @@ input {
 	background-color: $white;
 }
 
-section {
-	margin-bottom: 130px;
-
-	@include desktop_extra_small {
-		margin-bottom: 80px;
-	}
-}
-
 .container {
 	margin-left: 175px;
 	margin-right: 175px;
@@ -143,11 +136,8 @@ section {
 		margin-right: 70px;
 	}
 
-	@include desktop_base {
-		margin-left: 20px;
-	}
-
 	@include tablet {
+		margin-left: 20px;
 		margin-right: 20px;
 	}
 }

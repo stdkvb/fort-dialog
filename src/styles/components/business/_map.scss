@@ -1,0 +1,9 @@
+.map {
+	height: 560px;
+	background-image: url(@images/map.png);
+
+	@include tablet {
+		height: 360px;
+	}
+}
+

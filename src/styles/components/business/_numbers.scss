@@ -1,0 +1,115 @@
+.numbers {
+	padding: 140px 0 120px 0;
+	.container {
+		display: grid;
+		grid-template-columns: minmax(360px, 511px) minmax(876px, 900px);
+		row-gap: 60px;
+		column-gap: 60px;
+		justify-content: space-between;
+		grid-template-areas:
+			'a c'
+			'b c';
+
+		@include desktop_large {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'c c'
+				'a b';
+		}
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'c'
+				'a'
+				'b';
+			gap: 30px;
+		}
+	}
+
+	@include tablet {
+		padding: 80px 0;
+	}
+
+	&__item {
+		&:nth-child(1) {
+			grid-area: a;
+		}
+
+		&:nth-child(2) {
+			grid-area: b;
+		}
+
+		&:nth-child(3) {
+			grid-area: c;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			@include mobile {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__number {
+		@include bold-80-uppercase;
+		color: $green50;
+		padding-bottom: 15px;
+		border-bottom: solid 1px $gray70;
+		max-width: 360px;
+
+		@include mobile {
+			@include bold-40-uppercase;
+			max-width: unset;
+		}
+
+		&_large {
+			@include bold-240-uppercase;
+			line-height: 80%;
+			border: none;
+			max-width: unset;
+			padding-bottom: 0;
+
+			@include tablet {
+				@include bold-120-uppercase;
+			}
+
+			@include mobile {
+				@include bold-60-uppercase;
+			}
+		}
+	}
+
+	&__description {
+		padding-top: 15px;
+		max-width: 360px;
+
+		@include mobile {
+			max-width: unset;
+		}
+
+		&_narrow {
+			max-width: 250px;
+		}
+
+		&_large {
+			@include regular-20;
+			max-width: 777px;
+
+			@include mobile {
+				@include regular-16;
+			}
+
+			.link {
+				margin-top: 34px;
+
+				@include mobile {
+					margin-top: 22px;
+				}
+			}
+		}
+	}
+}
+
