@@ -37,6 +37,10 @@
 
 		&:hover {
 			color: $green60;
+
+			&:after {
+				content: url(@icons/arrow-green-hover.svg);
+			}
 		}
 	}
 

@@ -1,0 +1,90 @@
+.solutions {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include desktop {
+		grid-template-columns: 1fr;
+	}
+
+	&__solution {
+		padding: 36px 28px 28px 28px;
+		border-top: solid 1px $gray10;
+		display: grid;
+		gap: 16px;
+		align-items: start;
+		grid-template-rows: max-content auto auto;
+		min-height: 360px;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $white;
+			z-index: -1;
+			@include transition;
+		}
+
+		&:hover {
+			&::after {
+				top: -100%;
+			}
+
+			h3,
+			p,
+			.link {
+				color: $white;
+			}
+
+			.link_green-arrow {
+				&:after {
+					content: url(@icons/arrow-white.svg);
+				}
+
+				&:hover {
+					color: $green60;
+
+					&:after {
+						content: url(@icons/arrow-green-hover.svg);
+					}
+				}
+			}
+		}
+
+		@include desktop {
+			min-height: unset;
+		}
+
+		@include tablet {
+			padding: 25px 20px;
+		}
+
+		h3 {
+			@include transition;
+		}
+
+		p {
+			max-height: 180px;
+			overflow: hidden;
+			@include transition;
+		}
+
+		.link {
+			align-self: flex-end;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: -1;
+	}
+}
+

@@ -105,6 +105,12 @@
 	font-weight: 700;
 }
 
+@mixin bold-30-uppercase {
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
 @mixin bold-28 {
 	font-size: 28px;
 	font-weight: 700;

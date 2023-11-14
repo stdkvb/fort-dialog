@@ -13,12 +13,12 @@
 						для внедрения <b>масштабных</b></span>
 					<div>
 						<span>it-решений</span>
-						@@include('components/ui/_button-link.html', {class: 'btn_round btn_arrow',children:'подробнее'})
+						@@include('components/ui/_button-link.html', {href:'#', class: 'btn_round btn_arrow',children:'подробнее'})
 					</div>
 				</h1>
 			</div>
 		</section>
-		<section class="map">
+		<!-- <section class="map">
 		</section>
 		<section class="numbers">
 			<div class="container">
@@ -95,6 +95,49 @@
 					</div>
 					<div class="swiper-slide">
 						<img src="@icons/chint.svg">
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<section class="offers">
+			<div class="container">
+				<h2>предлагаем решения, <span>которые выведут компанию</span> <b>на новый уровень</b>
+					<span>эффективности
+						@@include('components/ui/_button-link.html',
+						{href:'#', class: 'btn_round btn_arrow',children:'все решения'})</span>
+				</h2>
+			</div>
+			<div class="offers__list">
+				<div class="offers__video">
+					<video autoplay="true" muted src="@videos/sample-5s.mp4"></video>
+				</div>
+				<div class="solutions">
+					<div class="solutions__solution">
+						<img class="solutions__bg" src="@images/solution-bg.png">
+						<h3>Интеллектуальная транспортная система «Курсор»</h3>
+						<p>Создать системы безопасности для котельных</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="solutions__solution">
+						<img class="solutions__bg" src="@images/solution-bg.png">
+						<h3>Системы информационной безопасности</h3>
+						<p>Компания Форт Диалог предлагает комплексные решения по защите автоматизированных систем предприятия.
+							Каждое из таких решений представляет собой набор взаимодополняющих друг друга продуктов, обеспечивающих
+							оптимальную защиту информационных ресурсов.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="solutions__solution">
+						<img class="solutions__bg" src="@images/solution-bg.png">
+						<h3>АСУ ТП</h3>
+						<p>Информационное моделирование здания или информационная модель здания</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="solutions__solution">
+						<img class="solutions__bg" src="@images/solution-bg.png">
+						<h3>Центры обработки данных</h3>
+						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
+							любой сложности</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 				</div>
 			</div>

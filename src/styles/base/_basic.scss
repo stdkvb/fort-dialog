@@ -49,11 +49,28 @@ h1 {
 }
 
 h2 {
-	@include bold-50;
+	@include bold-60-uppercase;
+
+	@include tablet {
+		@include bold-30-uppercase;
+	}
+
+	@include mobile {
+		@include bold-20-uppercase;
+	}
 }
 
 h3 {
-	@include bold-30;
+	@include medium-24-uppercase;
+	color: $black;
+
+	@include tablet {
+		@include medium-20-uppercase;
+	}
+
+	@include mobile {
+		@include medium-16-uppercase;
+	}
 }
 
 h4 {
