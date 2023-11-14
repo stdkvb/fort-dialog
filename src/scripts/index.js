@@ -54,6 +54,16 @@ new Swiper('.partners__second', {
 	speed: 4000
 })
 
+new Swiper('.resources__swiper', {
+	slidesPerView: 'auto',
+	autoHeight: true,
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
 // addPhoneMaskListeners()
 // addRatingListener()
 // addModalListener()

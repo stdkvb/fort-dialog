@@ -13,7 +13,7 @@
 						для внедрения <b>масштабных</b></span>
 					<div>
 						<span>it-решений</span>
-						@@include('components/ui/_button-link.html', {href:'#', class: 'btn_round btn_arrow',children:'подробнее'})
+						@@include('components/ui/_button-link.html', {href:'#', class: 'btn_secondary',children:'подробнее'})
 					</div>
 				</h1>
 			</div>
@@ -98,42 +98,42 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 		<section class="offers">
 			<div class="container">
 				<h2>предлагаем решения, <span>которые выведут компанию</span> <b>на новый уровень</b>
 					<span>эффективности
 						@@include('components/ui/_button-link.html',
-						{href:'#', class: 'btn_round btn_arrow',children:'все решения'})</span>
+						{href:'#', class: 'btn_secondary',children:'все решения'})</span>
 				</h2>
 			</div>
-			<div class="offers__list">
+			<div class="offers__content">
 				<div class="offers__video">
-					<video autoplay="true" muted src="@videos/sample-5s.mp4"></video>
+					<video autoplay muted loop src="@videos/sample-5s.mp4"></video>
 				</div>
-				<div class="solutions">
-					<div class="solutions__solution">
-						<img class="solutions__bg" src="@images/solution-bg.png">
+				<div class="offers__list">
+					<div class="solution-card">
+						<img class="solution-card__bg" src="@images/solution-bg.png">
 						<h3>Интеллектуальная транспортная система «Курсор»</h3>
 						<p>Создать системы безопасности для котельных</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
-					<div class="solutions__solution">
-						<img class="solutions__bg" src="@images/solution-bg.png">
+					<div class="solution-card">
+						<img class="solution-card__bg" src="@images/solution-bg.png">
 						<h3>Системы информационной безопасности</h3>
 						<p>Компания Форт Диалог предлагает комплексные решения по защите автоматизированных систем предприятия.
 							Каждое из таких решений представляет собой набор взаимодополняющих друг друга продуктов, обеспечивающих
 							оптимальную защиту информационных ресурсов.</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
-					<div class="solutions__solution">
-						<img class="solutions__bg" src="@images/solution-bg.png">
+					<div class="solution-card">
+						<img class="solution-card__bg" src="@images/solution-bg.png">
 						<h3>АСУ ТП</h3>
 						<p>Информационное моделирование здания или информационная модель здания</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
-					<div class="solutions__solution">
-						<img class="solutions__bg" src="@images/solution-bg.png">
+					<div class="solution">
+						<img class="solution-card__bg" src="@images/solution-bg.png">
 						<h3>Центры обработки данных</h3>
 						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
 							любой сложности</p>
@@ -141,7 +141,64 @@
 					</div>
 				</div>
 			</div>
+		</section> -->
+		<section class="resources">
+			<div class="container">
+				<h2>Обладаем полным набором <b>компетенций и ресурсов</b>
+					<span>в области внедрения ИТ-систем
+						@@include('components/ui/_button-link.html',
+						{href:'#', class: 'btn_secondary btn_secondary_white',children:'все услуги'})</span>
+					и бизнес-консалтинга
+				</h2>
+			</div>
+			<div class="resources__swiper swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide service-card">
+						<img class="service-card__bg" src="@images/service-bg.png">
+						<h3>Монтажные и пусконаладочные работы</h3>
+						<p>Компания Форт Диалог предлагает комплексный подход к решению задач любой сложности на любом этапе проекта
+							- от стадии формирования задачи, инженерных изысканий или проектирования до этапа поставок, монтажа и
+							пуско-наладки, сервисного обслуживания.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__bg" src="@images/service-bg.png">
+						<h3>Bim</h3>
+						<p>Информационное моделирование здания или информационная модель здания.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__bg" src="@images/service-bg.png">
+						<h3>отдел проектной атрибуции (ОПД)</h3>
+						<p>Отдел проектной дистрибуции (ОПД)  АО «Форт Диалог» выступает в качестве «Поставщика» по следующим видам
+							продукции:
+							1) Орг. и вычислительная техника;
+							2) Оборудование средств связи;
+							3) Вычислительная техника и коммутационное оборудование;
+							4) Расходные материалы и...</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__bg" src="@images/service-bg.png">
+						<h3>Инженерные изыскания</h3>
+						<p>Данный вид исследований позволяет получить полный спектр данных о районе предполагаемой застройки, на
+							основе которых, можно подготовить качественную проектную документацию в короткие сроки.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__bg" src="@images/service-bg.png">
+						<h3>проектирование</h3>
+						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
+							любой сложности, что дает заказчику возможность существенно сэкономить время и ресурсы.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				@@include('components/ui/_button-link.html',
+				{href:'#', class: 'btn_secondary btn_secondary_white',children:'все услуги'})
+			</div>
 		</section>
+
 	</main>
 	@@include('components/business/_footer.html')
 

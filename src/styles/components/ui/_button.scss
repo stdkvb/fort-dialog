@@ -32,26 +32,18 @@
 		line-height: 0;
 	}
 
-	&_arrow {
-		svg {
-			margin-left: 10px;
-		}
-		&:hover {
-			svg {
-				path {
-					stroke: $white;
-				}
-			}
-		}
-	}
-
-	&_round {
+	&_secondary {
 		border: solid 1px $black;
 		background: transparent;
 		border-radius: 60px;
 		color: $black;
-		height: 51px;
 		padding: 20px 24px;
+		height: 55px;
+
+		@include tablet {
+			height: 32px;
+			padding: 12px;
+		}
 
 		@include mobile {
 			height: 40px;
@@ -62,13 +54,37 @@
 			border: solid 1px $green50;
 			background: $green50;
 			color: $white;
+
+			.children:after {
+				content: url(@icons/arrow-white.svg);
+			}
 		}
 
 		.children {
 			@include medium-18-uppercase;
+			display: flex;
+			gap: 10px;
 
 			@include tablet {
 				@include medium-12-uppercase;
+			}
+
+			&:after {
+				content: url(@icons/arrow-black.svg);
+				width: 23px;
+				display: inline-block;
+			}
+		}
+
+		&_white {
+			border: solid 1px $white;
+
+			.children {
+				color: $white;
+
+				&:after {
+					content: url(@icons/arrow-white.svg);
+				}
 			}
 		}
 	}

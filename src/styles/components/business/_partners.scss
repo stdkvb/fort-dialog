@@ -18,8 +18,12 @@
 		}
 
 		img {
-			width: unset;
-			height: unset;
+			object-fit: contain;
+
+			@include min_mobile {
+				width: unset;
+				height: unset;
+			}
 		}
 	}
 }
