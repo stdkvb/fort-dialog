@@ -1,0 +1,72 @@
+.project-card {
+	padding-bottom: 28px;
+	display: block;
+	align-items: start;
+	min-height: 612px;
+	height: 100%;
+	position: relative;
+	width: 775px;
+	overflow: hidden;
+
+	@include tablet {
+		padding-bottom: 25px;
+		width: 500px;
+	}
+
+	@include mobile {
+		max-height: 486px;
+		min-height: unset;
+		width: 320px;
+	}
+
+	&:hover {
+		img {
+			scale: 1.2;
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		height: 429px;
+		margin-bottom: 18px;
+
+		@include tablet {
+			height: 350px;
+		}
+
+		@include mobile {
+			height: 250px;
+			margin-bottom: 20px;
+		}
+	}
+
+	img {
+		@include transition;
+	}
+
+	h3 {
+		@include transition;
+		margin-bottom: 12px;
+
+		@include mobile {
+			margin-bottom: 15px;
+		}
+	}
+
+	p {
+		overflow: hidden;
+		@include transition;
+		margin-bottom: 24px;
+		align-self: flex-start;
+
+		@include mobile {
+			max-height: 80px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.link {
+		align-self: flex-end;
+	}
+}
+

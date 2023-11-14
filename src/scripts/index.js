@@ -49,14 +49,21 @@ new Swiper('.partners__second', {
 		disableOnInteraction: false,
 		reverseDirection: true
 	},
-	autoHeight: true,
 	loop: true,
 	speed: 4000
 })
 
 new Swiper('.resources__swiper', {
 	slidesPerView: 'auto',
-	autoHeight: true,
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
+new Swiper('.projects-section__swiper', {
+	slidesPerView: 'auto',
 	spaceBetween: 20,
 	pagination: {
 		el: '.swiper-pagination',

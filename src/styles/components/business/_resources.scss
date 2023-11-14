@@ -81,6 +81,14 @@
 			margin-left: 20px;
 		}
 
+		.swiper-pagination {
+			bottom: 70px;
+
+			@include min_tablet {
+				display: none;
+			}
+		}
+
 		.btn {
 			margin: 80px auto 0 auto;
 			@include min_tablet {

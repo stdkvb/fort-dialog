@@ -1,0 +1,48 @@
+.projects-section {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	position: relative;
+
+	@include tablet {
+		padding: 80px 0;
+	}
+
+	&__swiper {
+		padding-bottom: 80px;
+		margin-top: 80px;
+		margin-left: 175px;
+		margin-right: 20px;
+		overflow: visible;
+
+		@include desktop {
+			margin-left: 50px;
+		}
+
+		@include tablet {
+			margin-top: 40px;
+			margin-left: 20px;
+		}
+
+		@include tablet {
+			padding-bottom: 40px;
+		}
+	}
+
+	.btn {
+		margin: 40px auto 0 auto;
+
+		@include min_tablet {
+			margin: 0;
+			position: absolute;
+			right: 175px;
+			top: 150px;
+		}
+		@include min_mobile {
+			margin: 0;
+			top: 80px;
+			right: 55px;
+			position: absolute;
+		}
+	}
+}
+
