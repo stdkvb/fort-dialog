@@ -18,7 +18,7 @@
 				</h1>
 			</div>
 		</section>
-		<section class="map">
+		<!-- <section class="map">
 		</section>
 		<section class="numbers">
 			<div class="container">
@@ -99,7 +99,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="offers">
+		<section class="solutions-section">
 			<div class="container">
 				<h2>предлагаем решения, <span>которые выведут компанию</span> <b>на новый уровень</b>
 					<span>эффективности
@@ -107,11 +107,11 @@
 						{href:'#', class: 'btn_secondary',children:'все решения'})</span>
 				</h2>
 			</div>
-			<div class="offers__content">
-				<div class="offers__video">
+			<div class="solutions-section__content">
+				<div class="solutions-section__video">
 					<video autoplay muted loop src="@videos/sample-5s.mp4"></video>
 				</div>
-				<div class="offers__list">
+				<div class="solutions-section__list">
 					<div class="solution-card">
 						<img class="solution-card__bg" src="@images/solution-bg.png">
 						<h3>Интеллектуальная транспортная система «Курсор»</h3>
@@ -142,7 +142,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="resources">
+		<section class="services-section">
 			<div class="container">
 				<h2>Обладаем полным набором <b>компетенций и ресурсов</b>
 					<span>в области внедрения ИТ-систем
@@ -151,7 +151,7 @@
 					и бизнес-консалтинга
 				</h2>
 			</div>
-			<div class="resources__swiper swiper">
+			<div class="services-section__swiper swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide service-card">
 						<img class="service-card__bg" src="@images/service-bg.png">
@@ -242,8 +242,44 @@
 			</div>
 			@@include('components/ui/_button-link.html',
 			{href:'#', class: 'btn_secondary',children:'все проекты'})
+		</section> -->
+		<section class="career-section">
+			<video autoplay muted loop src="@videos/career-bg.mp4"></video>
+			<div class="container">
+				<h2>ваша успешная карьера в fort dialog </h2>
+				<p>Мы определяем стандарты и вектор развития индустрии высоких технологий, изменяя мир к лучшему, формируя
+					команды ярких единомышленников по всей России.</p>
+				<div class="career-section__vacancys">
+					<div class="career-section__vacancy">инженер-наладчик</div>
+					<div class="career-section__vacancy">Менеджер</div>
+					<div class="career-section__vacancy">Бухгалтер</div>
+					<div class="career-section__vacancy">Монтажник</div>
+					<div class="career-section__vacancy">Электрик</div>
+					<div class="career-section__vacancy">программист</div>
+					<div class="career-section__vacancy">и еще 12+ вакансий</div>
+				</div>
+			</div>
+			<form class="career-section__form form form_black">
+				<div class="form__row">
+					@@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
+					'name', required: true})
+					@@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
+					true})
+				</div>
+				@@include('components/ui/_input-text.html', {placeholder: 'На какую вакансию хотели бы устроиться?*',
+				errorMessage: 'Укажите вакансию', name: 'position', required: true})
+				@@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
+				true})
+				<div class="form__row">
+					<div class="form__privacy">
+						Отправляя форму, вы даете свое согласие
+						на <a href="#" class="link link_green">обработку своих персональных данных</a>
+					</div>
+					@@include('components/ui/_button.html',
+					{type: 'submit', class: '',children:'отправить'})
+				</div>
+			</form>
 		</section>
-
 	</main>
 	@@include('components/business/_footer.html')
 

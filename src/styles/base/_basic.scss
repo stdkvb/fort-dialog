@@ -58,15 +58,15 @@ h1 {
 }
 
 h2 {
-	@include bold-60-uppercase;
+	@include medium-60-uppercase;
 	color: $black;
 
 	@include tablet {
-		@include bold-30-uppercase;
+		@include medium-30-uppercase;
 	}
 
 	@include mobile {
-		@include bold-20-uppercase;
+		@include medium-20-uppercase;
 	}
 }
 

@@ -158,6 +158,17 @@
 	text-transform: uppercase;
 }
 
+@mixin medium-60 {
+	font-size: 60px;
+	font-weight: 500;
+}
+
+@mixin medium-60-uppercase {
+	font-size: 60px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
 @mixin medium-32 {
 	font-size: 32px;
 	font-weight: 500;
@@ -165,6 +176,17 @@
 
 @mixin medium-32-uppercase {
 	font-size: 32px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+@mixin medium-30 {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+@mixin medium-30-uppercase {
+	font-size: 30px;
 	font-weight: 500;
 	text-transform: uppercase;
 }

@@ -17,6 +17,9 @@ import addRatingListener from './listeners/addRatingListener'
 import addFormListeners from './listeners/addFormListeners'
 import addModalListener from './listeners/addModalListener'
 
+addFormListeners()
+addFileNameListeners()
+addPhoneMaskListeners()
 takeControlDropdown()
 takeControlMenu()
 
@@ -53,7 +56,7 @@ new Swiper('.partners__second', {
 	speed: 4000
 })
 
-new Swiper('.resources__swiper', {
+new Swiper('.services-section__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: 20,
 	pagination: {
@@ -71,11 +74,8 @@ new Swiper('.projects-section__swiper', {
 	}
 })
 
-// addPhoneMaskListeners()
 // addRatingListener()
 // addModalListener()
-
-// addFormListeners()
 
 // takeControlCustomSelect('custom-select')
 // takeControlNumberInput()
@@ -85,7 +85,6 @@ new Swiper('.projects-section__swiper', {
 // takeControlTabs()
 // takeControlTimer()
 // takeControlComments()
-// addFileNameListeners()
 
 // /* Код ниже для возвращения исходной высоты мобильному меню (100vh)
 // после ресайза экрана */

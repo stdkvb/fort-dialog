@@ -1,0 +1,70 @@
+.form {
+	padding: 60px;
+	width: 890px;
+	position: absolute;
+	bottom: -125px;
+	right: 60px;
+	background-color: $white;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@include desktop_huge {
+		width: unset;
+	}
+
+	@include tablet {
+		position: unset;
+	}
+
+	@include mobile {
+		padding: 60px 20px;
+		gap: 10px;
+	}
+
+	&_black {
+		background-color: $gray90;
+
+		input {
+			color: $white;
+			&::placeholder {
+				color: $white;
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+
+		@include mobile {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__privacy {
+		@include regular-16;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		display: inline;
+		max-width: 400px;
+
+		@include mobile {
+			@include regular-14;
+			max-width: unset;
+		}
+
+		.link {
+			display: inline;
+			@include regular-16;
+
+			@include mobile {
+				@include regular-14;
+			}
+		}
+	}
+}
+
