@@ -242,7 +242,7 @@
 			</div>
 			@@include('components/ui/_button-link.html',
 			{href:'#', class: 'btn_secondary',children:'все проекты'})
-		</section> -->
+		</section>
 		<section class="career-section">
 			<video autoplay muted loop src="@videos/career-bg.mp4"></video>
 			<div class="container">
@@ -277,6 +277,84 @@
 					</div>
 					@@include('components/ui/_button.html',
 					{type: 'submit', class: '',children:'отправить'})
+				</div>
+			</form>
+		</section> -->
+		<section class="media-section">
+			<div class="container">
+				<h2>медиацентр</h2>
+				<div class="media-section__tabs">
+					<div class="media-section__tab link active">
+						Все
+					</div>
+					<div class="media-section__tab link">
+						Новости компании
+					</div>
+					<div class="media-section__tab link">
+						СМИ
+					</div>
+					<div class="media-section__tab link">
+						Мероприятия
+					</div>
+				</div>
+				<div class="media-section__tab-content active">
+					<img src="@images/photographer.png">
+					<div class="media-section__list">
+						<div class="news-card">
+							<div class="news-card__date">24 августа</div>
+							<h3>В «Форт Диалоге» прошла первая профориентационная экскурсия</h3>
+							<p>Центральный офис компании «Форт Диалог» в городе Уфе посетили ученики 10-х классов МБОУ СОШ 1 села
+								Кушнаренково.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+						<div class="news-card">
+							<div class="news-card__date">25 августа</div>
+							<h3>К 1 сентября компания «Форт Диалог» оснастила новую школу современным оборудованием</h3>
+							<p>Центральный офис компании «Форт Диалог» в городе Уфе посетили ученики 10-х классов МБОУ СОШ 1 села
+								Кушнаренково. Системный интегратор «Форт Диалог» внес свой вклад в подготовку образовательного
+								учреждения к новому учебному году, привлекая к оснащению лучшие ИТ-продукты и решения.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+						<div class="news-card">
+							<div class="news-card__date">1 сентября</div>
+							<h3>Компания «Форт Диалог» 14-й раз стала победителем рейтинга «25 лучших региональных ИТ-компаний»</h3>
+							<p>Системный интегратор «Форт Диалог» внес свой вклад в подготовку образовательного учреждения к новому
+								учебному году, привлекая к оснащению лучшие ИТ-продукты и решения.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+					</div>
+				</div>
+				@@include('components/ui/_button-link.html',
+				{href:'#', class: 'btn_secondary',children:'все новости'})
+			</div>
+		</section>
+		<section class="questions">
+			<img src="@images/questions-bg.png"></img>
+			<div class="container">
+				<h2>Есть вопросы?</h2>
+				<p>Получите ответы на вопросы о продуктах, продажах, поддержке и многом другом.</p>
+				<p>Вы можете направить свой вопрос на почту <a href="mail:pochta@mail.ru"
+						class="link link_green">pochta@mail.ru</a> или воспользоваться формой
+					на сайте</p>
+			</div>
+			<form class="questions__form form">
+				<div class="form__row">
+					@@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
+					'name', required: true})
+					@@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
+					true})
+				</div>
+				@@include('components/ui/_input-text.html', {placeholder: 'На какую вакансию хотели бы устроиться?*',
+				errorMessage: 'Укажите вакансию', name: 'position', required: true})
+				@@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
+				true})
+				<div class="form__row">
+					<div class="form__privacy">
+						Отправляя форму, вы даете свое согласие
+						на <a href="#" class="link link_green">обработку своих персональных данных</a>
+					</div>
+					@@include('components/ui/_button.html',
+					{type: 'submit', class: 'btn_green',children:'отправить'})
 				</div>
 			</form>
 		</section>

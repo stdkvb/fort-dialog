@@ -2,11 +2,21 @@ import Pristine from './Pristine'
 // import takeControlModal from './ModalController';
 
 const takeControlForms = () => {
-	const workRequestForm = document.querySelector('.career-section__form')
-	if (workRequestForm !== null) {
-		const workRequestValidator = new Pristine(workRequestForm)
-		workRequestForm.addEventListener('submit', function (e) {
-			if (workRequestValidator.validate() != true) {
+	const careerForm = document.querySelector('.career-section__form')
+	if (careerForm !== null) {
+		const careerValidator = new Pristine(careerForm)
+		careerForm.addEventListener('submit', function (e) {
+			if (careerValidator.validate() != true) {
+				e.preventDefault()
+			}
+		})
+	}
+
+	const questionsForm = document.querySelector('.questions__form')
+	if (questionsForm !== null) {
+		const questionsValidator = new Pristine(questionsForm)
+		questionsForm.addEventListener('submit', function (e) {
+			if (questionsValidator.validate() != true) {
 				e.preventDefault()
 			}
 		})
