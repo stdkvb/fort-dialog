@@ -10,6 +10,10 @@
 	width: 100%;
 	z-index: 10;
 
+	@include desktop_huge {
+		height: calc(100% - 100px);
+	}
+
 	&.active {
 		display: flex;
 

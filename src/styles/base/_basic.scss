@@ -25,6 +25,10 @@ body {
 	@supports (-moz-appearance: none) {
 		overflow-y: auto;
 	}
+
+	&.lock {
+		overflow: hidden;
+	}
 }
 
 html,

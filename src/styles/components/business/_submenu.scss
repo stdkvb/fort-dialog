@@ -1,0 +1,102 @@
+.submenu {
+	position: fixed;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	background-color: $white;
+	padding: 80px 80px 96px 175px;
+	box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
+	display: none;
+
+	@include tablet {
+		top: 45px;
+		padding: 30px 20px 109px 20px;
+		box-shadow: none;
+	}
+
+	&.active {
+		display: block;
+	}
+
+	&__button {
+		&.link {
+			display: flex;
+			gap: 10px;
+
+			@include tablet {
+				justify-content: space-between;
+				&::after {
+					content: '';
+					background-image: url(@icons/chevron-right.svg);
+					height: 20px;
+					width: 20px;
+				}
+			}
+
+			b {
+				display: block;
+
+				@include tablet {
+					display: none;
+				}
+			}
+
+			&.active {
+				color: $green50;
+				b {
+					transform: rotate(180deg) translateY(-3px);
+				}
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: 110px;
+		top: 47px;
+		background-image: url(@icons/cross-black.svg);
+		height: 21px;
+		width: 21px;
+		background-size: 100%;
+		background-position: center;
+		cursor: pointer;
+
+		@include tablet {
+			background-image: url(@icons/chevron-left.svg);
+			position: unset;
+
+			&::after {
+				content: 'Назад';
+				margin-left: 30px;
+			}
+		}
+	}
+
+	&__title {
+		@include medium-20-uppercase;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__list {
+		margin-top: 32px;
+		max-height: 120px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		flex-wrap: wrap;
+		width: 510px;
+
+		@include tablet {
+			max-height: unset;
+			margin-top: 20px;
+		}
+
+		@include mobile {
+			gap: 30px;
+		}
+	}
+}
+
