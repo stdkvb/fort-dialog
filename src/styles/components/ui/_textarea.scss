@@ -1,26 +1,24 @@
 textarea {
 	transition: all $transitionDuration;
 	width: 100%;
-	min-height: 100px;
-	padding: 10px 20px;
-	border: 1px solid $grayB9;
+	min-height: 152px;
+	padding: 23px 28px;
+	border: 1px solid $gray30;
 	outline: none;
 	resize: none;
 	@include regular-16;
 	background-color: transparent;
 
-	@include tablet_small {
-		@include regular-14;
+	@include mobile {
+		padding: 15px 20px;
 	}
 
 	&:focus {
-
 	}
 	&:disabled {
-
 	}
 	&::placeholder {
-		color: $grayB9;
+		color: $gray60;
 	}
 
 	&::-webkit-scrollbar {
@@ -30,35 +28,33 @@ textarea {
 		background: white;
 	}
 	&::-webkit-scrollbar-thumb {
-		background-color: $grayFA;
+		background-color: $gray60;
 	}
 	&:focus::-webkit-scrollbar-thumb {
-		background-color: $black25;
+		background-color: $black;
 	}
 	&:disabled::-webkit-scrollbar-thumb {
-		background-color: $grayB9;
+		background-color: $gray60;
 	}
 
-	&~.pristine-error {
+	& ~ .pristine-error {
 		display: none;
 	}
 
-	&[aria-invalid=true] {
+	&[aria-invalid='true'] {
 		&:not(:focus) {
-			border: 1px solid $redDB;
-		}	
+			border: 1px solid $red;
+		}
 	}
 
 	.has-success & {
 		&:not(:focus) {
-			border: 1px solid $green22;
+			border: 1px solid $green50;
 		}
 	}
-
 }
 
 .textarea__container {
-
 	position: relative;
 	width: 100%;
 	display: flex;
@@ -67,7 +63,7 @@ textarea {
 
 	.textarea__label {
 		@include regular-20;
-		
+
 		@include tablet_small {
 			@include regular-14;
 		}
@@ -83,3 +79,4 @@ textarea {
 		}
 	}
 }
+

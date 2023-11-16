@@ -366,15 +366,13 @@
 			</div>
 			<form class="questions__form form">
 				<div class="form__row">
-					@@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
+					@@include('components/ui/_input-text.html', {placeholder: 'Ваше имя*', errorMessage: 'Введите ваше имя', name:
 					'name', required: true})
-					@@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
+					@@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
 					true})
 				</div>
-				@@include('components/ui/_input-text.html', {placeholder: 'На какую вакансию хотели бы устроиться?*',
-				errorMessage: 'Укажите вакансию', name: 'position', required: true})
-				@@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
-				true})
+				@@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение*',
+				errorMessage: 'Оставьте свое сообщение', name: 'message', required: true})
 				<div class="form__row">
 					<div class="form__privacy">
 						Отправляя форму, вы даете свое согласие
