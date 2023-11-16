@@ -1,93 +1,144 @@
 .swiper-button-prev {
-	height: 21px !important;
-	width: 8px !important;
+	height: 51px !important;
+	width: 51px !important;
+	right: 266px !important;
+	bottom: 46px !important;
+	left: unset !important;
+	top: unset !important;
+
+	@include desktop {
+		right: 200px !important;
+	}
+
+	@include tablet {
+		right: 70px !important;
+	}
+
+	@include mobile {
+		height: 40px !important;
+		width: 40px !important;
+	}
+
 	&:after {
-		content: url(@icons/swiper-arrow.svg) !important;
-		transform: rotate(180deg) !important;
+		content: url(@icons/prev.svg) !important;
+
+		@include tablet {
+			content: url(@icons/prev-small.svg) !important;
+		}
 	}
 }
 .swiper-button-next {
-	height: 21px !important;
-	width: 8px !important;
+	height: 51px !important;
+	width: 51px !important;
+	right: 175px !important;
+	bottom: 46px !important;
+	top: unset !important;
+
+	@include desktop {
+		right: 110px !important;
+	}
+
+	@include tablet {
+		right: 20px !important;
+	}
+
+	@include mobile {
+		height: 40px !important;
+		width: 40px !important;
+	}
+
 	&:after {
-		content: url(@icons/swiper-arrow.svg) !important;
+		content: url(@icons/next.svg) !important;
+
+		@include tablet {
+			content: url(@icons/next-small.svg) !important;
+		}
 	}
 }
 .swiper-slide {
 	height: unset !important;
 }
 
+.swiper-scrollbar-drag {
+	background-color: $gray70;
+}
+
 .swiper-pagination {
-	margin-bottom: 20px;
-
-	@include tablet_small {
-		margin-bottom: 10px;
+	.swiper-pagination-bullet {
+		width: 24px;
+		background-color: $gray80;
+		border-radius: 0;
+		height: 3px;
 	}
 
-	&-bullet {
-		width: 10px;
-		height: 10px;
-		background-color: $black25;
-		opacity: 0.3;
-		margin: 0 6px !important;
+	.swiper-pagination-bullet-active {
+		width: 70px;
+		background-color: $gray40;
+	}
 
-		&-active {
-			opacity: 1;
+	&_white {
+		.swiper-pagination-bullet {
+			background-color: $gray40;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: $gray10;
 		}
 	}
 }
 
-.swiper-navigation {
-	display: flex;
-	align-items: center;
-	gap: 20px;
+// .swiper-navigation {
+// 	display: flex;
+// 	align-items: center;
+// 	gap: 20px;
 
-	& > * {
-		width: 50px;
-		height: 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: $white;
-		border: 1px solid $black25;
-		transition: background-color $transitionDuration ease-in-out;
+// 	& > * {
+// 		width: 50px;
+// 		height: 50px;
+// 		display: flex;
+// 		justify-content: center;
+// 		align-items: center;
+// 		background-color: $white;
+// 		border: 1px solid $black25;
+// 		transition: background-color $transitionDuration ease-in-out;
 
-		&:hover {
-			cursor: pointer;
-			background-color: $black25;
+// 		&:hover {
+// 			cursor: pointer;
+// 			background-color: $black25;
 
-			&:after {
-				content: url('@icons/chevron_white.svg');
-			}
-		}
+// 			&:after {
+// 				content: url('@icons/chevron_white.svg');
+// 			}
+// 		}
 
-		&::after {
-			content: url('@icons/chevron.svg');
-			width: 24px;
-			height: 24px;
-		}
+// 		&::after {
+// 			content: url('@icons/chevron.svg');
+// 			width: 24px;
+// 			height: 24px;
+// 		}
 
-		&.swiper-button-disabled {
-			border-color: $grayB9;
-			pointer-events: none;
+// 		&.swiper-button-disabled {
+// 			border-color: $grayB9;
+// 			pointer-events: none;
 
-			&:hover {
-				cursor: auto;
-			}
+// 			&:hover {
+// 				cursor: auto;
+// 			}
 
-			&::after {
-				content: url('@icons/chevron_disabled.svg');
-			}
-		}
-	}
+// 			&::after {
+// 				content: url('@icons/chevron_disabled.svg');
+// 			}
+// 		}
+// 	}
 
-	&_transparent > * {
-		background-color: transparent;
-	}
+// 	&_transparent > * {
+// 		background-color: transparent;
+// 	}
 
-	&-prev {
-		&::after {
-			transform: rotate(180deg);
-		}
-	}
-}
+// 	&-prev {
+// 		&::after {
+// 			transform: rotate(180deg);
+// 		}
+// 	}
+// }
+

@@ -53,6 +53,12 @@
 @mixin bold-70 {
 	font-size: 70px;
 	font-weight: 700;
+	text-transform: uppercase;
+}
+
+@mixin bold-70 {
+	font-size: 70px;
+	font-weight: 700;
 }
 
 @mixin bold-60-uppercase {

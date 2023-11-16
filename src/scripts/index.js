@@ -75,6 +75,15 @@ new Swiper('.projects-section__swiper', {
 	}
 })
 
+new Swiper('.banner', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	}
+})
+
 // addRatingListener()
 // addModalListener()
 

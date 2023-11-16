@@ -149,42 +149,13 @@ input {
 	border: none;
 }
 
-// swiper
-.swiper-scrollbar-drag {
-	background-color: $gray70;
-}
-
-.swiper-pagination {
-	.swiper-pagination-bullet {
-		width: 24px;
-		background-color: $gray80;
-		border-radius: 0;
-		height: 3px;
-	}
-
-	.swiper-pagination-bullet-active {
-		width: 70px;
-		background-color: $gray40;
-	}
-
-	&_white {
-		.swiper-pagination-bullet {
-			background-color: $gray40;
-		}
-
-		.swiper-pagination-bullet-active {
-			background-color: $gray10;
-		}
-	}
-}
-
 .container {
 	margin-left: 175px;
 	margin-right: 175px;
 
 	@include desktop {
 		margin-left: 50px;
-		margin-right: 70px;
+		margin-right: 110px;
 	}
 
 	@include tablet {

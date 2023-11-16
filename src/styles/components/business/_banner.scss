@@ -1,0 +1,67 @@
+.banner {
+	.container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		height: 100%;
+		display: grid;
+		grid-template-rows: minmax(0, 150px) auto max-content;
+		gap: 12px;
+
+		@include mobile {
+			grid-template-rows: minmax(0, 75px) auto max-content;
+			gap: 15px;
+		}
+	}
+
+	.swiper-slide {
+		position: relative;
+		height: 500px;
+
+		@include mobile {
+			height: 350px;
+		}
+	}
+
+	img {
+		filter: brightness(50%);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: -1;
+	}
+
+	h2,
+	p {
+		max-width: 707px;
+		color: $white;
+		overflow: hidden;
+	}
+
+	h2 {
+		@include bold-40-uppercase;
+
+		@include tablet {
+			@include bold-30-uppercase;
+		}
+
+		@include mobile {
+			@include bold-20-uppercase;
+		}
+	}
+
+	p {
+		@include regular-18;
+
+		@include mobile {
+			@include regular-16;
+		}
+	}
+
+	.link {
+		justify-self: flex-end;
+	}
+}
+
