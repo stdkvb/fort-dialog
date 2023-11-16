@@ -22,6 +22,7 @@ addFileNameListeners()
 addPhoneMaskListeners()
 takeControlDropdown()
 takeControlMenu()
+takeControlTabs()
 
 // accordions init
 takeControlAccordion('.footer__top', '.accordion__list', {
@@ -82,7 +83,7 @@ new Swiper('.projects-section__swiper', {
 // takeControlFavorite()
 // CookieController('.cookie-container', '.cookie-accept')
 // takeControlModal()
-// takeControlTabs()
+
 // takeControlTimer()
 // takeControlComments()
 

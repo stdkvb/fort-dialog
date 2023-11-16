@@ -1,0 +1,37 @@
+.tabs {
+	margin-bottom: 40px;
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@include mobile {
+		gap: 16px;
+		row-gap: 10px;
+	}
+}
+
+.tab {
+	cursor: pointer;
+
+	&.active {
+		a {
+			cursor: default;
+			@include medium-24;
+			color: $green50;
+
+			@include mobile {
+				@include medium-20;
+			}
+		}
+	}
+}
+
+.tab-content {
+	display: none;
+
+	&.active {
+		display: grid;
+	}
+}
+

@@ -11,29 +11,7 @@
 	.container {
 	}
 
-	&__tabs {
-		margin-bottom: 40px;
-		display: flex;
-		gap: 24px;
-		align-items: center;
-	}
-
-	&__tab {
-		cursor: pointer;
-
-		&.active {
-			cursor: default;
-			@include medium-24;
-			color: $green50;
-
-			@include mobile {
-				@include medium-20;
-			}
-		}
-	}
-
 	&__tab-content {
-		display: grid;
 		grid-template-columns: minmax(auto, 650px) calc(55% - 20px);
 		gap: 20px;
 
