@@ -1,28 +1,29 @@
 .dropdown {
 	position: relative;
 
-	&._disabled {
+	&.disabled {
 		pointer-events: none;
 	}
 
 	&__button {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 6px;
-		max-width: fit-content;
+		width: 100%;
+		padding: 27px 30px;
+		border: solid 1px $gray10;
 
-		span {
-			min-width: fit-content;
-			@include regular-18;
-			color: $gray70;
-			@include transition;
-			user-select: none;
+		@include tablet {
+			padding: 15px;
 		}
 
-		svg {
-			@include transition;
-			path {
-				@include transition;
+		span {
+			@include regular-20;
+			color: $gray70;
+
+			@include tablet {
+				@include regular-16;
 			}
 		}
 
@@ -33,34 +34,45 @@
 
 	&__options {
 		position: absolute;
-		margin-top: 6px;
 		height: 0;
 		overflow: hidden;
 		@include transition;
 		opacity: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 2px;
-		width: fit-content;
+		width: 100%;
 		background-color: $white;
 		z-index: 10;
+		border: solid 1px $gray10;
+		border-top: none;
 	}
 
 	&__option {
+		padding: 27px 30px;
+
+		@include tablet {
+			padding: 15px;
+		}
+
 		a {
-			@include regular-18;
+			@include regular-20;
 			color: $gray70;
+
+			@include tablet {
+				@include regular-16;
+			}
 		}
 
 		&:hover {
 			cursor: pointer;
+			background-color: $gray04;
 		}
 	}
 
 	&.active {
 		.dropdown__button {
-			svg {
-				transform: rotate(180deg);
+			b {
+				transform: rotate(180deg) translateY(-3px);
 			}
 		}
 		.dropdown__options {

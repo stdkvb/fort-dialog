@@ -1,0 +1,48 @@
+.breadcrumbs {
+	display: flex;
+	gap: 35px;
+
+	@include mobile {
+		gap: 19px;
+		margin-bottom: 10px;
+	}
+
+	li {
+		position: relative;
+		color: $gray50;
+
+		@include mobile {
+			@include regular-14;
+		}
+
+		&:after {
+			content: url(@icons/dot.svg);
+			color: $gray50;
+			position: absolute;
+			right: -17px;
+			bottom: 3px;
+
+			@include mobile {
+				right: -9px;
+			}
+		}
+
+		&:last-child::after {
+			content: '';
+		}
+	}
+
+	.link {
+		@include regular-16;
+		color: $gray50;
+
+		@include mobile {
+			@include regular-14;
+		}
+
+		&:hover {
+			color: $green50;
+		}
+	}
+}
+

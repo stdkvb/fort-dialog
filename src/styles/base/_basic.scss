@@ -49,15 +49,15 @@ section {
 }
 
 h1 {
-	@include bold-80-uppercase;
+	@include medium-60-uppercase;
 	color: $black;
 
 	@include tablet {
-		@include bold-40-uppercase;
+		@include medium-30-uppercase;
 	}
 
 	@include mobile {
-		@include bold-28-uppercase;
+		@include medium-20-uppercase;
 	}
 }
 

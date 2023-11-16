@@ -129,11 +129,39 @@
 
 	&__lang {
 		padding-left: 39px;
+		position: relative;
+
+		span,
+		.link {
+			@include regular-18;
+		}
 
 		@include tablet {
 			span,
-			a {
+			.link {
 				@include regular-12;
+			}
+		}
+
+		span {
+			display: flex;
+			gap: 10px;
+		}
+
+		ul {
+			display: none;
+			position: absolute;
+			bottom: -25px;
+			left: 39px;
+		}
+
+		&:hover {
+			b {
+				transform: rotate(180deg) translateY(-3px);
+			}
+
+			ul {
+				display: block;
 			}
 		}
 	}
