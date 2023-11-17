@@ -1,11 +1,22 @@
 <div class="pagination">
-	<a href="#" class="active">1</a>
-	<a href="#">2</a>
-	<a href="#">3</a>
-	<a href="#">4</a>
-	<a href="#">5</a>
-	<a href="#">6</a>
-	<a href="#" class="disabled">...</a>
-	<a href="#">10</a>
-	<a href="#">11</a>
+	@@include('components/ui/_button-link.html',
+	{href:'#', class: 'btn_secondary',children:'показать еще'})
+	<div class="pagination__nav">
+		<a href="#" class="active">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#" class="disabled">...</a>
+		<a href="#">20</a>
+		<a htef="#">
+			<svg width="42" height="45" viewBox="0 0 42 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect width="42" height="45" fill="#F5F5F5" />
+				<path d="M14.4873 22H28.0402" stroke="#39393A" stroke-width="2" stroke-linecap="round"
+					stroke-linejoin="round" />
+				<path d="M21.2637 28.7764L28.0402 22L21.2637 15.2236" stroke="#39393A" stroke-width="2" stroke-linecap="round"
+					stroke-linejoin="round" />
+			</svg>
+		</a>
+	</div>
 </div>

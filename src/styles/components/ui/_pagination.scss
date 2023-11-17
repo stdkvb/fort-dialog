@@ -1,48 +1,72 @@
 .pagination {
 	display: flex;
-	align-items: center;
-	gap: 10px;
+	justify-content: center;
+	position: relative;
 
-	grid-area: pagination;
-
-	@include tablet_small {
-		display: none;
+	@include desktop {
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
 	}
 
-	a {
-		@include FontFamilyZurichRegular;
-		&,
-		&:focus,
-		&:visited {
-			color: $black25;
-			background-color: $white;
-			width: 32px;
-			height: 32px;
-			padding: 12px;
-			@include regular-18;
-			line-height: 0;
-			border: 1px solid $black25;
-			transition: all $transitionDuration ease-in-out;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}		
+	&__nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		display: flex;
+		align-items: center;
+		gap: 0px;
 
-		&:hover {
-			color: $white;
-			background-color: $green22;
-			border-color: $green22;
-		}
-		
-		&.active {
-			color: $white;
-			background-color: $black25;
+		@include desktop {
+			position: unset;
 		}
 
-		&.active,
-		&.disabled {
-			pointer-events: none;
-			user-select: none;
+		@include mobile {
+			display: none;
+		}
+
+		a {
+			&,
+			&:focus,
+			&:visited {
+				color: $gray70;
+				width: 42px;
+				height: 42px;
+				padding: 11px;
+				@include regular-18;
+				line-height: 0;
+				transition: all $transitionDuration ease-in-out;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&:last-child {
+					padding: 0;
+
+					&:hover {
+						path {
+							stroke: $green50;
+						}
+					}
+				}
+			}
+
+			&:hover {
+				color: $green50;
+			}
+
+			&.active {
+				background-color: $gray04;
+			}
+
+			&.active,
+			&.disabled {
+				pointer-events: none;
+				user-select: none;
+			}
 		}
 	}
 }
+

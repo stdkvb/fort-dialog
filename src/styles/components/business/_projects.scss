@@ -1,0 +1,28 @@
+.projects {
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	@include tablet {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.container {
+	}
+
+	&__cards {
+		grid-area: cards;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 20px;
+		row-gap: 80px;
+		margin-bottom: 70px;
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+			row-gap: 60px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
