@@ -6,6 +6,11 @@
 	transition: all $transitionDuration;
 }
 
+@mixin bold-250 {
+	font-size: 250px;
+	font-weight: 700;
+}
+
 @mixin bold-240 {
 	font-size: 240px;
 	font-weight: 700;
@@ -15,6 +20,11 @@
 	font-size: 240px;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+
+@mixin bold-150 {
+	font-size: 150px;
+	font-weight: 700;
 }
 
 @mixin bold-120 {

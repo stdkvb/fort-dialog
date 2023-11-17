@@ -1,0 +1,51 @@
+.error-page {
+	padding-top: 180px;
+	padding-bottom: 140px;
+
+	@include mobile {
+		padding-top: 140px;
+		padding-bottom: 80px;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		div {
+			@include bold-250;
+			color: $green50;
+			line-height: 100%;
+
+			@include tablet {
+				@include bold-150;
+			}
+		}
+
+		h1 {
+			@include bold-36;
+			color: $green50;
+			margin-bottom: 30px;
+			text-transform: none;
+
+			@include tablet {
+				@include bold-28;
+			}
+
+			@include mobile {
+				margin-bottom: 40px;
+			}
+		}
+
+		p {
+			max-width: 418px;
+			margin-bottom: 50px;
+			text-align: center;
+
+			@include mobile {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
