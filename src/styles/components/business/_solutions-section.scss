@@ -13,8 +13,8 @@
 		}
 
 		span {
-			@include bold-60-uppercase;
 			display: inline;
+			font-weight: inherit;
 
 			&:last-of-type:not(.children) {
 				display: flex;
@@ -27,28 +27,12 @@
 					align-items: flex-start;
 				}
 			}
-
-			@include tablet {
-				@include bold-30-uppercase;
-			}
-
-			@include mobile {
-				@include bold-20-uppercase;
-			}
 		}
 
 		b {
-			@include bold-60-uppercase;
+			font-weight: inherit;
 			color: $green50;
 			white-space: nowrap;
-
-			@include tablet {
-				@include bold-30-uppercase;
-			}
-
-			@include mobile {
-				@include bold-20-uppercase;
-			}
 		}
 	}
 

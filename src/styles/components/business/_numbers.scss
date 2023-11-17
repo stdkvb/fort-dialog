@@ -42,6 +42,9 @@
 
 		&:nth-child(3) {
 			grid-area: c;
+		}
+
+		&_large {
 			height: 100%;
 			display: flex;
 			flex-direction: column;

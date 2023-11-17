@@ -9,7 +9,7 @@
 
 	li {
 		position: relative;
-		color: $gray50;
+		color: $gray20;
 
 		@include mobile {
 			@include regular-14;
@@ -17,7 +17,7 @@
 
 		&:after {
 			content: url(@icons/dot.svg);
-			color: $gray50;
+			color: $gray20;
 			position: absolute;
 			right: -17px;
 			bottom: 3px;
@@ -27,14 +27,22 @@
 			}
 		}
 
-		&:last-child::after {
-			content: '';
+		&:last-child {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+
+			& ::after {
+				content: '';
+			}
 		}
 	}
 
 	.link {
 		@include regular-16;
-		color: $gray50;
+		color: $gray20;
 
 		@include mobile {
 			@include regular-14;

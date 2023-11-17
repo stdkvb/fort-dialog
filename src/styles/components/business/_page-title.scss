@@ -16,5 +16,47 @@
 			gap: 20px;
 		}
 	}
+
+	h1 {
+		max-width: 1500px;
+	}
+
+	&_secondary {
+		background-image: url(@images/title-bg.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		h1 {
+			color: $white;
+		}
+
+		@include tablet {
+			padding-bottom: 27px;
+		}
+	}
+
+	&__details {
+		display: flex;
+		gap: 60px;
+
+		@include tablet {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		div {
+			@include regular-20;
+			color: $white;
+
+			@include tablet {
+				@include regular-14;
+			}
+
+			span {
+				color: $gray20;
+			}
+		}
+	}
 }
 

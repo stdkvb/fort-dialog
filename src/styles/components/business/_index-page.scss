@@ -1,0 +1,18 @@
+.index-page {
+	h2 {
+		@include medium-60-uppercase;
+		span,
+		b {
+			font-size: inherit;
+		}
+	}
+
+	.project-section {
+		padding-bottom: 140px;
+
+		@include tablet {
+			padding-bottom: 80px;
+		}
+	}
+}
+

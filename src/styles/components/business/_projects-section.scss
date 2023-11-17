@@ -1,10 +1,9 @@
 .projects-section {
 	padding-top: 140px;
-	padding-bottom: 140px;
 	position: relative;
 
 	@include tablet {
-		padding: 80px 0;
+		padding-top: 80px;
 	}
 
 	&__swiper {
@@ -13,7 +12,6 @@
 		margin-left: 175px;
 		margin-right: 20px;
 		overflow: visible;
-		width: 775px;
 
 		@include desktop {
 			margin-left: 50px;
@@ -22,20 +20,21 @@
 		@include tablet {
 			margin-top: 40px;
 			margin-left: 20px;
-			width: 500px;
 			padding-bottom: 40px;
-		}
-
-		@include mobile {
-			width: 320px;
 		}
 	}
 
 	.swiper-slide {
+		width: 775px;
 		height: 612px;
 
 		@include tablet {
 			height: 486px;
+			width: 500px;
+		}
+
+		@include mobile {
+			width: 320px;
 		}
 	}
 

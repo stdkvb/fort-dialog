@@ -84,6 +84,15 @@ new Swiper('.banner', {
 	}
 })
 
+new Swiper('.task__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
 // addRatingListener()
 // addModalListener()
 

@@ -1,0 +1,132 @@
+.task {
+	padding-top: 140px;
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+
+		@include tablet {
+			align-items: flex-start;
+			text-align: left;
+		}
+
+		span {
+			@include regular-28;
+			color: gray80;
+			margin-bottom: 15px;
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
+
+		h2 {
+			max-width: 1200px;
+			margin-bottom: 50px;
+
+			@include tablet {
+				margin-bottom: 20px;
+			}
+
+			span {
+				font-size: inherit;
+				color: $green50;
+			}
+		}
+
+		p {
+			max-width: 877px;
+			@include regular-20;
+			color: gray70;
+
+			@include mobile {
+				@include regular-16;
+			}
+		}
+	}
+
+	&__columns {
+		padding-top: 80px;
+		padding-bottom: 140px;
+		display: grid;
+		grid-template-columns: minmax(0, 360px) minmax(0, 900px);
+		gap: 30px;
+		justify-content: space-between;
+
+		@include tablet {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+			gap: 80px;
+		}
+
+		.numbers {
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+
+			@include tablet_small {
+				gap: 30px;
+			}
+		}
+	}
+
+	&__result {
+		span {
+			display: block;
+			margin-top: 80px;
+			margin-bottom: 10px;
+			@include regular-20;
+			color: $gray30;
+
+			@include tablet {
+				@include regular-16;
+				margin-top: 40px;
+				margin-bottom: 15px;
+			}
+		}
+
+		p {
+			@include regular-20;
+			max-width: 850px;
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
+	}
+
+	&__swiper {
+		margin-left: 175px;
+		margin-right: 20px;
+		overflow: visible;
+		padding-bottom: 80px;
+
+		@include desktop {
+			margin-left: 50px;
+		}
+
+		@include tablet {
+			margin-top: 40px;
+			margin-left: 20px;
+			padding-bottom: 40px;
+		}
+
+		.swiper-slide {
+			width: 775px;
+			height: 478px;
+
+			@include mobile {
+				width: 320px;
+				height: 197px;
+			}
+		}
+	}
+}
+
