@@ -1,0 +1,21 @@
+.media-component {
+	display: grid;
+	grid-template-columns: minmax(auto, 650px) calc(55% - 20px);
+	gap: 20px;
+
+	@include tablet {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	img {
+		@include desktop_medium {
+			max-height: 780px;
+		}
+
+		@include mobile {
+			max-height: 400px;
+		}
+	}
+}
+

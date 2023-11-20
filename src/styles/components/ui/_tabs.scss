@@ -28,10 +28,10 @@
 }
 
 .tab-content {
-	display: none;
+	display: none !important;
 
 	&.active {
-		display: grid;
+		display: grid !important;
 	}
 }
 

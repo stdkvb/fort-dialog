@@ -109,6 +109,15 @@ new Swiper('.service-detail__swiper', {
 	}
 })
 
+new Swiper('.solution-detail__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
 // addRatingListener()
 // addModalListener()
 
