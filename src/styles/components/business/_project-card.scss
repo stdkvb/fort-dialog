@@ -16,6 +16,7 @@
 		overflow: hidden;
 		height: 429px;
 		margin-bottom: 18px;
+		position: relative;
 
 		@include tablet {
 			height: 250px;
@@ -63,6 +64,29 @@
 
 	.link {
 		align-self: flex-end;
+	}
+
+	&__tag {
+		position: absolute;
+		top: 42px;
+		left: 42px;
+		z-index: 10;
+		border: solid 1px $white;
+		border-radius: 100px;
+		color: $white;
+		padding: 8px 20px;
+
+		@include tablet {
+			top: 20px;
+			left: 20px;
+			@include regular-14;
+		}
+
+		& ~ picture {
+			img {
+				filter: brightness(50%);
+			}
+		}
 	}
 }
 

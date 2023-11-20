@@ -7,15 +7,10 @@
 	min-height: 468px;
 	height: 100%;
 	position: relative;
-	width: 378px;
 	overflow: hidden;
 
 	@include tablet {
 		padding: 25px 20px;
-	}
-
-	@include mobile {
-		width: 320px;
 	}
 
 	&::after {
@@ -52,7 +47,7 @@
 		align-self: flex-end;
 	}
 
-	&__bg {
+	&__image {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -60,6 +55,65 @@
 		right: 0;
 		margin: auto;
 		z-index: -1;
+	}
+
+	&_secondary {
+		padding: 0 0 28px 0;
+		background-color: $gray04;
+		height: 678px;
+		grid-template-rows: 288px minmax(0, 58px) minmax(0, 180px) auto;
+		gap: 30px;
+
+		@include tablet {
+			height: unset;
+			padding: 0 0 20px 0;
+			grid-template-rows: 200px minmax(0, 75px) auto auto;
+			gap: 0;
+		}
+
+		&::after {
+			background: none;
+		}
+
+		h3 {
+			color: $black;
+			overflow: hidden;
+
+			@include tablet {
+				margin-top: 30px;
+				margin-bottom: 15px;
+			}
+		}
+
+		p {
+			color: $gray70;
+			overflow: hidden;
+
+			@include tablet {
+				margin-bottom: 40px;
+			}
+		}
+
+		h3,
+		p,
+		.link {
+			margin-left: 28px;
+			margin-right: 28px;
+
+			@include tablet {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+		}
+
+		.service-card__image {
+			position: unset;
+			height: 288px;
+
+			@include tablet {
+				height: 200px;
+			}
+		}
 	}
 }
 

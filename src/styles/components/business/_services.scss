@@ -1,0 +1,22 @@
+.services {
+	padding-bottom: 140px;
+
+	@include tablet {
+		padding-bottom: 80px;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+
+		@include desktop {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+

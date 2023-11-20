@@ -5,6 +5,14 @@
 		b {
 			font-size: inherit;
 		}
+
+		@include tablet {
+			@include medium-30-uppercase;
+		}
+
+		@include mobile {
+			@include medium-20-uppercase;
+		}
 	}
 
 	.project-section {

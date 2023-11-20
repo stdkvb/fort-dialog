@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Форт Диаолог | Услуги'})
+
+<body>
+  @@include('components/business/_header.html')
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="/" class="link">Главная</a>
+          </li>
+          <li>
+            Услуги
+          </li>
+        </ul>
+        <h1>Услуги</h1>
+        <div class="dropdown">
+          <div class="dropdown__button">
+            <span>Все отрасли</span>
+            <b>&#x25BE;</b>
+          </div>
+          <ul class="dropdown__options">
+            <li class="dropdown__option">
+              <a href="#">Здравоохранение</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Образование</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Промышленность</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Транспорт</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Химическое предприятие</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Энергетика</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Государственные организации</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="service-card service-card_secondary">
+          <img class="service-card__image" src="@images/geology.png">
+          <h3>Инженерные изыскания</h3>
+          <p>Компания Форт Диалог предлагает комплексный подход к решению задач любой сложности на любом этапе проекта
+            - от стадии формирования задачи, инженерных изысканий или проектирования до этапа поставок, монтажа и
+            пуско-наладки, сервисного обслуживания.</p>
+          <a class="link link_green-arrow" href="#">подробнее</a>
+        </div>
+        <div class="service-card service-card_secondary">
+          <img class="service-card__image" src="@images/autocad.png">
+          <h3>Проектирование</h3>
+          <p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов любой
+            сложности, что дает заказчику возможность существенно сэкономить время и ресурсы, так как за выполнение всех
+            элементов проекта и их эффективное взаимодействие отвечает одна проектная организация</p>
+          <a class="link link_green-arrow" href="#">подробнее</a>
+        </div>
+        <div class="service-card service-card_secondary">
+          <img class="service-card__image" src="@images/warehouse.png">
+          <h3>Комплексные поставки</h3>
+          <p>Компания Форт Диалог располагает всеми необходимыми ресурсами (квалифицированные специалисты, наличие
+            необходимых допусков и лицензий, сертифицированная система менеджмента качества, партнерство с ведущими
+            производителями электрооборудования и др.) для выполнения договоров поставки</p>
+          <a class="link link_green-arrow" href="#">подробнее</a>
+        </div>
+        <div class="service-card service-card_secondary">
+          <img class="service-card__image" src="@images/electrican.png">
+          <h3>Монтажные и пусконаладочные работы</h3>
+          <p>Компания Форт Диалог предлагает комплексный подход к решению задач любой сложности на любом этапе проекта -
+            от стадии формирования задачи, инженерных изысканий или проектирования до этапа поставок, монтажа и
+            пуско-наладки, а также сервисного обслуживания</p>
+          <a class="link link_green-arrow" href="#">подробнее</a>
+        </div>
+        <div class="service-card service-card_secondary">
+          <img class="service-card__image" src="@images/printer.png">
+          <h3>Сервис</h3>
+          <p>Многолетний опыт обслуживания различных видов техники позволяет инженерам сервисных центров осуществлять
+            высококачественный ремонт практически любого оборудования. Специалисты компании быстро и квалифицированно
+            справляются со сложными задачами по обслуживанию техники</p>
+          <a class="link link_green-arrow" href="#">подробнее</a>
+        </div>
+        <div class="service-card service-card_secondary">
+          <img class="service-card__image" src="@images/3d.png">
+          <h3>Система вибромониторинга насосного оборудования</h3>
+          <p>Данная технология является последним словом в проектировании. Она представляет собой структуру, в которой
+            все разделы зависят друг от друга, а 3d модель неразрывно связанна с информационной базой. При внесении
+            изменений в один раздел, остальные, зависимые от него, изменяются соответственно</p>
+          <a class="link link_green-arrow" href="#">подробнее</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  @@include('components/business/_footer.html')
+
+  @@include('meta/_includeScripts.html')
+</body>
+
+</html>

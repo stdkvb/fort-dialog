@@ -65,6 +65,14 @@
 			margin-left: 20px;
 		}
 
+		.swiper-slide {
+			width: 378px;
+
+			@include mobile {
+				width: 320px;
+			}
+		}
+
 		.swiper-pagination {
 			bottom: 70px;
 
