@@ -1,13 +1,10 @@
-.projects {
+.projects-detail {
 	padding-top: 140px;
 	padding-bottom: 140px;
 
 	@include tablet {
 		padding-top: 80px;
 		padding-bottom: 80px;
-	}
-
-	.container {
 	}
 
 	&__cards {

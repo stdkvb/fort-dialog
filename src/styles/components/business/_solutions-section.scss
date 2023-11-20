@@ -53,6 +53,7 @@
 	}
 
 	&__video {
+		min-height: 360px;
 		@include tablet {
 			order: 2;
 		}

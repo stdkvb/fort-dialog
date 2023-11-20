@@ -68,7 +68,7 @@
 		align-self: flex-end;
 	}
 
-	&__bg {
+	&__image {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -76,6 +76,94 @@
 		right: 0;
 		margin: auto;
 		z-index: -1;
+	}
+
+	&_secondary {
+		padding: 0 0 28px 0;
+		background-color: $gray04;
+		height: 678px;
+		grid-template-rows: 288px minmax(0, 58px) minmax(0, 203px) auto;
+		gap: 30px;
+
+		@include desktop {
+			grid-template-rows: 288px minmax(0, 90px) auto auto;
+		}
+
+		@include tablet {
+			height: unset;
+			padding: 0 0 20px 0;
+			grid-template-rows: 200px minmax(0, 90px) auto auto;
+			gap: 0;
+		}
+
+		&::after {
+			background: none;
+		}
+
+		&:hover {
+			h3,
+			p {
+				color: $black;
+			}
+
+			.link {
+				color: $green50;
+			}
+
+			.link_green-arrow {
+				&:after {
+					content: url(@icons/arrow-green.svg);
+				}
+
+				&:hover {
+					color: $green60;
+
+					&:after {
+						content: url(@icons/arrow-green-hover.svg);
+					}
+				}
+			}
+		}
+
+		h3 {
+			color: $black;
+			overflow: hidden;
+
+			@include tablet {
+				margin-top: 30px;
+				margin-bottom: 15px;
+			}
+		}
+
+		p {
+			color: $gray70;
+			overflow: hidden;
+
+			@include tablet {
+				margin-bottom: 40px;
+			}
+		}
+
+		h3,
+		p,
+		.link {
+			margin-left: 28px;
+			margin-right: 28px;
+
+			@include tablet {
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+		}
+
+		.solution-card__image {
+			position: unset;
+			height: 288px;
+
+			@include tablet {
+				height: 200px;
+			}
+		}
 	}
 }
 
