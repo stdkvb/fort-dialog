@@ -57,6 +57,7 @@
 		color: $black;
 		padding: 20px 24px;
 		height: 55px;
+		width: fit-content;
 
 		@include tablet {
 			height: 32px;
@@ -96,6 +97,8 @@
 
 		&_white {
 			border: solid 1px $white;
+			color: $white;
+			border-radius: 60px;
 
 			.children {
 				color: $white;

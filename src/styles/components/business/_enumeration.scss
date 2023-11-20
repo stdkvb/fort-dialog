@@ -1,0 +1,82 @@
+.enumeration {
+	&__item {
+		padding: 40px 0 60px 0;
+		border-top: solid 1px $gray10;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+
+		@include tablet {
+			display: block;
+			padding: 0;
+			border: none;
+			position: relative;
+
+			&::before {
+				content: '';
+				width: 100%;
+				border-top: solid 1px $gray10;
+				position: absolute;
+				top: -20px;
+			}
+
+			h3 {
+				@include mobile {
+					@include bold-16-uppercase;
+				}
+			}
+		}
+	}
+
+	.accordion__list {
+		@include min_tablet {
+			gap: 40px !important;
+		}
+	}
+
+	.accordion__toggle {
+		align-self: flex-start;
+		@include medium-20;
+		color: $white;
+		margin-bottom: 20px;
+
+		@include tablet {
+			margin-bottom: 0;
+		}
+
+		@include min_tablet {
+			cursor: default !important;
+		}
+
+		&::after {
+			border-bottom: none !important;
+		}
+	}
+
+	.accordion-icon {
+		background-image: url(../files/icons/plus-black.svg) !important;
+	}
+
+	.accordion__content {
+		@include tablet {
+			margin-top: 40px !important;
+		}
+		@include min_tablet {
+			gap: 15px !important;
+			height: unset !important;
+			max-height: unset !important;
+		}
+	}
+	.accordion__item_active {
+		.accordion__content {
+			@include tablet {
+				padding-bottom: 40px !important;
+			}
+		}
+
+		.accordion-icon {
+			background-image: url(../files/icons/minus-black.svg) !important;
+		}
+	}
+}
+

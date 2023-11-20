@@ -32,6 +32,13 @@ takeControlAccordion('.footer__top', '.accordion__list', {
 	accordionItemActiveClass: 'accordion__item_active'
 })
 
+takeControlAccordion('.enumeration', '.accordion__list', {
+	accordionItemSelector: '.accordion__item',
+	accordionItemTogglerSelector: '.accordion__toggle',
+	accordionItemContentSelector: '.accordion__content',
+	accordionItemActiveClass: 'accordion__item_active'
+})
+
 //swipers init
 new Swiper('.partners__first', {
 	slidesPerView: 'auto',
@@ -85,6 +92,15 @@ new Swiper('.banner', {
 })
 
 new Swiper('.task__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
+new Swiper('.service-detail__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: 20,
 	pagination: {
