@@ -1,9 +1,17 @@
 .projects-section {
 	padding-top: 140px;
+	padding-bottom: 140px;
 	position: relative;
 
 	@include tablet {
 		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	&_secondary {
+		.projects-section__swiper {
+			margin-top: 0 !important;
+		}
 	}
 
 	&__swiper {
