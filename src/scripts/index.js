@@ -118,6 +118,15 @@ new Swiper('.solution-detail__swiper', {
 	}
 })
 
+new Swiper('.about-company__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
 // addRatingListener()
 // addModalListener()
 

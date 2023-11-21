@@ -1,0 +1,102 @@
+.quote-section {
+	background-color: $gray80;
+	padding-top: 140px;
+	padding-bottom: 140px;
+
+	@include tablet {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.container {
+		display: grid;
+		grid-template-areas:
+			'img text'
+			'img author';
+		grid-template-columns: max-content 1fr;
+		gap: 30px;
+
+		@include mobile {
+			display: block;
+		}
+	}
+
+	&__quote {
+		width: 91px;
+		height: 69px;
+		grid-area: img;
+
+		@include tablet {
+			width: 61px;
+			height: 47px;
+		}
+
+		@include mobile {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__text {
+		grid-area: text;
+		text-align: right;
+		@include medium-30-uppercase;
+		color: $white;
+		max-width: 1100px;
+		justify-self: flex-end;
+
+		@include tablet {
+			@include medium-16-uppercase;
+		}
+
+		@include mobile {
+			text-align: left;
+		}
+	}
+
+	&__author {
+		grid-area: author;
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		color: $white;
+		justify-self: flex-end;
+		margin-top: 20px;
+
+		@include mobile {
+			flex-direction: column-reverse;
+			gap: 15px;
+			align-items: flex-start;
+			margin-top: 50px;
+		}
+	}
+
+	&__author-name {
+		text-align: right;
+		@include regular-20;
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+
+		@include tablet {
+			@include regular-16;
+		}
+
+		@include mobile {
+			text-align: left;
+		}
+	}
+
+	&__avatar {
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		overflow: hidden;
+
+		@include tablet {
+			width: 70px;
+			height: 70px;
+			border-radius: 70px;
+		}
+	}
+}
+
