@@ -127,6 +127,33 @@ new Swiper('.about-company__swiper', {
 	}
 })
 
+new Swiper('.documents__licenses', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
+new Swiper('.documents__certificates', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
+new Swiper('.documents__diplomas', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
 // addRatingListener()
 // addModalListener()
 

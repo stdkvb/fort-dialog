@@ -20,6 +20,23 @@
 			height: 197px;
 		}
 	}
+
+	&_secondary {
+		.swiper-slide {
+			width: 378px;
+			height: 535px;
+
+			@include tablet {
+				width: 350px;
+				height: 495px;
+			}
+
+			@include mobile {
+				width: 320px;
+				height: 453px;
+			}
+		}
+	}
 }
 
 .swiper-button-prev {
