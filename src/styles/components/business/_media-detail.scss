@@ -1,0 +1,28 @@
+.media-detail {
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 80px;
+
+		@include tablet {
+			flex-direction: column-reverse;
+			gap: 40px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: flex-end;
+
+		@include tablet {
+			gap: 15px;
+		}
+
+		p {
+			max-width: 1040px;
+		}
+	}
+}
+

@@ -154,6 +154,15 @@ new Swiper('.documents__diplomas', {
 	}
 })
 
+new Swiper('.media-detail__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
 // addRatingListener()
 // addModalListener()
 
