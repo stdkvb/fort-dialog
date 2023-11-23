@@ -1,0 +1,110 @@
+.contacts-map {
+	position: relative;
+	margin-bottom: 140px;
+
+	@include tablet {
+		margin-bottom: 100px;
+	}
+
+	#yandex-map {
+		height: 768px;
+
+		@include tablet {
+			height: 455px;
+		}
+	}
+
+	&__card {
+		position: absolute;
+		right: 60px;
+		bottom: 0;
+		width: 100%;
+		max-width: 890px;
+		background-color: $gray04;
+		padding: 60px 60px 40px 60px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@include desktop {
+			width: 50%;
+		}
+
+		@include tablet {
+			width: 100%;
+			max-width: unset;
+			position: unset;
+			padding: 30px 20px 20px 20px;
+		}
+
+		h3 {
+			font-size: 40px !important;
+
+			@include tablet {
+				font-size: 20px !important;
+			}
+		}
+
+		span,
+		a {
+			display: inline;
+			@include regular-18;
+			color: $gray70;
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
+	}
+
+	&__address {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		border-bottom: solid 1px $gray30;
+		padding-bottom: 60px;
+
+		@include tablet {
+			padding-bottom: 40px;
+			gap: 20px;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__mailing-address {
+		.dropdown__button {
+			border: none;
+			padding: 0;
+			width: fit-content;
+			margin-bottom: 20px;
+
+			@include mobile {
+				width: 100%;
+				margin-bottom: 10px;
+
+				span {
+					@include regular-20;
+				}
+			}
+
+			span {
+				@include regular-24;
+			}
+		}
+
+		.dropdown__options {
+			background: unset;
+			position: unset;
+			border: none;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+}
+

@@ -59,6 +59,9 @@
 		height: 55px;
 		width: fit-content;
 
+		@include medium-20-uppercase;
+		line-height: 0;
+
 		@include tablet {
 			height: 32px;
 			padding: 12px;
@@ -67,6 +70,7 @@
 		@include mobile {
 			height: 40px;
 			padding: 16px 24px;
+			@include medium-16-uppercase;
 		}
 
 		&:hover {
@@ -108,6 +112,13 @@
 				}
 			}
 		}
+	}
+
+	&.disabled {
+		background-color: $gray70;
+		color: $white;
+		border-color: $gray70;
+		cursor: default;
 	}
 }
 

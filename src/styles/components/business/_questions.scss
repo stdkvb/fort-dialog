@@ -1,6 +1,6 @@
 .questions {
 	position: relative;
-	height: 767px;
+	min-height: 767px;
 	margin-bottom: 125px;
 
 	&::after {
@@ -14,7 +14,8 @@
 	}
 
 	@include tablet {
-		height: 540px;
+		min-height: 540px;
+		margin-bottom: 0;
 	}
 
 	.container {

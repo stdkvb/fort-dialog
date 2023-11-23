@@ -1,0 +1,41 @@
+.contacts {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		max-width: 290px;
+
+		@include tablet {
+			max-width: unset;
+		}
+
+		span,
+		a {
+			display: inline;
+			@include regular-18;
+			color: $gray70;
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
+	}
+
+	.enumeration {
+		margin-bottom: 140px;
+
+		@include tablet {
+			margin-bottom: 80px;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+
+			&__item {
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
+			}
+		}
+	}
+}
+
