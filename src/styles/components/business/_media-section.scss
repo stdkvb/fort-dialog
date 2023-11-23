@@ -47,6 +47,10 @@
 			.btn {
 				position: unset;
 				margin: 0;
+
+				@include min_mobile {
+					display: none;
+				}
 			}
 		}
 

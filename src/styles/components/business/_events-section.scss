@@ -34,6 +34,19 @@
 		}
 	}
 
+	.pagination {
+		margin-top: 50px;
+
+		.btn {
+			position: unset;
+			margin: 0;
+
+			@include min_mobile {
+				display: none;
+			}
+		}
+	}
+
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -48,6 +61,14 @@
 
 			.event-card:nth-child(n + 4) {
 				display: none;
+			}
+		}
+	}
+
+	&_secondary {
+		.event-card:nth-child(n + 4) {
+			@include tablet_small {
+				display: grid;
 			}
 		}
 	}
