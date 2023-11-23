@@ -1,0 +1,55 @@
+.events-section {
+	padding-top: 0;
+	padding-bottom: 140px;
+	position: relative;
+
+	@include tablet {
+		padding-top: 0;
+		padding-bottom: 80px;
+	}
+
+	h2 {
+		margin-bottom: 80px;
+
+		@include tablet {
+			margin-bottom: 40px;
+		}
+	}
+
+	.btn {
+		margin: 40px auto 0 auto;
+
+		@include min_tablet {
+			margin: 0;
+			position: absolute;
+			right: 175px;
+			top: 0;
+		}
+
+		@include min_mobile {
+			margin: 0;
+			top: 0;
+			right: 55px;
+			position: absolute;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+
+		@include desktop_large {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+
+			.event-card:nth-child(n + 4) {
+				display: none;
+			}
+		}
+	}
+}
+

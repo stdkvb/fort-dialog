@@ -1,0 +1,57 @@
+.event-card {
+	background-color: $gray04;
+	cursor: pointer;
+	display: grid;
+	grid-template-rows: 300px auto 75px;
+	height: 100%;
+
+	@include tablet_small {
+		grid-template-rows: 300px auto 53px;
+	}
+
+	img {
+		max-height: 300px;
+	}
+
+	&__wrapper {
+		padding: 38px 38px 0 38px;
+		display: grid;
+		grid-template-rows: 87px auto;
+		gap: 45px;
+
+		@include tablet {
+			padding: 20px;
+		}
+
+		p {
+			margin-bottom: 62px;
+		}
+
+		@include tablet_small {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			padding: 20px 20px 40px 20px;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__date {
+		color: $gray30;
+		border-top: solid 1px $gray30;
+		padding: 16px 0 38px 0;
+		margin: 0 38px;
+		align-self: flex-end;
+		@include regular-18;
+
+		@include tablet_small {
+			padding: 15px 0 20px 0;
+			margin: 0 20px;
+			@include regular-14;
+		}
+	}
+}
+
