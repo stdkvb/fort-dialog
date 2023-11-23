@@ -1,24 +1,35 @@
-
 .search-bar {
-	margin-top: 5em;
+	margin-top: 30px;
 	width: 100%;
-	max-width: 110em;
-	padding-right: 2em;
-	border: solid 3px $gray20;
+	padding-right: 30px;
+	border: solid 3px $gray10;
 	display: flex;
 	align-items: center;
 	background: transparent;
 
+	@include tablet {
+		margin-top: 0;
+		padding-right: 15px;
+	}
+
 	input {
 		width: 100%;
-		height: 4.5em;
-		padding: 0 60px 0 40px;
+		height: 80px;
+		padding: 0 60px 0 30px;
 		border: none;
 		color: $gray70;
 		background: transparent;
 		@include regular-18;
+
 		&:focus-visible {
 			outline: none;
+		}
+
+		@include tablet {
+			height: 50px;
+			padding-left: 15px;
+			padding-right: 50px;
+			@include regular-14;
 		}
 	}
 
@@ -34,7 +45,7 @@
 	}
 
 	&__reset {
-		border:1px solid transparent;
+		border: 1px solid transparent;
 		background-color: transparent;
 		display: inline-block;
 		vertical-align: middle;
@@ -43,12 +54,12 @@
 		position: relative;
 
 		&:after {
-			content: url(@icons/search-reset.svg);
+			content: url(@icons/close.svg);
 			display: block;
 			width: 28px;
 			height: 28px;
 			position: absolute;
-			z-index:1;
+			z-index: 1;
 			bottom: -13px;
 			right: 20px;
 			border-radius: 50%;
@@ -57,6 +68,10 @@
 			font-weight: normal;
 			font-size: 28px;
 			cursor: pointer;
+
+			@include tablet {
+				right: 6px;
+			}
 		}
 	}
 
@@ -64,3 +79,4 @@
 		display: none;
 	}
 }
+

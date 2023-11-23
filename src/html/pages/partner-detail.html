@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Форт Диаолог | Партнеры'})
+
+<body>
+  @@include('components/business/_header.html')
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="/" class="link">Главная</a>
+          </li>
+          <li>
+            Партнеры
+          </li>
+        </ul>
+        <h1>Интеллектуальная транспортная система «Курсор»</h1>
+        <form>
+          <input type="text">
+          <button type="submit"></button>
+        </form>
+      </div>
+    </section>
+
+
+    <section class="questions">
+      <img src="@images/questions-bg.png"></img>
+      <div class="container">
+        <h2>Свяжитесь<br>
+          с экспертом</h2>
+        <p>Получите ответы на вопросы о продуктах, продажах, поддержке и многом другом.</p>
+        <p>Вы можете направить свой вопрос на почту <a href="mail:pochta@mail.ru"
+            class="link link_green">pochta@mail.ru</a> или воспользоваться формой
+          на сайте</p>
+      </div>
+      <form class="questions__form form">
+        <div class="form__row">
+          @@include('components/ui/_input-text.html', {placeholder: 'Ваше имя*', errorMessage: 'Введите ваше имя', name:
+          'name', required: true})
+          @@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
+          true})
+        </div>
+        @@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение*',
+        errorMessage: 'Оставьте свое сообщение', name: 'message', required: true})
+        <div class="form__row">
+          <div class="form__privacy">
+            Отправляя форму, вы даете свое согласие
+            на <a href="#" class="link link_green">обработку своих персональных данных</a>
+          </div>
+          @@include('components/ui/_button.html',
+          {type: 'submit', class: 'btn_green',children:'отправить'})
+        </div>
+      </form>
+    </section>
+  </main>
+  @@include('components/business/_footer.html')
+
+  @@include('meta/_includeScripts.html')
+</body>
+
+</html>
