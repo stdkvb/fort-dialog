@@ -1,0 +1,76 @@
+.partner-detail {
+	padding-bottom: 140px;
+
+	@include tablet {
+		padding-bottom: 80px;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: minmax(320px, 450px) 1fr;
+		gap: 100px;
+		grid-template-areas:
+			'photo title'
+			'photo content';
+
+		@include desktop {
+			gap: 50px;
+			grid-template-columns: 0.5fr 1fr;
+		}
+
+		@include tablet {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				'title'
+				'photo'
+				'content';
+			gap: 0;
+		}
+	}
+
+	&__photo {
+		grid-area: photo;
+		min-width: 320px;
+		max-width: 450px;
+
+		@include tablet {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title {
+		grid-area: title;
+
+		@include tablet {
+			margin-bottom: 20px;
+			@include medium-28-uppercase;
+		}
+	}
+
+	&__content {
+		grid-area: content;
+		max-width: 1040px;
+
+		p {
+			margin-bottom: 30px;
+
+			@include tablet {
+				margin-bottom: 20px;
+			}
+		}
+
+		img {
+			margin-top: 50px;
+
+			@include tablet {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	img {
+		height: unset;
+		object-fit: contain;
+	}
+}
+
