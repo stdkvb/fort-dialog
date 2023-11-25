@@ -16,13 +16,15 @@ import addFileNameListeners from './listeners/addFileNameListener'
 import addRatingListener from './listeners/addRatingListener'
 import addFormListeners from './listeners/addFormListeners'
 import addModalListener from './listeners/addModalListener'
+import takeControlHistoryScroll from './ElementsControllers/historyScrollController'
 
 addFormListeners()
 addFileNameListeners()
-addPhoneMaskListeners()
+// addPhoneMaskListeners()
 takeControlDropdown()
 takeControlMenu()
 takeControlTabs()
+takeControlHistoryScroll()
 
 // accordions init
 takeControlAccordion('.footer__top', '.accordion__list', {

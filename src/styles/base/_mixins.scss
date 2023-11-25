@@ -191,6 +191,16 @@
 	text-transform: uppercase;
 }
 
+@mixin medium-56 {
+	font-size: 56px;
+	font-weight: 500;
+}
+
+@mixin medium-48 {
+	font-size: 48px;
+	font-weight: 500;
+}
+
 @mixin medium-48 {
 	font-size: 48px;
 	font-weight: 500;

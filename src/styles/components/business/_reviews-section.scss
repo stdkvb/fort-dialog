@@ -1,0 +1,11 @@
+.reviews-section {
+	h2 {
+		text-align: right;
+		margin-bottom: 80px;
+
+		@include tablet {
+			margin-bottom: 40px;
+		}
+	}
+}
+

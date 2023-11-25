@@ -1,6 +1,27 @@
 .numbers {
-	padding: 140px 0 120px 0;
-	.container {
+	padding-top: 140px;
+	padding-bottom: 120px;
+
+	@include tablet {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h2 {
+		margin-bottom: 80px;
+		text-align: right;
+
+		@include tablet {
+			margin-bottom: 40px;
+			text-align: left;
+		}
+
+		span {
+			color: $green50;
+		}
+	}
+
+	&__wrapper {
 		display: grid;
 		grid-template-columns: minmax(360px, 511px) minmax(876px, 900px);
 		row-gap: 60px;
@@ -25,10 +46,6 @@
 				'b';
 			gap: 30px;
 		}
-	}
-
-	@include tablet {
-		padding: 80px 0;
 	}
 
 	&__item {

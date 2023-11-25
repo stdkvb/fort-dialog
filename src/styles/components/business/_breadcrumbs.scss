@@ -10,6 +10,7 @@
 	li {
 		position: relative;
 		color: $gray20;
+		white-space: nowrap;
 
 		@include mobile {
 			@include regular-14;
