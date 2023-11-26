@@ -22,6 +22,16 @@ const takeControlForms = () => {
 		})
 	}
 
+	const popupForm = document.querySelector('.popup__form')
+	if (popupForm !== null) {
+		const popupValidator = new Pristine(popupForm)
+		popupForm.addEventListener('submit', function (e) {
+			if (popupValidator.validate() != true) {
+				e.preventDefault()
+			}
+		})
+	}
+
 	// password toggle
 	// const passwordToggle = document.querySelectorAll('.toggle-show-password-btn')
 	// passwordToggle.forEach((elem) => {

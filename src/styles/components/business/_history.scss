@@ -30,6 +30,14 @@
 		.dropdown__options {
 			opacity: 1;
 		}
+
+		.dropdown__option {
+			padding: 0;
+
+			&:hover {
+				background-color: unset;
+			}
+		}
 	}
 
 	.container {

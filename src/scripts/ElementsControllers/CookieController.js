@@ -38,8 +38,9 @@ class CookieController {
 	}
 }
 
-const takeControlCookie = (cookieContainerSelector, cookieAcceptButtonSelector) => {
-	new CookieController(cookieContainerSelector, cookieAcceptButtonSelector)
+const takeControlCookie = function () {
+	new CookieController('.cookie', '.cookie-accept')
 }
 
 export default takeControlCookie
+

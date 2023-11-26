@@ -77,6 +77,14 @@
 		gap: 12px;
 		margin-bottom: 200px;
 
+		a {
+			@include transition;
+		}
+
+		a:hover {
+			opacity: 0.7;
+		}
+
 		@include tablet {
 			margin-bottom: 60px;
 
