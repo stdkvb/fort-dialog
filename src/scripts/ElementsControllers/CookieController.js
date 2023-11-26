@@ -13,14 +13,12 @@ class CookieController {
 			this._showCookieContainer()
 		}
 
-		cookieAcceptButtonElements.forEach(cookieAcceptButtonElement => {
-
-			cookieAcceptButtonElement.addEventListener('click', event => {
+		cookieAcceptButtonElements.forEach((cookieAcceptButtonElement) => {
+			cookieAcceptButtonElement.addEventListener('click', (event) => {
 				this._setCookieIsAccepted()
 				this._hideCookieContainer()
-			});
-		 
-		 });
+			})
+		})
 	}
 
 	_checkCookieIsAccepted = () => {
@@ -32,11 +30,11 @@ class CookieController {
 	}
 
 	_hideCookieContainer() {
-		this._cookieContainer.classList.remove('_showing')
+		this._cookieContainer.classList.remove('active')
 	}
 
 	_showCookieContainer() {
-		this._cookieContainer.classList.add('_showing')
+		this._cookieContainer.classList.add('active')
 	}
 }
 

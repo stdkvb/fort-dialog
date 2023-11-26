@@ -143,25 +143,26 @@
 			}
 		}
 
-		span {
-			display: flex;
-			gap: 10px;
+		.dropdown__button {
+			border: none;
+			padding: 0;
 		}
 
-		ul {
-			display: none;
-			position: absolute;
-			bottom: -25px;
-			left: 39px;
-		}
+		.dropdown__options {
+			border: 0;
+			width: fit-content;
 
-		&:hover {
-			b {
-				transform: rotate(180deg) translateY(-3px);
+			@include tablet {
+				position: unset;
 			}
+		}
 
-			ul {
-				display: block;
+		.dropdown__option {
+			border: none;
+			padding: 0;
+
+			&:hover {
+				background-color: unset;
 			}
 		}
 	}

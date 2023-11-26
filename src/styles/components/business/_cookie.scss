@@ -1,0 +1,57 @@
+.cookie {
+	position: fixed;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 0);
+	width: 100%;
+	background-color: $gray90;
+	z-index: 1000;
+	padding: 30px 0;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		padding-right: 60px;
+
+		@include tablet {
+			flex-direction: column;
+			gap: 30px;
+			align-items: flex-start;
+			padding-right: 0;
+		}
+	}
+
+	&__description {
+		max-width: 884px;
+		@include regular-18;
+		color: $white;
+
+		@include tablet_small {
+			@include regular-14;
+		}
+
+		.link,
+		.link:visited,
+		.link:focus {
+			display: inline;
+
+			@include tablet_small {
+				@include regular-14;
+			}
+		}
+	}
+
+	.btn {
+		@include mobile {
+			width: 100%;
+		}
+	}
+}
+

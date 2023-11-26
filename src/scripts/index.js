@@ -25,6 +25,7 @@ takeControlDropdown()
 takeControlMenu()
 takeControlTabs()
 takeControlHistoryScroll()
+CookieController('.cookie', '.cookie-accept')
 
 // accordions init
 takeControlAccordion('.footer__top', '.accordion__list', {
@@ -171,7 +172,6 @@ new Swiper('.media-detail__swiper', {
 // takeControlCustomSelect('custom-select')
 // takeControlNumberInput()
 // takeControlFavorite()
-// CookieController('.cookie-container', '.cookie-accept')
 // takeControlModal()
 
 // takeControlTimer()
