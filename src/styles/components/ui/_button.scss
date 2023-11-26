@@ -114,6 +114,10 @@
 		}
 	}
 
+	&_wide {
+		width: 100%;
+	}
+
 	&.disabled {
 		background-color: $gray70;
 		color: $white;

@@ -37,7 +37,7 @@
       </div>
     </nav>
     <a class="link" href="tel:8 (800) 000-00-00">8 (800) 000-00-00</a>
-    <span class="link">Написать нам</span>
+    <span class="link popup-link" href="#write-us">Написать нам</span>
   </div>
   <div class="dropdown header__lang">
     <div class="dropdown__button">
@@ -123,3 +123,30 @@
       компаний, работающих в сфере системной интеграции.</p>
   </div>
 </nav>
+<div id="write-us" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <span class="popup__close close-popup"></span>
+      <h2>Написать нам</h2>
+      <form class="form">
+        <div class="form__row">
+          @@include('components/ui/_input-text.html', {placeholder: 'Ваше имя*', errorMessage: 'Введите ваше имя',
+          name:
+          'name', required: true})
+          @@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
+          true})
+        </div>
+        @@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение*',
+        errorMessage: 'Оставьте свое сообщение', name: 'message', required: true})
+        <div class="form__row">
+          <div class="form__privacy">
+            Отправляя форму, вы даете свое согласие
+            на <a href="#" class="link link_green">обработку своих персональных данных</a>
+          </div>
+          @@include('components/ui/_button.html',
+          {type: 'submit', class: 'btn_green',children:'отправить'})
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

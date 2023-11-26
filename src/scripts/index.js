@@ -16,7 +16,7 @@ import addFileNameListeners from './listeners/addFileNameListener'
 import addRatingListener from './listeners/addRatingListener'
 import addFormListeners from './listeners/addFormListeners'
 import addModalListener from './listeners/addModalListener'
-import takeControlHistoryScroll from './ElementsControllers/historyScrollController'
+import takeControlHistoryScroll from './ElementsControllers/HistoryScrollController'
 
 addFormListeners()
 addFileNameListeners()
@@ -25,6 +25,7 @@ takeControlDropdown()
 takeControlMenu()
 takeControlTabs()
 takeControlHistoryScroll()
+takeControlModal()
 CookieController('.cookie', '.cookie-accept')
 
 // accordions init
@@ -172,7 +173,6 @@ new Swiper('.media-detail__swiper', {
 // takeControlCustomSelect('custom-select')
 // takeControlNumberInput()
 // takeControlFavorite()
-// takeControlModal()
 
 // takeControlTimer()
 // takeControlComments()

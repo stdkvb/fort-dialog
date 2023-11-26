@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Форт Диаолог'})
+
+<body class="lock">
+	@@include('components/business/_header.html')
+	<main class="index-page">
+		<section class="title">
+			<div class="container">
+				<h1>
+					<span>ваш технологический партнер</span>
+					<span>
+						для внедрения <b>масштабных</b></span>
+					<div>
+						<span>it-решений</span>
+						@@include('components/ui/_button-link.html', {href:'#', class: 'btn_secondary',children:'подробнее'})
+					</div>
+				</h1>
+			</div>
+		</section>
+		<section class="map">
+		</section>
+		<section class="numbers">
+			<div class="container">
+				<div class="numbers__wrapper">
+					<div class="numbers__item">
+						<div class="numbers__number">235 +</div>
+						<div class="numbers__description">сертифицированных инженеров и разработчиков</div>
+					</div>
+					<div class="numbers__item">
+						<div class="numbers__number">1178+</div>
+						<div class="numbers__description numbers__description_narrow">проектов по модернизации ИТ-инфраструктуры
+						</div>
+					</div>
+					<div class="numbers__item numbers__item_large">
+						<div class="numbers__number numbers__number_large">35 лет</div>
+						<div class="numbers__description numbers__description_large">35 лет мы развиваем технологии в России и
+							создаем
+							решения, которыми
+							пользуются миллионы. Одна из крупнейших российских региональных компаний, работающих в сфере системной
+							интеграции
+							<a href="#" class="link link_green-arrow">Подробнее о компании</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="partners-section">
+			<div class="partners__first swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="@icons/rosneft.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/gazprom.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/gazpromneft.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/novatec.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/transneft.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/sibur.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/tatneft.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/alabuga.svg">
+					</div>
+				</div>
+			</div>
+			<div class="partners__second swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="@icons/kod.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/pantum.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/atomic.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/stil.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/msi.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/securityvision.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/usergate.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/chint.svg">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="solutions-section">
+			<div class="container">
+				<h2>предлагаем решения, <span>которые выведут компанию</span> <b>на новый уровень</b>
+					<span>эффективности
+						@@include('components/ui/_button-link.html',
+						{href:'#', class: 'btn_secondary',children:'все решения'})</span>
+				</h2>
+			</div>
+			<div class="solutions-section__content">
+				<div class="solutions-section__video">
+					<video autoplay muted loop src="@videos/sample-5s.mp4"></video>
+				</div>
+				<div class="solutions-section__list">
+					<div class="solution-card">
+						<img class="solution-card__image" src="@images/solution-bg.png">
+						<h3>Интеллектуальная транспортная система «Курсор»</h3>
+						<p>Создать системы безопасности для котельных</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="solution-card">
+						<img class="solution-card__image" src="@images/solution-bg.png">
+						<h3>Системы информационной безопасности</h3>
+						<p>Компания Форт Диалог предлагает комплексные решения по защите автоматизированных систем предприятия.
+							Каждое из таких решений представляет собой набор взаимодополняющих друг друга продуктов, обеспечивающих
+							оптимальную защиту информационных ресурсов.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="solution-card">
+						<img class="solution-card__image" src="@images/solution-bg.png">
+						<h3>АСУ ТП</h3>
+						<p>Информационное моделирование здания или информационная модель здания</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="solution-card">
+						<img class="solution-card__image" src="@images/solution-bg.png">
+						<h3>Центры обработки данных</h3>
+						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
+							любой сложности</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="services-section">
+			<div class="container">
+				<h2>Обладаем полным набором <b>компетенций и ресурсов</b>
+					<span>в области внедрения ИТ-систем
+						@@include('components/ui/_button-link.html',
+						{href:'#', class: 'btn_secondary btn_secondary_white',children:'все услуги'})</span>
+					и бизнес-консалтинга
+				</h2>
+			</div>
+			<div class="services-section__swiper swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide service-card">
+						<img class="service-card__image" src="@images/service-bg.png">
+						<h3>Монтажные и пусконаладочные работы</h3>
+						<p>Компания Форт Диалог предлагает комплексный подход к решению задач любой сложности на любом этапе проекта
+							- от стадии формирования задачи, инженерных изысканий или проектирования до этапа поставок, монтажа и
+							пуско-наладки, сервисного обслуживания.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__image" src="@images/service-bg.png">
+						<h3>Bim</h3>
+						<p>Информационное моделирование здания или информационная модель здания.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__image" src="@images/service-bg.png">
+						<h3>отдел проектной атрибуции (ОПД)</h3>
+						<p>Отдел проектной дистрибуции (ОПД)  АО «Форт Диалог» выступает в качестве «Поставщика» по следующим видам
+							продукции:
+							1) Орг. и вычислительная техника;
+							2) Оборудование средств связи;
+							3) Вычислительная техника и коммутационное оборудование;
+							4) Расходные материалы и...</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__image" src="@images/service-bg.png">
+						<h3>Инженерные изыскания</h3>
+						<p>Данный вид исследований позволяет получить полный спектр данных о районе предполагаемой застройки, на
+							основе которых, можно подготовить качественную проектную документацию в короткие сроки.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide service-card">
+						<img class="service-card__image" src="@images/service-bg.png">
+						<h3>проектирование</h3>
+						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
+							любой сложности, что дает заказчику возможность существенно сэкономить время и ресурсы.</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+				</div>
+				<div class="swiper-pagination swiper-pagination_white "></div>
+				@@include('components/ui/_button-link.html',
+				{href:'#', class: 'btn_secondary btn_secondary_white',children:'все услуги'})
+			</div>
+		</section>
+		<section class="projects-section">
+			<div class="container">
+				<h2>Проекты</h2>
+			</div>
+			<div class="projects-section__swiper swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide project-card">
+						<div class="project-card__image">
+							<img src="@images/project-1.png">
+						</div>
+						<h3>Полное технологическое оснащение школы нового поколения</h3>
+						<p>Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network (LoRaWAN) на
+							предприятиях</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide project-card">
+						<div class="project-card__image">
+							<img src="@images/project-2.png">
+						</div>
+						<h3>Полное технологическое оснащение школы нового поколения</h3>
+						<p>Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network (LoRaWAN) на
+							предприятиях Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network
+							(LoRaWAN) на
+							предприятиях</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+					<div class="swiper-slide project-card">
+						<div class="project-card__image">
+							<img src="@images/project-1.png">
+						</div>
+						<h3>Полное технологическое</h3>
+						<p>Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network (LoRaWAN) на
+							предприятиях Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network
+							(LoRaWAN) на
+							предприятиях Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network
+							(LoRaWAN) на
+							предприятиях</p>
+						<a class="link link_green-arrow" href="#">подробнее</a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			@@include('components/ui/_button-link.html',
+			{href:'#', class: 'btn_secondary',children:'все проекты'})
+		</section>
+		<section class="career-section">
+			<video autoplay muted loop src="@videos/career-bg.mp4"></video>
+			<div class="container">
+				<h2>ваша успешная карьера в fort dialog </h2>
+				<p>Мы определяем стандарты и вектор развития индустрии высоких технологий, изменяя мир к лучшему, формируя
+					команды ярких единомышленников по всей России.</p>
+				<div class="career-section__vacancys">
+					<div class="career-section__vacancy">инженер-наладчик</div>
+					<div class="career-section__vacancy">Менеджер</div>
+					<div class="career-section__vacancy">Бухгалтер</div>
+					<div class="career-section__vacancy">Монтажник</div>
+					<div class="career-section__vacancy">Электрик</div>
+					<div class="career-section__vacancy">программист</div>
+					<div class="career-section__vacancy">и еще 12+ вакансий</div>
+				</div>
+			</div>
+			<form class="career-section__form form form_black">
+				<div class="form__row">
+					@@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
+					'name', required: true})
+					@@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
+					true})
+				</div>
+				@@include('components/ui/_input-text.html', {placeholder: 'На какую вакансию хотели бы устроиться?*',
+				errorMessage: 'Укажите вакансию', name: 'position', required: true})
+				@@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
+				true})
+				<div class="form__row">
+					<div class="form__privacy">
+						Отправляя форму, вы даете свое согласие
+						на <a href="#" class="link link_green">обработку своих персональных данных</a>
+					</div>
+					@@include('components/ui/_button.html',
+					{type: 'submit', class: '',children:'отправить'})
+				</div>
+			</form>
+		</section>
+		<section class="media-section">
+			<div class="container">
+				<h2>медиацентр</h2>
+				<ul class="tabs">
+					<li class="media-section__tab link tab active">
+						<a href="#tab-1">Все</a>
+					</li>
+					<li class="media-section__tab link tab">
+						<a href="#tab-2"> Новости компании</a>
+					</li>
+					<li class="media-section__tab link tab">
+						<a href="#tab-3"> СМИ</a>
+					</li>
+					<li class="media-section__tab link tab">
+						<a href="#tab-4"> Мероприятия</a>
+					</li>
+				</ul>
+				<div class="media-component tab-content active" id="tab-1">
+					<img src="@images/photographer.png">
+					<div class="media-component__list">
+						<div class="news-card">
+							<div class="news-card__date">24 августа</div>
+							<h3>В «Форт Диалоге» прошла первая профориентационная экскурсия</h3>
+							<p>Центральный офис компании «Форт Диалог» в городе Уфе посетили ученики 10-х классов МБОУ СОШ 1 села
+								Кушнаренково.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+						<div class="news-card">
+							<div class="news-card__date">25 августа</div>
+							<h3>К 1 сентября компания «Форт Диалог» оснастила новую школу современным оборудованием</h3>
+							<p>Центральный офис компании «Форт Диалог» в городе Уфе посетили ученики 10-х классов МБОУ СОШ 1 села
+								Кушнаренково. Системный интегратор «Форт Диалог» внес свой вклад в подготовку образовательного
+								учреждения к новому учебному году, привлекая к оснащению лучшие ИТ-продукты и решения.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+						<div class="news-card">
+							<div class="news-card__date">1 сентября</div>
+							<h3>Компания «Форт Диалог» 14-й раз стала победителем рейтинга «25 лучших региональных ИТ-компаний»</h3>
+							<p>Системный интегратор «Форт Диалог» внес свой вклад в подготовку образовательного учреждения к новому
+								учебному году, привлекая к оснащению лучшие ИТ-продукты и решения.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="media-component tab-content" id="tab-2">
+					<img src="@images/building.png">
+					<div class="media-component__list">
+						<div class="news-card">
+							<div class="news-card__date">24 августа</div>
+							<h3>В «Форт Диалоге» прошла первая профориентационная экскурсия</h3>
+							<p>Центральный офис компании «Форт Диалог» в городе Уфе посетили ученики 10-х классов МБОУ СОШ 1 села
+								Кушнаренково. 10-х классов МБОУ СОШ 1 села
+								Кушнаренково. Системный интегратор «Форт Диалог» внес свой вклад в подготовку образовательного
+								учреждения к новому учебному году, привлекая к оснащению лучшие ИТ-продукты и решения.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+						<div class="news-card">
+							<div class="news-card__date">25 августа</div>
+							<h3>К 1 сентября компания «Форт Диалог» оснастила новую школу современным оборудованием</h3>
+							<p>Центральный офис компании «Форт Диалог» в городе Уфе посетили ученики </p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+						<div class="news-card">
+							<div class="news-card__date">1 сентября</div>
+							<h3>Компания «Форт Диалог» 14-й раз стала победителем рейтинга «25 лучших региональных ИТ-компаний»</h3>
+							<p>Системный интегратор «Форт Диалог» внес свой вклад в подготовку образовательного учреждения к новому
+								учебному году, привлекая к оснащению лучшие ИТ-продукты и решения.</p>
+							<a class="link link_green-arrow" href="#">подробнее</a>
+						</div>
+					</div>
+				</div>
+				@@include('components/ui/_button-link.html',
+				{href:'#', class: 'btn_secondary',children:'все новости'})
+			</div>
+		</section>
+		<section class="questions">
+			<img src="@images/questions-bg.png"></img>
+			<div class="container">
+				<h2>Есть вопросы?</h2>
+				<p>Получите ответы на вопросы о продуктах, продажах, поддержке и многом другом.</p>
+				<p>Вы можете направить свой вопрос на почту <a href="mail:pochta@mail.ru"
+						class="link link_green">pochta@mail.ru</a> или воспользоваться формой
+					на сайте</p>
+			</div>
+			<form class="questions__form form">
+				<div class="form__row">
+					@@include('components/ui/_input-text.html', {placeholder: 'Ваше имя*', errorMessage: 'Введите ваше имя', name:
+					'name', required: true})
+					@@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
+					true})
+				</div>
+				@@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение*',
+				errorMessage: 'Оставьте свое сообщение', name: 'message', required: true})
+				<div class="form__row">
+					<div class="form__privacy">
+						Отправляя форму, вы даете свое согласие
+						на <a href="#" class="link link_green">обработку своих персональных данных</a>
+					</div>
+					@@include('components/ui/_button.html',
+					{type: 'submit', class: 'btn_green',children:'отправить'})
+				</div>
+			</form>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+	@@include('components/business/_success-popup.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
