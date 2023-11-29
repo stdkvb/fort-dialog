@@ -17,12 +17,7 @@
 	&.active {
 		a {
 			cursor: default;
-			@include medium-24;
 			color: $green50;
-
-			@include mobile {
-				@include medium-20;
-			}
 		}
 	}
 }

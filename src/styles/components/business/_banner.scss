@@ -57,6 +57,7 @@
 
 		@include mobile {
 			@include regular-16;
+			max-height: 80px;
 		}
 	}
 

@@ -29,8 +29,13 @@
 		}
 	}
 
+	.dropdown__button b {
+		font-size: 30px;
+		line-height: 80%;
+	}
+
 	&_secondary {
-		background-image: url(@images/title-bg.png);
+		background-image: url(@images/title-bg.webp);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -41,6 +46,16 @@
 
 		@include tablet {
 			padding-bottom: 27px;
+		}
+	}
+
+	&_align-right {
+		h1 {
+			text-align: right;
+
+			@include tablet {
+				text-align: left;
+			}
 		}
 	}
 

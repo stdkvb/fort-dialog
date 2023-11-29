@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang='ru'>
-@@include('meta/_head.html', {title: 'Форт Диаолог | 404'})
+@@include('meta/_head.html', {title: 'Форт Диалог | 404'})
 
 <body>
 	@@include('components/business/_header.html')
@@ -12,6 +12,13 @@
 				<p>Страница, на которую вы пытаетесь попасть, не существует или была удалена</p>
 				@@include('components/ui/_button-link.html', {href:'/', class: 'btn_secondary',children:'Вернуться на главную'})
 			</div>
+			<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+				type="module"></script>
+
+			<dotlottie-player src="https://lottie.host/98587cd0-2220-4677-8b39-6425b42866c9/EDFQxzLtlF.json"
+				background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+			<dotlottie-player src="https://lottie.host/0f7405d8-755a-4a45-83d4-e2751cf02de8/DrCcR7ZTxj.json"
+				background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
 		</section>
 	</main>
 	@@include('components/business/_footer.html')

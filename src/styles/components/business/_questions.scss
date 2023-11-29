@@ -43,6 +43,12 @@
 		right: 0;
 		margin: auto;
 		z-index: -1;
+		filter: brightness(50%);
+
+		@include tablet {
+			margin: unset;
+			max-height: 500px;
+		}
 	}
 
 	h2 {

@@ -25,7 +25,8 @@
 	&_black {
 		background-color: $gray90;
 
-		input {
+		input,
+		textarea {
 			color: $white;
 			&::placeholder {
 				color: $white;
@@ -50,7 +51,6 @@
 		display: flex;
 		gap: 20px;
 		justify-content: space-between;
-		align-items: center;
 
 		@include tablet_small {
 			flex-direction: column;
@@ -66,10 +66,12 @@
 		justify-content: center;
 		display: inline;
 		max-width: 400px;
+		align-self: center;
 
 		@include mobile {
 			@include regular-14;
 			max-width: unset;
+			margin-bottom: 10px;
 		}
 
 		.link {

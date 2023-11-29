@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang='ru'>
-@@include('meta/_head.html', {title: 'Форт Диаолог | Карьера'})
+@@include('meta/_head.html', {title: 'Форт Диалог | Карьера'})
 
 <body>
   @@include('components/business/_header.html')
@@ -143,7 +143,7 @@
         </div>
       </div>
     </section>
-    <section class="career-section career-section_secondary" id="career-section">
+    <section class="career-section career-section_secondary career-section_high" id="career-section">
       <img src="@images/high-five.png" alt="photo">
       <div class="container">
         <h2>Корпоративная жизнь<br>в fort dialog </h2>
@@ -161,10 +161,12 @@
         errorMessage: 'Укажите вакансию', name: 'position', required: true})
         @@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
         true})
+        @@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение',
+        errorMessage: 'Сопроводительное письмо', name: 'message', required: false})
         <div class="form__row">
           <div class="form__privacy">
             Отправляя форму, вы даете свое согласие
-            на <a href="#" class="link link_green">обработку своих персональных данных</a>
+            на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
           </div>
           @@include('components/ui/_button.html',
           {type: 'submit', class: '',children:'отправить'})

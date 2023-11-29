@@ -45,6 +45,8 @@
 
 	&__item {
 		display: flex;
+		width: 280px;
+
 		&:hover {
 			.menu__inner {
 				display: flex;
@@ -55,9 +57,9 @@
 	&__inner {
 		display: none;
 		flex-direction: column;
-		gap: 15px;
 		flex-wrap: wrap;
 		max-height: 325px;
+		max-width: 370px;
 		position: absolute;
 		top: 100px;
 		left: 445px;
@@ -68,6 +70,7 @@
 
 		.link {
 			max-width: 370px;
+			padding-bottom: 15px;
 		}
 	}
 

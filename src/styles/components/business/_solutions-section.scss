@@ -48,7 +48,6 @@
 		@include tablet {
 			margin-top: 40px;
 			grid-template-columns: 1fr;
-			grid-auto-flow: column-reverse;
 		}
 	}
 

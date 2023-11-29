@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang='ru'>
-@@include('meta/_head.html', {title: 'Форт Диаолог | Услуги'})
+@@include('meta/_head.html', {title: 'Форт Диалог | Услуги'})
 
 <body>
   @@include('components/business/_header.html')
@@ -22,6 +22,9 @@
             <b>&#x25BE;</b>
           </div>
           <ul class="dropdown__options">
+            <li class="dropdown__option">
+              <a href="#">Все отрасли</a>
+            </li>
             <li class="dropdown__option">
               <a href="#">Здравоохранение</a>
             </li>
@@ -50,7 +53,9 @@
     <section class="services">
       <div class="container">
         <div class="service-card service-card_secondary">
-          <img class="service-card__image" src="@images/geology.png">
+          <div class="service-card__image">
+            <img src="@images/geology.png" alt="photo">
+          </div>
           <h3>Инженерные изыскания</h3>
           <p>Компания Форт Диалог предлагает комплексный подход к решению задач любой сложности на любом этапе проекта
             - от стадии формирования задачи, инженерных изысканий или проектирования до этапа поставок, монтажа и
@@ -58,7 +63,9 @@
           <a class="link link_green-arrow" href="#">подробнее</a>
         </div>
         <div class="service-card service-card_secondary">
-          <img class="service-card__image" src="@images/autocad.png">
+          <div class="service-card__image">
+            <img src="@images/autocad.png" alt="photo">
+          </div>
           <h3>Проектирование</h3>
           <p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов любой
             сложности, что дает заказчику возможность существенно сэкономить время и ресурсы, так как за выполнение всех
@@ -66,7 +73,9 @@
           <a class="link link_green-arrow" href="#">подробнее</a>
         </div>
         <div class="service-card service-card_secondary">
-          <img class="service-card__image" src="@images/warehouse.png">
+          <div class="service-card__image">
+            <img src="@images/warehouse.png" alt="photo">
+          </div>
           <h3>Комплексные поставки</h3>
           <p>Компания Форт Диалог располагает всеми необходимыми ресурсами (квалифицированные специалисты, наличие
             необходимых допусков и лицензий, сертифицированная система менеджмента качества, партнерство с ведущими
@@ -74,7 +83,9 @@
           <a class="link link_green-arrow" href="#">подробнее</a>
         </div>
         <div class="service-card service-card_secondary">
-          <img class="service-card__image" src="@images/electrican.png">
+          <div class="service-card__image">
+            <img src="@images/electrican.png" alt="photo">
+          </div>
           <h3>Монтажные и пусконаладочные работы</h3>
           <p>Компания Форт Диалог предлагает комплексный подход к решению задач любой сложности на любом этапе проекта -
             от стадии формирования задачи, инженерных изысканий или проектирования до этапа поставок, монтажа и
@@ -82,7 +93,9 @@
           <a class="link link_green-arrow" href="#">подробнее</a>
         </div>
         <div class="service-card service-card_secondary">
-          <img class="service-card__image" src="@images/printer.png">
+          <div class="service-card__image">
+            <img src="@images/printer.png" alt="photo">
+          </div>
           <h3>Сервис</h3>
           <p>Многолетний опыт обслуживания различных видов техники позволяет инженерам сервисных центров осуществлять
             высококачественный ремонт практически любого оборудования. Специалисты компании быстро и квалифицированно
@@ -90,7 +103,9 @@
           <a class="link link_green-arrow" href="#">подробнее</a>
         </div>
         <div class="service-card service-card_secondary">
-          <img class="service-card__image" src="@images/3d.png">
+          <div class="service-card__image">
+            <img src="@images/3d.png" alt="photo">
+          </div>
           <h3>Система вибромониторинга насосного оборудования</h3>
           <p>Данная технология является последним словом в проектировании. Она представляет собой структуру, в которой
             все разделы зависят друг от друга, а 3d модель неразрывно связанна с информационной базой. При внесении
@@ -98,7 +113,6 @@
           <a class="link link_green-arrow" href="#">подробнее</a>
         </div>
       </div>
-
     </section>
   </main>
   @@include('components/business/_footer.html')

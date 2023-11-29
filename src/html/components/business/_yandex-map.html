@@ -7,7 +7,7 @@
 		function init() {
 			let map = new ymaps.Map('yandex-map', {
 				center: [54.738435, 55.983600],
-				zoom: 14,
+				zoom: 16,
 				type: 'yandex#map',
 				controls: []
 			});
@@ -15,7 +15,7 @@
 			let placemark = new ymaps.Placemark([54.741301, 55.985946], {}, {
 				iconLayout: 'default#image',
 				iconImageHref: '@icons/placemark.svg',
-				iconImageSize: [43, 63],
+				iconImageSize: [61, 73],
 				iconImageOffset: [-25, -55]
 			});
 			map.geoObjects.add(placemark);

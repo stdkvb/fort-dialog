@@ -1,6 +1,10 @@
 .task {
 	padding-top: 140px;
 
+	@include tablet {
+		padding-top: 80px;
+	}
+
 	&__text {
 		display: flex;
 		flex-direction: column;
@@ -14,7 +18,7 @@
 
 		span {
 			@include regular-28;
-			color: gray80;
+			color: $gray80;
 			margin-bottom: 15px;
 
 			@include tablet {
@@ -39,7 +43,7 @@
 		p {
 			max-width: 877px;
 			@include regular-20;
-			color: gray70;
+			color: $gray70;
 
 			@include mobile {
 				@include regular-16;
@@ -78,6 +82,31 @@
 	}
 
 	&__result {
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+
+			li {
+				display: flex;
+				gap: 10px;
+				align-items: center;
+				@include regular-20;
+
+				@include tablet {
+					@include regular-16;
+				}
+
+				&::before {
+					content: url(@icons/list-item.svg);
+
+					@include tablet {
+						content: url(@icons/list-item-small.svg);
+					}
+				}
+			}
+		}
+
 		span {
 			display: block;
 			margin-top: 80px;

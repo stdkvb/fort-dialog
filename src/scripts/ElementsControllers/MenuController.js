@@ -19,7 +19,11 @@ const takeControlMenu = () => {
 				elem.classList.remove('active')
 			})
 		}
-		document.body.classList.toggle('lock')
+		if (!document.body.classList.contains('lock')) {
+			document.body.classList.add('lock')
+		} else if (!subMenu.classList.contains('active')) {
+			document.body.classList.remove('lock')
+		}
 	})
 
 	subMenuButtons.forEach((elem) => {
@@ -29,10 +33,11 @@ const takeControlMenu = () => {
 			})
 			subMenu.classList.toggle('active')
 			if (!document.body.classList.contains('lock')) {
-				document.body.classList.add('lock')
+				document.body.classList.toggle('lock')
+			} else if (!menu.classList.contains('active')) {
+				document.body.classList.remove('lock')
 			}
-
-			if (menu.classList.contains('active')) {
+			if (menu.classList.contains('active') && window.innerWidth > 991) {
 				menuButton.classList.remove('close')
 				menu.classList.remove('active')
 				logo.classList.remove('active')

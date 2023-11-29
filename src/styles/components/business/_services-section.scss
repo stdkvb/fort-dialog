@@ -23,7 +23,6 @@
 			align-items: center;
 			gap: 20px;
 			justify-content: flex-end;
-			word-wrap: none;
 
 			@include desktop_huge {
 				flex-direction: column;
@@ -76,6 +75,10 @@
 		@include tablet {
 			margin-top: 40px;
 			margin-left: 20px;
+
+			.swiper-wrapper {
+				padding-bottom: 50px;
+			}
 		}
 
 		.swiper-slide {
@@ -93,12 +96,13 @@
 				display: none;
 			}
 		}
+	}
 
-		.btn {
-			margin: 80px auto 0 auto;
-			@include min_tablet {
-				display: none;
-			}
+	&__button {
+		margin: 40px auto 0 auto;
+
+		@include min_tablet {
+			display: none;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang='ru'>
-@@include('meta/_head.html', {title: 'Форт Диаолог | Руководство'})
+@@include('meta/_head.html', {title: 'Форт Диалог | Руководство'})
 
 <body>
   @@include('components/business/_header.html')
@@ -60,7 +60,7 @@
       </div>
     </section>
     <section class="questions">
-      <img src="@images/questions-bg.png"></img>
+      <img src="@images/questions-bg.png" alt="photo">
       <div class="container">
         <h2>Свяжитесь<br>
           с экспертом</h2>
@@ -81,7 +81,7 @@
         <div class="form__row">
           <div class="form__privacy">
             Отправляя форму, вы даете свое согласие
-            на <a href="#" class="link link_green">обработку своих персональных данных</a>
+            на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
           </div>
           @@include('components/ui/_button.html',
           {type: 'submit', class: 'btn_green',children:'отправить'})

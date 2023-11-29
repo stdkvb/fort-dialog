@@ -20,6 +20,10 @@
 		min-width: 175px;
 		transition: 0.4s ease-in-out;
 
+		a {
+			display: flex;
+		}
+
 		img:nth-child(2) {
 			display: none;
 		}

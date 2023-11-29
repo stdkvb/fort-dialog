@@ -26,6 +26,14 @@
 			top: 150px;
 		}
 
+		@include desktop {
+			right: 115px;
+		}
+
+		@include tablet {
+			right: 20px;
+		}
+
 		@include min_mobile {
 			margin: 0;
 			top: 80px;

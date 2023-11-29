@@ -88,6 +88,7 @@
 
 		&_large {
 			@include bold-240-uppercase;
+			font-weight: 900;
 			line-height: 80%;
 			border: none;
 			max-width: unset;
@@ -106,9 +107,11 @@
 	&__description {
 		padding-top: 15px;
 		max-width: 360px;
+		@include regular-18;
 
 		@include mobile {
 			max-width: unset;
+			@include regular-16;
 		}
 
 		&_narrow {

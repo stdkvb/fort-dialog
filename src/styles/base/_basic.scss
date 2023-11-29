@@ -4,7 +4,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	line-height: 125%;
-	viewport-fit: auto;
 	scroll-behavior: smooth;
 }
 
@@ -18,7 +17,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	overflow-y: overlay;
 	overflow-x: hidden;
 	touch-action: pan-x pan-y;
 
@@ -29,11 +27,6 @@ body {
 	&.lock {
 		overflow: hidden;
 	}
-}
-
-html,
-body {
-	scrollbar-gutter: stable;
 }
 
 main {

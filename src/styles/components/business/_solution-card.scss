@@ -56,12 +56,24 @@
 
 	h3 {
 		@include transition;
+		max-height: 90px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		@include tablet {
+			max-height: 50px;
+		}
+
+		@include tablet_small {
+			max-height: unset;
+		}
 	}
 
 	p {
 		max-height: 180px;
 		overflow: hidden;
 		@include transition;
+		text-overflow: ellipsis;
 	}
 
 	.link {
@@ -94,6 +106,10 @@
 			padding: 0 0 20px 0;
 			grid-template-rows: 200px minmax(0, 90px) auto auto;
 			gap: 0;
+		}
+
+		@include tablet_small {
+			grid-template-rows: 200px auto auto auto;
 		}
 
 		&::after {

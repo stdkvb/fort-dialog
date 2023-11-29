@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang='ru'>
-@@include('meta/_head.html', {title: 'Форт Диаолог | Детальная новости/мероприятия'})
+@@include('meta/_head.html', {title: 'Форт Диалог | Детальная новости/мероприятия'})
 
 <body>
   @@include('components/business/_header.html')
   <main>
-    <section class="page-title">
+    <section class="page-title page-title_align-right ">
       <div class="container">
         <ul class="breadcrumbs">
           <li>
@@ -114,7 +114,7 @@
           </li>
         </ul>
         <div class="media-component tab-content active" id="tab-1">
-          <img src="@images/photographer.png">
+          <img src="@images/photographer.png" alt="photo">
           <div class="media-component__list">
             <div class="news-card">
               <div class="news-card__date">24 августа</div>
@@ -141,7 +141,7 @@
           </div>
         </div>
         <div class="media-component tab-content" id="tab-2">
-          <img src="@images/building.png">
+          <img src="@images/building.png" alt="photo">
           <div class="media-component__list">
             <div class="news-card">
               <div class="news-card__date">24 августа</div>
@@ -172,7 +172,7 @@
       </div>
     </section>
     <section class="questions">
-      <img src="@images/notebook.png"></img>
+      <img src="@images/notebook.png">
       <div class="container">
         <h2>Подписаться
           на рассылку</h2>
@@ -187,7 +187,7 @@
         <div class="form__row">
           <div class="form__privacy">
             Отправляя форму, вы даете свое согласие
-            на <a href="#" class="link link_green">обработку своих персональных данных</a>
+            на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
           </div>
           @@include('components/ui/_button.html',
           {type: 'submit', class: 'btn_green',children:'отправить'})

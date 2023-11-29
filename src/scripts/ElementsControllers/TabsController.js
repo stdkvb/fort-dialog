@@ -13,8 +13,10 @@ const takeControlTabs = () => {
 		}
 		let anchorReference = tabClickEvent.target
 		let activeTabId = anchorReference.getAttribute('href')
-		let activeTabContent = document.querySelector(activeTabId)
-		activeTabContent.classList.add('active')
+		if (document.querySelector(activeTabId)) {
+			let activeTabContent = document.querySelector(activeTabId)
+			activeTabContent.classList.add('active')
+		}
 	}
 	for (let i = 0; i < tabs.length; i++) {
 		tabs[i].addEventListener('click', tabClicks)
