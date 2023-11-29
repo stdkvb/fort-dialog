@@ -9,11 +9,13 @@ import addFormListeners from './listeners/addFormListeners'
 import addModalListener from './listeners/addModalListener'
 import takeControlHistoryScroll from './ElementsControllers/HistoryScrollController'
 import takeControlCookie from './ElementsControllers/CookieController'
+import takeControlUpButton from './ElementsControllers/UpButton'
 
 addFormListeners()
 addFileNameListeners()
 addPhoneMaskListeners()
 addModalListener()
+takeControlUpButton()
 takeControlModal()
 takeControlDropdown()
 takeControlMenu()
