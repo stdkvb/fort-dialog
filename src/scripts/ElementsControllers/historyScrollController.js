@@ -3,7 +3,7 @@ const takeControlHistoryScroll = () => {
 
 	const options = {
 		rootMargin: '0px',
-		threshold: 0
+		threshold: 0.2
 	}
 
 	const callback = function (entries, observer) {

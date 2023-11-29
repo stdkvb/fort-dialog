@@ -11,10 +11,10 @@
 					<span>ваш технологический партнер</span>
 					<span>
 						для внедрения <b>масштабных</b></span>
-					<div>
+					<article>
 						<span>it-решений</span>
 						@@include('components/ui/_button-link.html', {href:'#', class: 'btn_secondary',children:'подробнее'})
-					</div>
+					</article>
 				</h1>
 			</div>
 		</section>
@@ -49,56 +49,56 @@
 			<div class="partners__first swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="@icons/rosneft.svg">
+						<img src="@icons/rosneft.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/gazprom.svg">
+						<img src="@icons/gazprom.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/gazpromneft.svg">
+						<img src="@icons/gazpromneft.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/novatec.svg">
+						<img src="@icons/novatec.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/transneft.svg">
+						<img src="@icons/transneft.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/sibur.svg">
+						<img src="@icons/sibur.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/tatneft.svg">
+						<img src="@icons/tatneft.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/alabuga.svg">
+						<img src="@icons/alabuga.svg" alt="logo">
 					</div>
 				</div>
 			</div>
 			<div class="partners__second swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img src="@icons/kod.svg">
+						<img src="@icons/kod.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/pantum.svg">
+						<img src="@icons/pantum.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/atomic.svg">
+						<img src="@icons/atomic.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/stil.svg">
+						<img src="@icons/stil.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/msi.svg">
+						<img src="@icons/msi.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/securityvision.svg">
+						<img src="@icons/securityvision.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/usergate.svg">
+						<img src="@icons/usergate.svg" alt="logo">
 					</div>
 					<div class="swiper-slide">
-						<img src="@icons/chint.svg">
+						<img src="@icons/chint.svg" alt="logo">
 					</div>
 				</div>
 			</div>
@@ -117,13 +117,13 @@
 				</div>
 				<div class="solutions-section__list">
 					<div class="solution-card">
-						<img class="solution-card__image" src="@images/solution-bg.png">
+						<img class="solution-card__image" src="@images/solution-bg.png" alt="photo">
 						<h3>Интеллектуальная транспортная система «Курсор»</h3>
 						<p>Создать системы безопасности для котельных</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="solution-card">
-						<img class="solution-card__image" src="@images/solution-bg.png">
+						<img class="solution-card__image" src="@images/solution-bg.png" alt="photo">
 						<h3>Системы информационной безопасности</h3>
 						<p>Компания Форт Диалог предлагает комплексные решения по защите автоматизированных систем предприятия.
 							Каждое из таких решений представляет собой набор взаимодополняющих друг друга продуктов, обеспечивающих
@@ -131,13 +131,13 @@
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="solution-card">
-						<img class="solution-card__image" src="@images/solution-bg.png">
+						<img class="solution-card__image" src="@images/solution-bg.png" alt="photo">
 						<h3>АСУ ТП</h3>
 						<p>Информационное моделирование здания или информационная модель здания</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="solution-card">
-						<img class="solution-card__image" src="@images/solution-bg.png">
+						<img class="solution-card__image" src="@images/solution-bg.png" alt="photo">
 						<h3>Центры обработки данных</h3>
 						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
 							любой сложности</p>
@@ -158,7 +158,9 @@
 			<div class="services-section__swiper swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide service-card">
-						<img class="service-card__image" src="@images/service-bg.png">
+						<div class="service-card__image">
+							<img src="@images/service-bg.png" alt="photo">
+						</div>
 						<h3>Монтажные и пусконаладочные работы</h3>
 						<p>Компания Форт Диалог предлагает комплексный подход к решению задач любой сложности на любом этапе проекта
 							- от стадии формирования задачи, инженерных изысканий или проектирования до этапа поставок, монтажа и
@@ -166,13 +168,17 @@
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="swiper-slide service-card">
-						<img class="service-card__image" src="@images/service-bg.png">
+						<div class="service-card__image">
+							<img src="@images/service-bg.png" alt="photo">
+						</div>
 						<h3>Bim</h3>
 						<p>Информационное моделирование здания или информационная модель здания.</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="swiper-slide service-card">
-						<img class="service-card__image" src="@images/service-bg.png">
+						<div class="service-card__image">
+							<img src="@images/service-bg.png" alt="photo">
+						</div>
 						<h3>отдел проектной атрибуции (ОПД)</h3>
 						<p>Отдел проектной дистрибуции (ОПД)  АО «Форт Диалог» выступает в качестве «Поставщика» по следующим видам
 							продукции:
@@ -183,14 +189,18 @@
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="swiper-slide service-card">
-						<img class="service-card__image" src="@images/service-bg.png">
+						<div class="service-card__image">
+							<img src="@images/service-bg.png" alt="photo">
+						</div>
 						<h3>Инженерные изыскания</h3>
 						<p>Данный вид исследований позволяет получить полный спектр данных о районе предполагаемой застройки, на
 							основе которых, можно подготовить качественную проектную документацию в короткие сроки.</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="swiper-slide service-card">
-						<img class="service-card__image" src="@images/service-bg.png">
+						<div class="service-card__image">
+							<img src="@images/service-bg.png" alt="photo">
+						</div>
 						<h3>проектирование</h3>
 						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
 							любой сложности, что дает заказчику возможность существенно сэкономить время и ресурсы.</p>
@@ -198,9 +208,9 @@
 					</div>
 				</div>
 				<div class="swiper-pagination swiper-pagination_white "></div>
-				@@include('components/ui/_button-link.html',
-				{href:'#', class: 'btn_secondary btn_secondary_white',children:'все услуги'})
 			</div>
+			@@include('components/ui/_button-link.html',
+			{href:'#', class: 'btn_secondary btn_secondary_white services-section__button',children:'все услуги'})
 		</section>
 		<section class="projects-section">
 			<div class="container">
@@ -210,7 +220,7 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide project-card">
 						<div class="project-card__image">
-							<img src="@images/project-1.png">
+							<img src="@images/project-1.png" alt="photo">
 						</div>
 						<h3>Полное технологическое оснащение школы нового поколения</h3>
 						<p>Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network (LoRaWAN) на
@@ -219,7 +229,7 @@
 					</div>
 					<div class="swiper-slide project-card">
 						<div class="project-card__image">
-							<img src="@images/project-2.png">
+							<img src="@images/project-2.png" alt="photo">
 						</div>
 						<h3>Полное технологическое оснащение школы нового поколения</h3>
 						<p>Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network (LoRaWAN) на
@@ -230,7 +240,7 @@
 					</div>
 					<div class="swiper-slide project-card">
 						<div class="project-card__image">
-							<img src="@images/project-1.png">
+							<img src="@images/project-1.png" alt="photo">
 						</div>
 						<h3>Полное технологическое</h3>
 						<p>Разработка проектных решений по развертыванию опорной сеть Low-power Wide-area Network (LoRaWAN) на
@@ -302,7 +312,7 @@
 					</li>
 				</ul>
 				<div class="media-component tab-content active" id="tab-1">
-					<img src="@images/photographer.png">
+					<img src="@images/photographer.png" alt="photo">
 					<div class="media-component__list">
 						<div class="news-card">
 							<div class="news-card__date">24 августа</div>
@@ -329,7 +339,7 @@
 					</div>
 				</div>
 				<div class="media-component tab-content" id="tab-2">
-					<img src="@images/building.png">
+					<img src="@images/building.png" alt="photo">
 					<div class="media-component__list">
 						<div class="news-card">
 							<div class="news-card__date">24 августа</div>
@@ -360,12 +370,11 @@
 			</div>
 		</section>
 		<section class="questions">
-			<img src="@images/questions-bg.png"></img>
+			<img src="@images/questions-bg.png" alt="photo">
 			<div class="container">
 				<h2>Есть вопросы?</h2>
 				<p>Получите ответы на вопросы о продуктах, продажах, поддержке и многом другом.</p>
-				<p>Вы можете направить свой вопрос на почту <a href="mail:pochta@mail.ru"
-						class="link link_green">pochta@mail.ru</a> или воспользоваться формой
+				<p>Вы можете направить свой вопрос на почту <a href="mail:pochta@mail.ru" class="link link_green">pochta@mail.ru</a> или воспользоваться формой
 					на сайте</p>
 			</div>
 			<form class="questions__form form">

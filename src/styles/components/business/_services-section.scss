@@ -2,6 +2,7 @@
 	background-color: $gray80;
 	padding-top: 140px;
 	padding-bottom: 140px;
+	overflow-x: hidden;
 
 	@include tablet {
 		padding-top: 80px;

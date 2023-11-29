@@ -20,12 +20,9 @@ body {
 	overflow-x: hidden;
 	touch-action: pan-x pan-y;
 
-	@supports (-moz-appearance: none) {
-		overflow-y: auto;
-	}
-
 	&.lock {
 		overflow: hidden;
+		padding-right: 15px;
 	}
 }
 

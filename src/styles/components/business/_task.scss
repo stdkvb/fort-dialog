@@ -1,5 +1,6 @@
 .task {
 	padding-top: 140px;
+	overflow-x: hidden;
 
 	@include tablet {
 		padding-top: 80px;
