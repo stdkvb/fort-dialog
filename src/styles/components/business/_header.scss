@@ -204,16 +204,6 @@
 		margin: 39px auto 0 auto;
 		background-size: contain;
 
-		&.close {
-			background-image: url(@icons/cross-white.svg);
-
-			@include tablet {
-				background-image: url(@icons/cross-black.svg);
-				width: 16px;
-				height: 16px;
-			}
-		}
-
 		@include tablet {
 			height: 10px;
 			width: 20px;
@@ -224,6 +214,29 @@
 			left: 0;
 			margin: auto;
 			background-image: url(@icons/burger-black.svg);
+		}
+	}
+
+	&__close {
+		display: none;
+		height: 30px;
+		width: 30px;
+		background-image: url(@icons/cross-white.svg);
+		background-repeat: no-repeat;
+		cursor: pointer;
+		margin: 39px auto 0 auto;
+		background-size: contain;
+
+		@include tablet {
+			background-image: url(@icons/cross-black.svg);
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
 		}
 	}
 }
