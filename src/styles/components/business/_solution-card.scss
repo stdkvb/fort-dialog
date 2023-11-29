@@ -116,6 +116,10 @@
 			background: none;
 		}
 
+		img {
+			@include transition;
+		}
+
 		&:hover {
 			h3,
 			p {
@@ -138,6 +142,10 @@
 						content: url(@icons/arrow-green-hover.svg);
 					}
 				}
+			}
+
+			img {
+				scale: 1.2;
 			}
 		}
 
@@ -175,6 +183,9 @@
 		.solution-card__image {
 			position: unset;
 			height: 288px;
+			z-index: 0;
+			overflow: hidden;
+			width: 100%;
 
 			@include tablet {
 				height: 200px;

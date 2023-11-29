@@ -33,6 +33,7 @@
 		grid-area: photo;
 		min-width: 320px;
 		max-width: 450px;
+		height: 100%;
 
 		@include tablet {
 			margin-bottom: 40px;
@@ -72,6 +73,8 @@
 	img {
 		height: unset;
 		object-fit: contain;
+		position: sticky;
+		top: 140px;
 	}
 }
 
