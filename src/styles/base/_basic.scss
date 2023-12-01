@@ -12,17 +12,22 @@ html {
 }
 
 body {
+	margin: 0;
+	width: 100%;
 	color: $gray70;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	overflow-x: hidden;
 	touch-action: pan-x pan-y;
+	overflow: auto;
 
 	&.lock {
-		overflow: hidden;
-		padding-right: 15px;
+		overflow-y: hidden;
+	}
+
+	@supports (-moz-appearance: none) {
+		overflow-y: auto;
 	}
 }
 
@@ -122,12 +127,12 @@ input {
 
 // scrollbar
 * {
-	scrollbar-width: thin;
+	scrollbar-width: 5px;
 	scrollbar-color: $gray70 transparent;
 }
 
 *::-webkit-scrollbar {
-	width: 12px;
+	width: 5px;
 }
 
 *::-webkit-scrollbar-track {

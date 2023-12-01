@@ -52,6 +52,10 @@
 	}
 
 	.accordion__content {
+		@include min_tablet {
+			opacity: 1 !important;
+		}
+
 		@include tablet {
 			margin-top: 40px !important;
 		}

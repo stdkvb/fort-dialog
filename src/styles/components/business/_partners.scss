@@ -25,6 +25,7 @@
 		padding: 30px;
 		display: grid;
 		grid-template-rows: 200px 257px;
+		width: 100%;
 
 		@include mobile {
 			padding: 30px 20px 34px 20px;

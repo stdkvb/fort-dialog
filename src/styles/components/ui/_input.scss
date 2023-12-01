@@ -26,38 +26,6 @@ input {
 		@include regular-16;
 	}
 
-	&[aria-invalid='true'] {
-		&:not(:focus) {
-			border: 1px solid $red;
-		}
-	}
-
-	// &[type='date'] {
-	// 	text-transform: uppercase;
-	// 	position: relative;
-
-	// 	&:hover {
-	// 		cursor: pointer;
-	// 	}
-	// 	&::-webkit-inner-spin-button,
-	// 	&::-webkit-calendar-picker-indicator {
-	// 		opacity: 0;
-
-	// 		&:hover {
-	// 			cursor: pointer;
-	// 		}
-	// 	}
-
-	// 	&::after {
-	// 		content: url(@icons/calendar.svg);
-	// 		position: absolute;
-	// 		right: 20px;
-	// 		width: 24px;
-	// 		height: 24px;
-	// 		pointer-events: none;
-	// 	}
-	// }
-
 	&[type='file'] {
 		border: none;
 		padding: 0;
@@ -66,10 +34,6 @@ input {
 
 		&:hover {
 			cursor: pointer;
-		}
-
-		&[aria-invalid='true'] ~ .file-button {
-			border: 1px solid $red;
 		}
 	}
 
@@ -103,12 +67,6 @@ input {
 			cursor: pointer;
 		}
 
-		&.has-success {
-			.file-button {
-				border: 1px solid $green50;
-			}
-		}
-
 		&.has-danger {
 			margin-bottom: 25px;
 
@@ -121,6 +79,12 @@ input {
 				@include mobile {
 					margin-bottom: -10px;
 				}
+			}
+		}
+
+		&.has-success {
+			.file-button {
+				border: 1px solid $green50;
 			}
 		}
 
@@ -148,40 +112,6 @@ input {
 		}
 	}
 
-	// &_password {
-	// 	input[type='password'] {
-	// 		padding-right: calc(0.75rem + 26px);
-	// 	}
-
-	// 	.toggle-show-password-btn {
-	// 		position: absolute;
-	// 		display: flex;
-	// 		align-items: center;
-	// 		justify-content: center;
-	// 		width: 18px;
-	// 		height: 18px;
-	// 		bottom: 12px;
-	// 		right: 20px;
-	// 		cursor: pointer;
-	// 	}
-
-	// 	input[type='password'] + .toggle-show-password-btn {
-	// 		&::before {
-	// 			width: 18px;
-	// 			height: 18px;
-	// 			content: url('@icons/closeLock.svg');
-	// 		}
-	// 	}
-
-	// 	input[type='text'] + .toggle-show-password-btn {
-	// 		&::before {
-	// 			width: 18px;
-	// 			height: 18px;
-	// 			content: url('@icons/openLock.svg');
-	// 		}
-	// 	}
-	// }
-
 	&_valid {
 		input:not(:focus) {
 		}
@@ -208,77 +138,19 @@ input {
 		-ms-user-select: none;
 		user-select: none;
 	}
+
+	input:focus ~ &::after:last-child {
+		content: none;
+	}
 }
-
-// .input-wrapper {
-// 	display: flex;
-// 	gap: 10px;
-
-// 	input[type='number']::-webkit-inner-spin-button,
-// 	input[type='number']::-webkit-outer-spin-button {
-// 		-webkit-appearance: none;
-// 		appearance: none;
-// 		margin: 0;
-// 	}
-
-// 	input[type='number'] {
-// 		-moz-appearance: textfield;
-// 		color: $black;
-// 		text-align: center;
-// 		@include regular-16;
-// 		padding: 0;
-// 		width: 30px;
-// 	}
-
-// 	button {
-// 		@include regular-26;
-// 		max-width: 10px;
-// 		cursor: pointer;
-// 		color: $black;
-// 		background: transparent;
-// 		border: none;
-// 		transition: color $transitionDuration ease-in-out;
-// 		user-select: none;
-
-// 		&:hover {
-// 			color: $green50;
-// 		}
-
-// 		&._disabled {
-// 			pointer-events: none;
-// 			color: $grayB9;
-// 		}
-// 	}
-
-// 	.quantity {
-// 		pointer-events: none;
-// 	}
-// }
 
 .input-wrapper * {
 	border: none;
 	flex: 1;
 }
 
-// .input__reset {
-// 	width: 24px;
-// 	height: 24px;
-// 	position: absolute;
-// 	border: none;
-// 	background-color: transparent;
-// 	background-image: url('@icons/close-icon.svg');
-// 	background-position: center;
-// 	background-repeat: no-repeat;
-// 	right: 20px;
-// 	top: 45px;
-
-// 	&:hover {
-// 		cursor: pointer;
-// 	}
-// }
-
 .has-success {
-	&::after {
+	.pristine-success::after {
 		position: absolute;
 		right: 28px;
 		top: 25px;
@@ -290,6 +162,11 @@ input {
 			top: 18px;
 			right: 20px;
 		}
+	}
+
+	input:focus + .pristine-success::after,
+	textarea:focus + .pristine-success::after {
+		content: none;
 	}
 }
 

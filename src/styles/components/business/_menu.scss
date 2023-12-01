@@ -1,21 +1,25 @@
 .menu {
 	padding: 100px 180px 70px 180px;
 	position: fixed;
-	top: 100px;
-	display: none;
+	top: -100%;
+	opacity: 0;
+	display: flex;
 	flex-direction: column;
 	gap: 32px;
-	top: 100px;
 	background-color: $white;
 	width: 100%;
 	z-index: 10;
+	@include transition;
+	pointer-events: none;
 
 	@include desktop_huge {
 		height: calc(100% - 100px);
 	}
 
 	&.active {
-		display: flex;
+		top: 100px;
+		opacity: 1;
+		pointer-events: unset;
 
 		@include tablet {
 			display: none;
@@ -71,6 +75,7 @@
 		.link {
 			max-width: 370px;
 			padding-bottom: 15px;
+			margin-right: 20px;
 		}
 	}
 

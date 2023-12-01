@@ -1070,6 +1070,13 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lottiefiles/lottie-interactivity@^1.6.2":
+  "integrity" "sha512-psmG/frpi4IIJjBa+Mj0ivKtfNRkasUnvU6sBrVfm7nSwBpEoyMop16uIEYg5PYdpboFbQQhibmwC006KGZhsA=="
+  "resolved" "https://registry.npmjs.org/@lottiefiles/lottie-interactivity/-/lottie-interactivity-1.6.2.tgz"
+  "version" "1.6.2"
+  dependencies:
+    "core-js" "3"
+
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   "integrity" "sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg=="
   "resolved" "https://registry.npmjs.org/@nicolo-ribaudo/eslint-scope-5-internals/-/eslint-scope-5-internals-5.1.1-v1.tgz"
@@ -2705,6 +2712,11 @@
   "version" "3.32.2"
   dependencies:
     "browserslist" "^4.21.10"
+
+"core-js@3":
+  "integrity" "sha512-lo0kOocUlLKmm6kv/FswQL8zbkH7mVsLJ/FULClOhv8WRVmKLVcs6XPNQAzstfeJTCHMyButEwG+z1kHxHoDZw=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.33.3.tgz"
+  "version" "3.33.3"
 
 "core-util-is@~1.0.0":
   "integrity" "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="

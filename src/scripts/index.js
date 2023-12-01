@@ -10,6 +10,7 @@ import addModalListener from './listeners/addModalListener'
 import takeControlHistoryScroll from './ElementsControllers/HistoryScrollController'
 import takeControlCookie from './ElementsControllers/CookieController'
 import takeControlUpButton from './ElementsControllers/UpButton'
+import CounterItemController from './ElementsControllers/CounterItemController'
 
 addFormListeners()
 addFileNameListeners()
@@ -160,5 +161,14 @@ new Swiper('.media-detail__swiper', {
 		el: '.swiper-pagination',
 		clickable: 'true'
 	}
+})
+
+// counter
+new CounterItemController({
+	countersElementsWrapperSelector: '.numbers',
+	counterElementSelector: '.numbers__item',
+	counterNumElementSelector: '.numbers__number span',
+	calcAnimationDelay: 4000,
+	clearHoverDelay: 100
 })
 

@@ -78,12 +78,22 @@
 		@include bold-80-uppercase;
 		color: $green50;
 		padding-bottom: 15px;
-		border-bottom: solid 1px $gray70;
 		max-width: 360px;
+		display: flex;
+		align-items: center;
+		border-bottom: solid 1px #4d4d4d;
 
 		@include mobile {
 			@include bold-40-uppercase;
 			max-width: unset;
+		}
+
+		span {
+			@include bold-80-uppercase;
+
+			@include mobile {
+				@include bold-40-uppercase;
+			}
 		}
 
 		&_large {
@@ -93,13 +103,29 @@
 			border: none;
 			max-width: unset;
 			padding-bottom: 0;
+			max-width: 850px;
+			justify-content: space-between;
 
 			@include tablet {
 				@include bold-120-uppercase;
+				max-width: 420px;
 			}
 
 			@include mobile {
 				@include bold-60-uppercase;
+				max-width: 210px;
+			}
+
+			span {
+				@include bold-240-uppercase;
+
+				@include tablet {
+					@include bold-120-uppercase;
+				}
+
+				@include mobile {
+					@include bold-60-uppercase;
+				}
 			}
 		}
 	}

@@ -57,7 +57,11 @@ const takeControlMenu = () => {
 		if (window.innerWidth > 991) {
 			closeMenu()
 		}
-		openSubMenu()
+		if (subMenuButton.classList.contains('active')) {
+			closeSubMenu()
+		} else {
+			openSubMenu()
+		}
 	})
 
 	closeSubMenuButton.addEventListener('click', () => {

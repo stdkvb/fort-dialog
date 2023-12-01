@@ -65,3 +65,4 @@ const stylesTask = () =>
 		.pipe(browserSync.stream())
 
 export default stylesTask
+

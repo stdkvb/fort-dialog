@@ -9,8 +9,15 @@
 		grid-template-rows: 300px auto 53px;
 	}
 
+	&:hover {
+		img {
+			scale: 1.2;
+		}
+	}
+
 	img {
 		max-height: 300px;
+		@include transition;
 	}
 
 	&__wrapper {
@@ -37,6 +44,11 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+
+	&__image {
+		margin: 0 !important;
+		overflow: hidden;
 	}
 
 	&__date {

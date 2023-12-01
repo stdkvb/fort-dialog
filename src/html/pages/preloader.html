@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'preloader'})
+
+<body>
+	<main>
+		<div class="preloader">
+			<dotlottie-player id="brain" class="preloader__brain" src="https://lottie.host/98587cd0-2220-4677-8b39-6425b42866c9/EDFQxzLtlF.json" background="transparent" speed="0.90" style="width: 300px; height: 300px;" autoplay></dotlottie-player>
+			<dotlottie-player id="text" class="preloader__text" src="https://lottie.host/0f7405d8-755a-4a45-83d4-e2751cf02de8/DrCcR7ZTxj.json" background="transparent" loop speed="0.85" style="width: 300px; height: 300px;" autoplay></dotlottie-player>
+		</div>
+		<style>
+			.preloader {
+				width: 100%;
+				height: 100vh;
+				background-color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.preloader__text {
+				display: none;
+			}
+
+			.preloader__text {
+				position: absolute;
+				top: 35%;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+		</style>
+		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+		<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js" type="text/javascript"></script>
+		<script>
+			const brain = document.getElementById('brain')
+			const text = document.getElementById('text')
+
+			setTimeout(() => {
+				text.style.display = 'block'
+			}, 1900)
+
+			setTimeout(() => {
+				brain.style.display = 'none'
+			}, 3200)
+
+			setTimeout(() => {
+				text.style.display = 'none'
+			}, 3200)
+
+		</script>
+	</main>
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

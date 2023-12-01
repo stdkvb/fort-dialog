@@ -44,11 +44,11 @@ textarea {
 		@include regular-16;
 	}
 
-	&[aria-invalid='true'] {
-		&:not(:focus) {
-			border: 1px solid $red;
-		}
-	}
+	// &[aria-invalid='true'] {
+	// 	&:not(:focus) {
+	// 		border: 1px solid $red;
+	// 	}
+	// }
 
 	.has-success & {
 		&:not(:focus) {

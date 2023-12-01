@@ -11,10 +11,10 @@
 					<span>ваш технологический партнер</span>
 					<span>
 						для внедрения <b>масштабных</b></span>
-					<article>
+					<strong>
 						<span>it-решений</span>
 						@@include('components/ui/_button-link.html', {href:'#', class: 'btn_secondary',children:'подробнее'})
-					</article>
+					</strong>
 				</h1>
 			</div>
 		</section>
@@ -24,16 +24,16 @@
 			<div class="container">
 				<div class="numbers__wrapper">
 					<div class="numbers__item">
-						<div class="numbers__number">235 +</div>
+						<div class="numbers__number"><span>235</span> +</div>
 						<div class="numbers__description">сертифицированных инженеров и разработчиков</div>
 					</div>
 					<div class="numbers__item">
-						<div class="numbers__number">1178+</div>
+						<div class="numbers__number"><span>1178</span> +</div>
 						<div class="numbers__description numbers__description_narrow">проектов по модернизации ИТ-инфраструктуры
 						</div>
 					</div>
 					<div class="numbers__item numbers__item_large">
-						<div class="numbers__number numbers__number_large">35 лет</div>
+						<div class="numbers__number numbers__number_large"><span>35</span> лет</div>
 						<div class="numbers__description numbers__description_large">35 лет мы развиваем технологии в России и
 							создаем
 							решения, которыми
@@ -125,8 +125,9 @@
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="solution-card">
-						<div class="solution-card__image"></div>
-						<img src="@images/solution-bg.png" alt="photo">
+						<div class="solution-card__image">
+							<img src="@images/solution-bg.png" alt="photo">
+						</div>
 						<h3>Системы информационной безопасности</h3>
 						<p>Компания Форт Диалог предлагает комплексные решения по защите автоматизированных систем предприятия.
 							Каждое из таких решений представляет собой набор взаимодополняющих друг друга продуктов, обеспечивающих
@@ -134,15 +135,17 @@
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="solution-card">
-						<div class="solution-card__image"></div>
-						<img src="@images/solution-bg.png" alt="photo">
+						<div class="solution-card__image">
+							<img src="@images/solution-bg.png" alt="photo">
+						</div>
 						<h3>АСУ ТП</h3>
 						<p>Информационное моделирование здания или информационная модель здания</p>
 						<a class="link link_green-arrow" href="#">подробнее</a>
 					</div>
 					<div class="solution-card">
-						<div class="solution-card__image"></div>
-						<img src="@images/solution-bg.png" alt="photo">
+						<div class="solution-card__image">
+							<img src="@images/solution-bg.png" alt="photo">
+						</div>
 						<h3>Центры обработки данных</h3>
 						<p>АО «Форт Диалог» успешно выполняет проектирование не только отдельных систем, но комплексных проектов
 							любой сложности</p>
@@ -154,7 +157,8 @@
 		<section class="services-section">
 			<div class="container">
 				<h2>Обладаем полным набором <b>компетенций и ресурсов</b>
-					<span>в области внедрения ИТ-систем
+					<span>в области внедрения</span>
+					<span>ИТ-систем
 						@@include('components/ui/_button-link.html',
 						{href:'#', class: 'btn_secondary btn_secondary_white',children:'все услуги'})</span>
 					и бизнес-консалтинга
@@ -275,7 +279,7 @@
 					<div class="career-section__vacancy">Монтажник</div>
 					<div class="career-section__vacancy">Электрик</div>
 					<div class="career-section__vacancy">программист</div>
-					<div class="career-section__vacancy">и еще 12+ вакансий</div>
+					<a href="#" class="career-section__vacancy btn btn_secondary">и еще 12+ вакансий</a>
 				</div>
 			</div>
 			<form class="career-section__form form form_black">

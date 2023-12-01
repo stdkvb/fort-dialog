@@ -28,16 +28,16 @@
       <div class="container">
         <div class="numbers__wrapper">
           <div class="numbers__item">
-            <div class="numbers__number">1178+</div>
+            <div class="numbers__number"><span>1178</span> +</div>
             <div class="numbers__description numbers__description_narrow">проектов по модернизации ИТ-инфраструктуры
             </div>
           </div>
           <div class="numbers__item">
-            <div class="numbers__number">235 +</div>
+            <div class="numbers__number"><span>235</span> +</div>
             <div class="numbers__description">сертифицированных инженеров и разработчиков</div>
           </div>
           <div class="numbers__item numbers__item_large">
-            <div class="numbers__number numbers__number_large">35 лет</div>
+            <div class="numbers__number numbers__number_large"><span>35</span> лет</div>
             <div class="numbers__description numbers__description_large">35 лет мы развиваем технологии в России и
               создаем
               решения, которыми
@@ -157,11 +157,11 @@
           @@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
           true})
         </div>
-        @@include('components/ui/_input-text.html', {placeholder: 'На какую вакансию хотели бы устроиться?*',
-        errorMessage: 'Укажите вакансию', name: 'position', required: true})
+        @@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
+        true})
         @@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
         true})
-        @@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение',
+        @@include('components/ui/_textarea.html', {placeholder: 'Сопроводительное письмо',
         errorMessage: 'Сопроводительное письмо', name: 'message', required: false})
         <div class="form__row">
           <div class="form__privacy">

@@ -16,10 +16,10 @@
 	}
 
 	&_no-padding {
-		padding-top: 0;
+		padding-bottom: 0;
 
 		@include tablet {
-			padding-top: 80px;
+			padding-bottom: 0;
 		}
 	}
 

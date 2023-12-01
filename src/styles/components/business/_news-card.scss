@@ -14,8 +14,23 @@
 		}
 	}
 
+	&:hover {
+		img {
+			scale: 1.2;
+		}
+	}
+
+	&__image {
+		margin: 0 !important;
+		overflow: hidden;
+	}
+
 	&__date {
 		color: $gray40;
+	}
+
+	img {
+		@include transition;
 	}
 }
 

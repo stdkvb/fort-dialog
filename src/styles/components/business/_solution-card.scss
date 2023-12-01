@@ -54,26 +54,8 @@
 		padding: 25px 20px;
 	}
 
-	h3 {
-		@include transition;
-		max-height: 90px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-
-		@include tablet {
-			max-height: 50px;
-		}
-
-		@include tablet_small {
-			max-height: unset;
-		}
-	}
-
 	p {
-		max-height: 180px;
-		overflow: hidden;
-		@include transition;
-		text-overflow: ellipsis;
+		align-self: flex-start;
 	}
 
 	.link {
@@ -93,23 +75,14 @@
 	&_secondary {
 		padding: 0 0 28px 0;
 		background-color: $gray04;
-		height: 678px;
-		grid-template-rows: 288px minmax(0, 58px) minmax(0, 203px) auto;
+		grid-template-rows: 288px auto auto auto;
 		gap: 30px;
-
-		@include desktop {
-			grid-template-rows: 288px minmax(0, 90px) auto auto;
-		}
 
 		@include tablet {
 			height: unset;
 			padding: 0 0 20px 0;
-			grid-template-rows: 200px minmax(0, 90px) auto auto;
-			gap: 0;
-		}
-
-		@include tablet_small {
 			grid-template-rows: 200px auto auto auto;
+			gap: 0;
 		}
 
 		&::after {
