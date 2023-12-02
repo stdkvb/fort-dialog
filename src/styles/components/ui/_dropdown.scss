@@ -54,6 +54,12 @@
 		z-index: 10;
 		border: solid 1px $gray10;
 		border-top: none;
+		max-height: 330px;
+		overflow-y: scroll;
+
+		@include tablet {
+			max-height: 205px;
+		}
 	}
 
 	&__option {
