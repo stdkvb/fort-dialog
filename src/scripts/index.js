@@ -136,7 +136,7 @@ new Swiper('.documents__licenses', {
 	}
 })
 
-new Swiper('.documents__certificates', {
+new Swiper('.documents__reviews', {
 	slidesPerView: 'auto',
 	spaceBetween: 20,
 	pagination: {

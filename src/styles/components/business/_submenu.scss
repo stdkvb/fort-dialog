@@ -7,7 +7,7 @@
 	padding: 80px 80px 96px 175px;
 	box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
 	opacity: 0;
-	@include transition;
+	transition: all 0.8s ease;
 	pointer-events: none;
 
 	@include tablet {
@@ -107,6 +107,14 @@
 
 		@include mobile {
 			gap: 30px;
+		}
+
+		&_high {
+			max-height: 150px;
+		}
+
+		.link {
+			margin-right: 50px;
 		}
 	}
 }

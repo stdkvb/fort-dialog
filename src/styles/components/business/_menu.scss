@@ -50,33 +50,6 @@
 	&__item {
 		display: flex;
 		width: 280px;
-
-		&:hover {
-			.menu__inner {
-				display: flex;
-			}
-		}
-	}
-
-	&__inner {
-		display: none;
-		flex-direction: column;
-		flex-wrap: wrap;
-		max-height: 325px;
-		max-width: 370px;
-		position: absolute;
-		top: 100px;
-		left: 445px;
-
-		@include desktop_huge {
-			max-height: unset;
-		}
-
-		.link {
-			max-width: 370px;
-			padding-bottom: 15px;
-			margin-right: 20px;
-		}
 	}
 
 	&__block {
