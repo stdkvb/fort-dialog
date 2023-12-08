@@ -17,8 +17,12 @@
 	}
 
 	&__logo {
-		min-width: 175px;
+		max-width: 200px;
 		transition: 0.4s ease-in-out;
+		padding: 0 20px;
+		height: 100%;
+		display: flex;
+		align-items: center;
 
 		a {
 			display: flex;
@@ -29,8 +33,7 @@
 		}
 
 		@include tablet {
-			min-width: unset;
-			width: 80px;
+			max-width: 100px;
 		}
 
 		@include min_tablet {
@@ -60,7 +63,7 @@
 		padding-left: 80px;
 
 		@include desktop_large {
-			padding: 0 35px;
+			padding: 0 30px;
 		}
 
 		@include desktop_base {
