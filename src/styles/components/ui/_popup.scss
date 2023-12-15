@@ -81,14 +81,14 @@
 		}
 	}
 
-	.form {
-		position: unset;
-		padding: 0;
-		margin-top: 35px;
-		width: 100%;
+	form {
+		position: unset !important;
+		padding: 0 !important;
+		margin-top: 35px !important;
+		width: 100% !important;
 
 		@include mobile {
-			margin-top: 15px;
+			margin-top: 15px !important;
 		}
 	}
 

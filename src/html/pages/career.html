@@ -150,28 +150,30 @@
         <p>Мы поддерживаем стремление сотрудников к обучению и развитию в самых разных сферах. При этом мы предлагаем
           быть не только пассивными слушателями, но и инициаторами, и экспертами.</p>
       </div>
-      <form class="career-section__form form form_black">
-        <div class="form__row">
-          @@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
-          'name', required: true})
-          @@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
-          true})
-        </div>
-        @@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
-        true})
-        @@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
-        true})
-        @@include('components/ui/_textarea.html', {placeholder: 'Сопроводительное письмо',
-        errorMessage: 'Сопроводительное письмо', name: 'message', required: false})
-        <div class="form__row">
-          <div class="form__privacy">
-            Отправляя форму, вы даете свое согласие
-            на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
+      <div class="career-section__form form form_black">
+        <form>
+          <div class="form__row">
+            @@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
+            'name', required: true})
+            @@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
+            true})
           </div>
-          @@include('components/ui/_button.html',
-          {type: 'submit', class: '',children:'отправить'})
-        </div>
-      </form>
+          @@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
+          true})
+          @@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
+          true})
+          @@include('components/ui/_textarea.html', {placeholder: 'Сопроводительное письмо',
+          errorMessage: 'Сопроводительное письмо', name: 'message', required: false})
+          <div class="form__row">
+            <div class="form__privacy">
+              Отправляя форму, вы даете свое согласие
+              на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
+            </div>
+            @@include('components/ui/_button.html',
+            {type: 'submit', class: '',children:'отправить'})
+          </div>
+        </form>
+      </div>
     </section>
   </main>
   @@include('components/business/_footer.html')

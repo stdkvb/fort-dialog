@@ -2,7 +2,7 @@ import Pristine from './Pristine'
 // import takeControlModal from './ModalController';
 
 const takeControlForms = () => {
-	const careerForm = document.querySelector('.career-section__form')
+	const careerForm = document.querySelector('.career-section__form form')
 	if (careerForm !== null) {
 		const careerValidator = new Pristine(careerForm)
 		careerForm.addEventListener('submit', function (e) {
@@ -12,7 +12,7 @@ const takeControlForms = () => {
 		})
 	}
 
-	const questionsForm = document.querySelector('.questions__form')
+	const questionsForm = document.querySelector('.questions__form form')
 	if (questionsForm !== null) {
 		const questionsValidator = new Pristine(questionsForm)
 		questionsForm.addEventListener('submit', function (e) {
@@ -22,7 +22,7 @@ const takeControlForms = () => {
 		})
 	}
 
-	const popupForm = document.querySelector('.popup__form')
+	const popupForm = document.querySelector('.popup__form form')
 	if (popupForm !== null) {
 		const popupValidator = new Pristine(popupForm)
 		popupForm.addEventListener('submit', function (e) {

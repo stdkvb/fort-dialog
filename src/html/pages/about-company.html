@@ -179,26 +179,28 @@
           <div class="career-section__vacancy">и еще 12+ вакансий</div>
         </div>
       </div>
-      <form class="career-section__form form form_black">
-        <div class="form__row">
-          @@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
-          'name', required: true})
-          @@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
-          true})
-        </div>
-        @@include('components/ui/_input-text.html', {placeholder: 'На какую вакансию хотели бы устроиться?*',
-        errorMessage: 'Укажите вакансию', name: 'position', required: true})
-        @@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
-        true})
-        <div class="form__row">
-          <div class="form__privacy">
-            Отправляя форму, вы даете свое согласие
-            на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
+      <div class="career-section__form form form_black">
+        <form>
+          <div class="form__row">
+            @@include('components/ui/_input-text.html', {placeholder: 'Ф.И.О.*', errorMessage: 'Введите ваше имя', name:
+            'name', required: true})
+            @@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
+            true})
           </div>
-          @@include('components/ui/_button.html',
-          {type: 'submit', class: '',children:'отправить'})
-        </div>
-      </form>
+          @@include('components/ui/_input-text.html', {placeholder: 'На какую вакансию хотели бы устроиться?*',
+          errorMessage: 'Укажите вакансию', name: 'position', required: true})
+          @@include('components/ui/_input-file.html', {button:'Прикрепите резюме*', required:
+          true})
+          <div class="form__row">
+            <div class="form__privacy">
+              Отправляя форму, вы даете свое согласие
+              на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
+            </div>
+            @@include('components/ui/_button.html',
+            {type: 'submit', class: '',children:'отправить'})
+          </div>
+        </form>
+      </div>
     </section>
   </main>
   @@include('components/business/_footer.html')

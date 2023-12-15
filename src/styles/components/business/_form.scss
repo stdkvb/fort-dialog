@@ -1,49 +1,55 @@
 .form {
-	padding: 60px;
-	width: 890px;
-	position: absolute;
-	bottom: -125px;
-	right: 60px;
-	background-color: $white;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	form {
+		padding: 60px;
+		width: 890px;
+		position: absolute;
+		bottom: -125px;
+		right: 60px;
+		background-color: $white;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 
-	@include desktop_huge {
-		width: unset;
-	}
+		@include desktop_huge {
+			width: unset;
+		}
 
-	@include tablet {
-		position: unset;
-	}
+		@include tablet {
+			position: unset;
+		}
 
-	@include mobile {
-		padding: 60px 20px;
-		gap: 10px;
+		@include mobile {
+			padding: 60px 20px;
+			gap: 10px;
+		}
 	}
 
 	&_black {
-		background-color: $gray90;
+		form {
+			background-color: $gray90;
 
-		input,
-		textarea {
-			color: $white;
-			&::placeholder {
+			input,
+			textarea {
 				color: $white;
+				&::placeholder {
+					color: $white;
+				}
 			}
 		}
 	}
 
 	&_secondary {
-		@include tablet {
-			position: absolute;
-			width: 100%;
-			right: unset;
-		}
+		form {
+			@include tablet {
+				position: absolute !important;
+				width: 100% !important;
+				right: unset !important;
+			}
 
-		@include mobile {
-			padding: 80px 20px;
-			gap: 10px;
+			@include mobile {
+				padding: 80px 20px !important;
+				gap: 10px !important;
+			}
 		}
 	}
 

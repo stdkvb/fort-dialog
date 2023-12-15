@@ -122,25 +122,27 @@
     <div class="popup__content">
       <span class="popup__close close-popup"></span>
       <h2>Написать нам</h2>
-      <form class="popup__form form">
-        <div class="form__row">
-          @@include('components/ui/_input-text.html', {placeholder: 'Ваше имя*', errorMessage: 'Введите ваше имя',
-          name:
-          'name', required: true})
-          @@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
-          true})
-        </div>
-        @@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение*',
-        errorMessage: 'Оставьте свое сообщение', name: 'message', required: true})
-        <div class="form__row">
-          <div class="form__privacy">
-            Отправляя форму, вы даете свое согласие
-            на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
+      <div class="popup__form form">
+        <form>
+          <div class="form__row">
+            @@include('components/ui/_input-text.html', {placeholder: 'Ваше имя*', errorMessage: 'Введите ваше имя',
+            name:
+            'name', required: true})
+            @@include('components/ui/_input-email.html', {placeholder: 'Электронная почта*', name: 'email', required:
+            true})
           </div>
-          @@include('components/ui/_button.html',
-          {type: 'submit', class: 'btn_green',children:'отправить'})
-        </div>
-      </form>
+          @@include('components/ui/_textarea.html', {placeholder: 'Оставьте свое сообщение*',
+          errorMessage: 'Оставьте свое сообщение', name: 'message', required: true})
+          <div class="form__row">
+            <div class="form__privacy">
+              Отправляя форму, вы даете свое согласие
+              на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
+            </div>
+            @@include('components/ui/_button.html',
+            {type: 'submit', class: 'btn_green',children:'отправить'})
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
