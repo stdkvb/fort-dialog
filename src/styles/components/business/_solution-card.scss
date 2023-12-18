@@ -73,20 +73,28 @@
 	}
 
 	&_secondary {
-		padding: 0 0 28px 0;
-		background-color: $gray04;
-		grid-template-rows: 288px auto auto auto;
-		gap: 30px;
-
-		@include tablet {
-			height: unset;
-			padding: 0 0 20px 0;
-			grid-template-rows: 200px auto auto auto;
-			gap: 0;
-		}
+		border-top: none;
+		display: block;
+		padding: 0 !important;
 
 		&::after {
 			background: none;
+		}
+
+		div {
+			min-height: 100%;
+			display: grid;
+			padding: 0 0 28px 0;
+			background-color: $gray04;
+			grid-template-rows: 288px auto auto auto;
+			gap: 30px;
+
+			@include tablet {
+				height: unset;
+				padding: 0 0 20px 0;
+				grid-template-rows: 200px auto auto auto;
+				gap: 0;
+			}
 		}
 
 		img {
