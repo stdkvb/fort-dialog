@@ -1,4 +1,6 @@
 .about-company {
+	overflow: hidden;
+
 	h2 {
 		text-align: right;
 
@@ -23,6 +25,7 @@
 		margin-top: 80px;
 		display: grid;
 		grid-template-columns: minmax(300px, 713px) 1fr;
+		overflow: hidden;
 
 		@include desktop_huge {
 			grid-template-columns: repeat(2, 1fr);
