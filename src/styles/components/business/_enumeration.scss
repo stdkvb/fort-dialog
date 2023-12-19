@@ -68,6 +68,26 @@
 				margin-bottom: 20px;
 			}
 		}
+
+		p {
+			@include regular-20;
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
+
+		a {
+			@include regular-20;
+
+			&:hover {
+				color: $green50;
+			}
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
 	}
 	.accordion__item_active {
 		.accordion__content {
