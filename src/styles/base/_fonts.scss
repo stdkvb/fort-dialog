@@ -1,7 +1,7 @@
 @font-face {
 	font-family: formular;
 	font-display: swap;
-	src: url('@fonts/Formular-Bold.woff2') format('woff2'), url('@fonts/Formular-Bold.woff') format('woff');
+	src: url('@fonts/formular-bold.woff2') format('woff2'), url('@fonts/formular-bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 }
@@ -14,7 +14,7 @@
 @font-face {
 	font-family: formular;
 	font-display: swap;
-	src: url('@fonts/Formular-Medium.woff2') format('woff2'), url('@fonts/Formular-Medium.woff') format('woff');
+	src: url('@fonts/formular-medium.woff2') format('woff2'), url('@fonts/formular-medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
 }
@@ -27,7 +27,7 @@
 @font-face {
 	font-family: formular;
 	font-display: swap;
-	src: url('@fonts/Formular-Regular.woff2') format('woff2'), url('@fonts/Formular-Regular.woff') format('woff');
+	src: url('@fonts/formular-regular.woff2') format('woff2'), url('@fonts/formular-regular.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
 }
@@ -36,3 +36,4 @@
 	font-weight: 400;
 	line-height: 125%;
 }
+
