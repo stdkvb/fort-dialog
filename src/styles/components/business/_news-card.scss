@@ -1,32 +1,41 @@
 .news-card {
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-	padding: 24px 20px;
-	border-bottom: solid 1px $gray20;
+	div {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		padding: 24px 20px;
+		border-bottom: solid 1px $gray20;
+		height: 100%;
 
-	@include tablet {
-		padding: 30px 0;
-		gap: 15px;
+		@include tablet {
+			padding: 30px 0;
+			gap: 15px;
 
-		&:first-child {
-			padding-top: 0;
+			&:first-child {
+				padding-top: 0;
+			}
 		}
-	}
 
-	&:hover {
-		img {
-			scale: 1.2;
+		&:hover {
+			img {
+				scale: 1.2;
+			}
 		}
 	}
 
 	&__image {
 		margin: 0 !important;
 		overflow: hidden;
+		border-bottom: none !important;
+		padding: 0 !important;
+		height: unset !important;
 	}
 
 	&__date {
 		color: $gray40;
+		border-bottom: none !important;
+		padding: 0 !important;
+		height: unset !important;
 	}
 
 	img {

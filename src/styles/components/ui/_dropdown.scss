@@ -63,13 +63,13 @@
 	}
 
 	&__option {
-		padding: 27px 30px;
-
-		@include tablet {
-			padding: 15px;
-		}
-
 		a {
+			padding: 27px 30px;
+			width: 100%;
+
+			@include tablet {
+				padding: 15px;
+			}
 			@include regular-20;
 			color: $gray70;
 
