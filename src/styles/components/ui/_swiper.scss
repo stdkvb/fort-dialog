@@ -102,6 +102,8 @@
 }
 
 .swiper-pagination {
+	display: flex;
+	justify-content: center;
 	bottom: 0 !important;
 
 	.swiper-pagination-bullet {

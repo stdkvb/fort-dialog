@@ -5,6 +5,14 @@
 		padding-bottom: 80px;
 	}
 
+	&__image {
+		margin-bottom: 80px;
+
+		@include tablet {
+			margin-bottom: 40px;
+		}
+	}
+
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);

@@ -1,9 +1,13 @@
 .map {
-	height: 560px;
+	min-height: calc((100vw - 60px) * 0.375);
 	background-image: url(@images/map.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-right: 60px;
 
 	@include tablet {
-		height: 360px;
+		min-height: calc(100vw * 0.375);
+		margin-right: 0;
 	}
 }
 
