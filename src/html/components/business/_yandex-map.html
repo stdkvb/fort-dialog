@@ -1,5 +1,4 @@
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a4d44cf3-d646-4c31-be91-2de47fe7de39"
-	type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a4d44cf3-d646-4c31-be91-2de47fe7de39" type="text/javascript"></script>
 <script type="text/javascript">
 
 	if (document.getElementById('yandex-map') !== null) {
@@ -11,6 +10,7 @@
 				type: 'yandex#map',
 				controls: []
 			});
+			map.behaviors.disable("scrollZoom");
 
 			let placemark = new ymaps.Placemark([54.741301, 55.985946], {}, {
 				iconLayout: 'default#image',

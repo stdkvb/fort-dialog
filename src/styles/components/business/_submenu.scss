@@ -9,6 +9,7 @@
 	opacity: 0;
 	transition: all 0.8s ease;
 	pointer-events: none;
+	z-index: 2;
 
 	@include tablet {
 		top: 45px;

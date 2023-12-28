@@ -3,7 +3,7 @@
 	display: grid;
 	gap: 16px;
 	align-items: start;
-	grid-template-rows: minmax(0, 60px) auto auto;
+	grid-template-rows: minmax(0, 90px) auto auto;
 	min-height: 468px;
 	height: 100%;
 	position: relative;
@@ -11,7 +11,7 @@
 
 	@include tablet {
 		padding: 25px 20px;
-		grid-template-rows: minmax(0, 50px) auto auto;
+		grid-template-rows: minmax(0, 75px) auto auto;
 	}
 
 	&::after {
@@ -36,15 +36,15 @@
 		@include transition;
 		color: $white;
 		overflow: hidden;
-		max-height: 60px;
+		max-height: 90px;
 		text-overflow: ellipsis;
 
 		@include tablet {
-			max-height: 50px;
+			max-height: 75px;
 		}
 
 		@include mobile {
-			max-height: 40px;
+			max-height: 60px;
 		}
 	}
 
@@ -74,13 +74,13 @@
 		padding: 0 0 28px 0;
 		background-color: $gray04;
 		height: 678px;
-		grid-template-rows: 288px minmax(0, 58px) minmax(0, 180px) auto;
+		grid-template-rows: 288px minmax(0, 90px) minmax(0, 160px) auto;
 		gap: 30px;
 
 		@include tablet {
 			height: unset;
 			padding: 0 0 20px 0;
-			grid-template-rows: 200px minmax(0, 85px) auto auto;
+			grid-template-rows: 200px minmax(0, 120px) auto auto;
 			gap: 0;
 		}
 
@@ -112,6 +112,7 @@
 		}
 
 		p {
+			max-height: 160px;
 			color: $gray70;
 			overflow: hidden;
 
