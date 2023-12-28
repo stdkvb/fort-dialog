@@ -26,6 +26,8 @@
 		@include tablet {
 			top: 45px;
 			left: 0;
+			height: 100%;
+			overflow-y: scroll;
 		}
 	}
 
@@ -94,28 +96,25 @@
 
 	&__list {
 		margin-top: 32px;
-		max-height: 120px;
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(2, 350px);
 		gap: 15px;
-		flex-wrap: wrap;
-		width: 510px;
 
 		@include tablet {
-			max-height: unset;
 			margin-top: 20px;
+			grid-template-columns: 1fr;
 		}
 
 		@include mobile {
 			gap: 30px;
 		}
 
-		&_high {
-			max-height: 150px;
-		}
-
 		.link {
 			margin-right: 50px;
+
+			@include tablet {
+				margin-right: 0;
+			}
 		}
 	}
 }

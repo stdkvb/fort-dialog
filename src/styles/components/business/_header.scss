@@ -188,6 +188,7 @@
 		height: 100vh;
 		width: 60px;
 		@include transition;
+		z-index: 3;
 
 		@include tablet {
 			height: 45px;
