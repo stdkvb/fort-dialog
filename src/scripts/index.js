@@ -100,6 +100,39 @@ new Swiper('.task__swiper', {
 	}
 })
 
+new Swiper('.reviews-section__slider', {
+	
+	spaceBetween: 15,
+	pagination: {
+		el: '.reviews-section__slider .swiper-pagination',
+		clickable: 'true'
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 'auto',
+		}
+	}
+})
+
+// Review's iframes-player
+const iframes = document.querySelectorAll('.reviews-section__iframe')
+
+if (iframes.length) {
+	iframes.forEach((frame) => {
+		const poster = frame.querySelector('.iframe__poster')
+		const iframe = frame.querySelector('iframe')
+		const iframeSRC = iframe.getAttribute('src')
+
+		poster.addEventListener('click', () => {
+			poster.classList.add('iframe__poster_active')
+			iframe.setAttribute('src', iframeSRC + '?rel=0&autoplay=1')
+		})
+	})
+}
+
 new Swiper('.service-detail__swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: 20,
@@ -171,4 +204,3 @@ new CounterItemController({
 	calcAnimationDelay: 4000,
 	clearHoverDelay: 100
 })
-

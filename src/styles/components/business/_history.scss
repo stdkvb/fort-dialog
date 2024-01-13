@@ -185,5 +185,13 @@
 			margin-top: 20px;
 		}
 	}
+
+	&__caption {
+		display: inline-block;
+		margin-top: 10px;
+		@include regular-16;
+		font-style: italic;
+		color: $gray40;
+	}
 }
 
