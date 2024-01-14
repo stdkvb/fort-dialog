@@ -100,5 +100,52 @@
 			background-image: url(../files/icons/minus-black.svg) !important;
 		}
 	}
+
+	&__wrapper {}
+
+	&__text {
+		
+
+		&_view {
+			max-height: 50px;
+			overflow-y: hidden;
+
+			@include tablet {
+				max-height: 40px;
+			}
+		}
+
+		&_active {
+			max-height: unset !important;
+		}
+
+		
+	}
+
+	&__link {
+		display: none;
+
+		&_active {
+			display: inline-block;
+            width: fit-content;
+            border-bottom: 1px solid $green50;
+            @include transition;
+			font-size: 14px !important;
+			margin-top: 12px;
+
+            &,
+            &:active,
+            &:visited,
+            &:focus,
+            &:focus-visible {
+                color: $green50;
+            }
+        
+            &:hover {
+                color: $green60 !important;
+                border-color: $green60;
+            }
+		}
+	}
 }
 

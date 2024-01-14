@@ -6,7 +6,7 @@
 	li {
 		display: flex;
 		gap: 10px;
-		align-items: center;
+		align-items: baseline;
 		@include regular-20;
 
 		@include tablet {

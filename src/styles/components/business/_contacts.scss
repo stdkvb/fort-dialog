@@ -2,12 +2,12 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
-		max-width: 290px;
+		gap: 12px;
+		// max-width: 290px;
 
-		@include tablet {
-			max-width: unset;
-		}
+		// @include tablet {
+		// 	max-width: unset;
+		// }
 
 		span,
 		a {
@@ -36,6 +36,20 @@
 				gap: 40px;
 			}
 		}
+	}
+
+	&__preview {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		
+		@include min_tablet {
+			max-width: 534px;
+		}
+	}
+
+	&__position {
+		@include regular-18;
 	}
 }
 

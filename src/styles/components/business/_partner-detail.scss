@@ -38,6 +38,11 @@
 		@include tablet {
 			margin-bottom: 40px;
 		}
+
+		img {
+			position: sticky;
+			top: 140px;
+		}
 	}
 
 	&__title {
@@ -54,15 +59,21 @@
 		max-width: 1040px;
 
 		p {
-			margin-bottom: 30px;
+			&:not(:last-of-type) {
+				margin-bottom: 30px;
 
-			@include tablet {
-				margin-bottom: 20px;
+				@include tablet {
+					margin-bottom: 20px;
+				}
 			}
 		}
 
 		img {
 			margin-top: 50px;
+
+			@include min_tablet {
+				width: 50%;
+			}
 
 			@include tablet {
 				margin-top: 20px;
@@ -73,8 +84,6 @@
 	img {
 		height: unset;
 		object-fit: contain;
-		position: sticky;
-		top: 140px;
 	}
 }
 

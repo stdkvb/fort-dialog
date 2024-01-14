@@ -39,6 +39,33 @@ takeControlAccordion('.enumeration', '.accordion__list', {
 	accordionItemActiveClass: 'accordion__item_active'
 })
 
+const enumerations = document.querySelectorAll('.enumeration__wrapper')
+if (enumerations.length) {
+	enumerations.forEach((enumeration) => {
+		if (enumeration.offsetHeight > 50) {
+			const enumerationLink = enumeration.querySelector('.enumeration__link')
+			enumerationLink.classList.add("enumeration__link_active")
+			const enumerationText = enumeration.querySelector('.enumeration__text')
+			enumerationText.classList.add("enumeration__text_view")
+
+			enumerationLink.addEventListener('click', (e) => {
+				e.preventDefault()
+				
+	
+				if (enumerationText.classList.contains("enumeration__text_active")) {
+					enumerationText.classList.remove("enumeration__text_active")
+					enumerationLink.textContent = "Подробнее"
+				} else {
+					enumerationText.classList.add("enumeration__text_active")
+					enumerationLink.textContent = "Скрыть"
+				}
+			})
+		}
+
+		
+	})
+}
+
 //swipers init
 new Swiper('.partners__first', {
 	slidesPerView: 'auto',
@@ -119,7 +146,6 @@ new Swiper('.reviews-section__slider', {
 
 // Review's iframes-player
 const iframes = document.querySelectorAll('.reviews-section__iframe')
-
 if (iframes.length) {
 	iframes.forEach((frame) => {
 		const poster = frame.querySelector('.iframe__poster')
