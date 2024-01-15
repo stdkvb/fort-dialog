@@ -65,11 +65,17 @@
 
 		img {
 			margin-bottom: 30px;
+			max-height: 230px;
 		}
 
 		a {
 			@include medium-24-uppercase;
 			margin-bottom: 20px;
+		}
+
+		p {
+			max-height: 90px;
+			overflow: hidden;
 		}
 	}
 }

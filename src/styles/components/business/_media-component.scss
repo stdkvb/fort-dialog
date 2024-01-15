@@ -9,6 +9,8 @@
 	}
 
 	img {
+		height: unset;
+
 		@include desktop_medium {
 			max-height: 780px;
 		}

@@ -28,9 +28,29 @@
 		margin-top: 10px;
 	}
 
-	li {
-		@include regular-18;
-		margin-left: 14px;
+	ul:not(.accordion__list) {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		li {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			@include regular-18;
+
+			@include tablet {
+				@include regular-16;
+			}
+
+			&::before {
+				content: url(@icons/list-item.svg);
+
+				@include tablet {
+					content: url(@icons/list-item-small.svg);
+				}
+			}
+		}
 	}
 
 	.enumeration {
