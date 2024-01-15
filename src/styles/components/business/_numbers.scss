@@ -90,6 +90,7 @@
 
 		span {
 			@include bold-80-uppercase;
+			margin-right: 10px;
 
 			@include mobile {
 				@include bold-40-uppercase;
