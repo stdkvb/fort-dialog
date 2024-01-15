@@ -44,25 +44,22 @@ if (enumerations.length) {
 	enumerations.forEach((enumeration) => {
 		if (enumeration.offsetHeight > 50) {
 			const enumerationLink = enumeration.querySelector('.enumeration__link')
-			enumerationLink.classList.add("enumeration__link_active")
+			enumerationLink.classList.add('enumeration__link_active')
 			const enumerationText = enumeration.querySelector('.enumeration__text')
-			enumerationText.classList.add("enumeration__text_view")
+			enumerationText.classList.add('enumeration__text_view')
 
 			enumerationLink.addEventListener('click', (e) => {
 				e.preventDefault()
-				
-	
-				if (enumerationText.classList.contains("enumeration__text_active")) {
-					enumerationText.classList.remove("enumeration__text_active")
-					enumerationLink.textContent = "Подробнее"
+
+				if (enumerationText.classList.contains('enumeration__text_active')) {
+					enumerationText.classList.remove('enumeration__text_active')
+					enumerationLink.textContent = 'Подробнее'
 				} else {
-					enumerationText.classList.add("enumeration__text_active")
-					enumerationLink.textContent = "Скрыть"
+					enumerationText.classList.add('enumeration__text_active')
+					enumerationLink.textContent = 'Скрыть'
 				}
 			})
 		}
-
-		
 	})
 }
 
@@ -128,7 +125,6 @@ new Swiper('.task__swiper', {
 })
 
 new Swiper('.reviews-section__slider', {
-	
 	spaceBetween: 15,
 	pagination: {
 		el: '.reviews-section__slider .swiper-pagination',
@@ -136,10 +132,10 @@ new Swiper('.reviews-section__slider', {
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 1,
+			slidesPerView: 1
 		},
 		576: {
-			slidesPerView: 'auto',
+			slidesPerView: 'auto'
 		}
 	}
 })
@@ -230,3 +226,4 @@ new CounterItemController({
 	calcAnimationDelay: 4000,
 	clearHoverDelay: 100
 })
+

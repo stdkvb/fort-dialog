@@ -1,0 +1,16 @@
+#img_box {
+	img {
+		width: auto;
+		height: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		max-height: 90vh;
+		max-width: 90vw;
+		object-fit: contain;
+	}
+}
+

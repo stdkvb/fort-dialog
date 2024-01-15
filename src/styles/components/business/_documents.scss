@@ -4,10 +4,37 @@
 	.swiper-component {
 		margin-top: 80px;
 		margin-bottom: 140px;
+		padding-bottom: 80px;
 
 		@include tablet {
 			margin-top: 40px;
 			margin-bottom: 80px;
+		}
+	}
+
+	.swiper-slide {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		img {
+			cursor: pointer;
+		}
+
+		a {
+			opacity: 0;
+			@include transition;
+
+			@include tablet {
+				opacity: 1;
+			}
+		}
+	}
+
+	.swiper-slide:hover {
+		a {
+			opacity: 1;
 		}
 	}
 }
