@@ -181,17 +181,24 @@
 			}
 		}
 
+		picture,
+		img {
+			& + div {
+				display: inline-block !important;
+				margin-top: 10px;
+				@include regular-16;
+				font-style: italic;
+				color: $gray40;
+
+				margin-bottom: 0;
+			}
+		}
+
 		p:not(:first-of-type) {
 			margin-top: 20px;
 		}
 	}
 
-	&__caption {
-		display: inline-block;
-		margin-top: 10px;
-		@include regular-16;
-		font-style: italic;
-		color: $gray40;
-	}
+	
 }
 
