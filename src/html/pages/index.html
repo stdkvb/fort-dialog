@@ -18,8 +18,9 @@
 				</h1>
 			</div>
 		</section>
-		<section class="map">
-		</section>
+
+		@@include('components/business/_map.html')
+		
 		<section class="numbers">
 			<div class="container">
 				<div class="numbers__wrapper">
@@ -425,6 +426,38 @@
 	@@include('components/business/_footer.html')
 
 	@@include('meta/_includeScripts.html')
+	<script>
+		const mapSVG = document.querySelectorAll('.map__svg path')
+		const mapImage = document.querySelector('.map__image')
+		const mapSection = document.querySelector('.map')
+	
+		if (mapSVG.length > 0) {
+			mapSVG.forEach((path) => {
+				path.addEventListener('mouseover', () => {
+					// Заменить "./files/images/" на нужный путь
+					let pathImage = `background-image: url(./files/images/map-` + path.getAttribute('id') + `.webp)`
+	
+					mapImage.setAttribute('style', pathImage)
+					mapImage.querySelector('img').style.opacity = 0			
+				})
+
+				path.addEventListener('click', () => {
+					const mapPreviewActive = document.querySelector('.map-preview > ._active')
+
+					if (mapPreviewActive) {
+						mapPreviewActive.classList.remove('_active')
+					}				
+
+					const mapPreviewSelector = `.map-preview__item_` + path.getAttribute('id')
+					document.querySelector(mapPreviewSelector).classList.add('_active')
+				})
+			})
+	
+			mapSection.addEventListener('mouseout', () => {
+				mapImage.querySelector('img').style.opacity = 1		
+			})
+		}
+	</script>
 </body>
 
 </html>

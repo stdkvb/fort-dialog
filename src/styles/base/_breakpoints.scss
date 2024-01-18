@@ -12,7 +12,19 @@ $desktop: 1366px;
 $desktop_medium: 1440px;
 $desktop_large: 1600px;
 $desktop_huge: 1800px;
+$desktop_extra: 1920px;
 
+@mixin desktop_extra {
+	@media screen and (max-width: $desktop_extra) {
+	  @content;
+	}
+  }
+  
+  @mixin min_desktop_extra {
+	@media screen and (min-width: $desktop_extra + 1px) {
+	  @content;
+	}
+  }
 
 @mixin desktop_huge {
   @media screen and (max-width: $desktop_huge) {

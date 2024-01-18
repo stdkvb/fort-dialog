@@ -1,0 +1,114 @@
+.map-preview {
+
+	&__item {
+		background-color: $white;
+		padding: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		max-width: 368px;
+		
+		position: absolute;
+		z-index: 4;
+
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity $transitionDuration;
+
+		&._active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		&_administration {
+			bottom: 20%;
+			left: 55%;
+		}
+
+		&_roads {
+			bottom: 15%;
+			left: 30%;
+		}
+
+		&_agroprom {
+			top: 10%;
+    		right: 20%;
+		}
+
+		&_airport {
+			top: 10%;
+    		left: 25%;
+		}
+
+		&_education {
+			bottom: 15%;
+    		left: 20%;
+		}
+
+		&_factory {
+			top: 10px;
+    		left: 15%;
+		}
+
+		&_hospital {
+			bottom: 15%;
+    		right: 20%;
+		}
+
+		&_oil {
+			top: 10px;
+    		left: 20%;
+		}
+
+		h3 {
+			@include medium-16;
+			margin-bottom: 3px;
+
+			span {
+				@include medium-16;
+				color: $green50;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		h4 {
+			@include regular-14;
+			color: $gray30;
+			text-transform: uppercase;
+		}
+
+		li {
+			@include regular-14;
+			
+			&::before {
+				content: url('@icons/list-item-small.svg');
+				width: 14px;
+				height: 14px;
+			}
+
+			.link {
+				@include regular-14;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__more {
+		@include medium-14;
+		align-items: center;
+		line-height: 100%;
+
+		&::after {
+			width: 18px;
+			height: 18px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
