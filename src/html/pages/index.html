@@ -443,31 +443,17 @@
 			}
 			
 			mapSVG.forEach((path) => {
-				// const mapImageLinkChange = (path) => {
-				// 	var preImg = document.createElement('link')
-				// 	// Заменить "./files/images/" на нужный путь
-				// 	preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
-				// 	preImg.rel = 'preload'
-				// 	preImg.as = 'image'
-				// 	document.head.appendChild(preImg)
-
-				// 	let pathImage = `background-image: url(./files/images/map-` + path.getAttribute('id') + `.webp)`
-
-					
-					
-				// 	mapImage.setAttribute('style', pathImage)
-
-				// 	console.log(mapImage.getAttribute('style', pathImage))
-				// }
-
-				// mapImageLinkChange(path)
-
+				var preImg = document.createElement('link')
+				preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
+				preImg.rel = 'preload'
+				preImg.as = 'image'
+				document.head.appendChild(preImg)
+				
 				const mapImageChange = (path) => {
 					// Заменить "./files/images/" на нужный путь
 					let pathImage = `./files/images/map-` + path.getAttribute('id') + `.webp`
 					
 					mapImage.setAttribute('src', pathImage)
-					// mapImage.querySelector('img').style.opacity = 0
 				}
 				
 				path.addEventListener('mouseover', () => {
@@ -490,6 +476,7 @@
 			})
 	
 			mapSection.addEventListener('mouseout', () => {
+				// Заменить "./files/images/" на нужный путь
 				let pathImageMain = './files/images/map.png'
 					
 				mapImage.setAttribute('src', pathImageMain)			
