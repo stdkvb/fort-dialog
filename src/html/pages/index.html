@@ -427,35 +427,67 @@
 
 	@@include('meta/_includeScripts.html')
 	<script>
-		const mapSVG = document.querySelectorAll('.map__svg path')
-		const mapImage = document.querySelector('.map__image')
 		const mapSection = document.querySelector('.map')
-	
+		const mapSVG = mapSection.querySelectorAll('.map__svg path')
+		const mapImage = mapSection.querySelector('.map__image')
+		const mapWrapper = mapSection.querySelector('.map__wrapper')
+		const mapPreloader = mapSection.querySelector('.map__preloader')
+		
 		if (mapSVG.length > 0) {
+			const mapPreviewActiveRemove = () => {
+				const mapPreviewActive = mapSection.querySelector('.map-preview > ._active')
+
+				if (mapPreviewActive) {
+					mapPreviewActive.classList.remove('_active')				
+				}
+			}
+			
 			mapSVG.forEach((path) => {
-				path.addEventListener('mouseover', () => {
+				const mapImageLinkChange = (path) => {
+					var preImg = document.createElement('link')
+					// Заменить "./files/images/" на нужный путь
+					preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
+					preImg.rel = 'preload'
+					preImg.as = 'image'
+					document.head.appendChild(preImg)
+				}
+				mapImageLinkChange(path)
+
+				const mapImageChange = (path) => {
 					// Заменить "./files/images/" на нужный путь
 					let pathImage = `background-image: url(./files/images/map-` + path.getAttribute('id') + `.webp)`
-	
+					
 					mapImage.setAttribute('style', pathImage)
-					mapImage.querySelector('img').style.opacity = 0			
+					mapImage.querySelector('img').style.opacity = 0
+				}
+				
+				path.addEventListener('mouseover', () => {
+					mapPreviewActiveRemove()
+					mapImageChange(path)								
 				})
 
 				path.addEventListener('click', () => {
-					const mapPreviewActive = document.querySelector('.map-preview > ._active')
-
-					if (mapPreviewActive) {
-						mapPreviewActive.classList.remove('_active')
-					}				
-
 					const mapPreviewSelector = `.map-preview__item_` + path.getAttribute('id')
-					document.querySelector(mapPreviewSelector).classList.add('_active')
+					const mapPreviewItem = mapSection.querySelector(mapPreviewSelector)
+
+					mapPreviewActiveRemove()
+					
+					mapPreviewItem.classList.add('_active')
+
+					mapPreviewItem.addEventListener('mouseover', () => {
+						mapImageChange(path)								
+					})
 				})
 			})
 	
 			mapSection.addEventListener('mouseout', () => {
-				mapImage.querySelector('img').style.opacity = 1		
-			})
+				mapImage.querySelector('img').style.opacity = 1				
+			})			
+		}
+
+		window.onload = () => {
+			mapWrapper.classList.add('_load')
+			mapPreloader.classList.add('_load')
 		}
 	</script>
 </body>

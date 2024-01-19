@@ -1,6 +1,10 @@
 .map-preview {
 
 	&__item {
+		@include min_desktop_extra {
+			max-width: calc(100vw - 60%);
+		}
+		
 		background-color: $white;
 		padding: 24px;
 		display: flex;
@@ -13,7 +17,7 @@
 
 		opacity: 0;
 		pointer-events: none;
-		transition: opacity $transitionDuration;
+		transition: opacity 0.1s;
 
 		&._active {
 			opacity: 1;
@@ -31,12 +35,12 @@
 		}
 
 		&_agroprom {
-			top: 10%;
+			top: 15%;
     		right: 20%;
 		}
 
 		&_airport {
-			top: 10%;
+			top: 15%;
     		left: 25%;
 		}
 
@@ -46,8 +50,8 @@
 		}
 
 		&_factory {
-			top: 10px;
-    		left: 15%;
+			top: 15%;
+			left: 55%;
 		}
 
 		&_hospital {
@@ -56,15 +60,23 @@
 		}
 
 		&_oil {
-			top: 10px;
+			top: 15%;
     		left: 20%;
 		}
 
 		h3 {
+			@include min_desktop_extra {
+				font-size: calc(16px + 16 * (100vw / 1920));
+			}
+			
 			@include medium-16;
 			margin-bottom: 3px;
 
 			span {
+				@include min_desktop_extra {
+					font-size: calc(16px + 16 * (100vw / 1920));
+				}
+				
 				@include medium-16;
 				color: $green50;
 			}
@@ -77,21 +89,49 @@
 		gap: 16px;
 
 		h4 {
+			@include min_desktop_extra {
+				font-size: calc(14px + 14 * (100vw / 1920));
+			}
+			
 			@include regular-14;
 			color: $gray30;
 			text-transform: uppercase;
 		}
 
+		.list {
+			@include desktop_medium {
+				max-height: 150px;
+				overflow-y: auto;
+				overflow-x: hidden;
+			}
+		}
+
 		li {
+			@include min_desktop_extra {
+				font-size: calc(14px + 14 * (100vw / 1920));
+			}
+			
 			@include regular-14;
 			
 			&::before {
+				@include min_desktop_extra {
+					content: url('@icons/list-item.svg');
+					padding-bottom: 1%;
+					display: flex;
+					align-items: flex-start;
+				}
+				
 				content: url('@icons/list-item-small.svg');
 				width: 14px;
 				height: 14px;
+				max-width: fit-content;
 			}
 
 			.link {
+				@include min_desktop_extra {
+					font-size: calc(14px + 14 * (100vw / 1920));
+				}
+				
 				@include regular-14;
 				text-transform: uppercase;
 			}
@@ -99,6 +139,10 @@
 	}
 
 	&__more {
+		@include min_desktop_extra {
+			font-size: calc(14px + 14 * (100vw / 1920));
+		}
+		
 		@include medium-14;
 		align-items: center;
 		line-height: 100%;
