@@ -3,6 +3,7 @@
 	&__item {
 		@include min_desktop_extra {
 			max-width: calc(100vw - 60%);
+			padding: 36px;
 		}
 		
 		background-color: $white;
@@ -17,7 +18,7 @@
 
 		opacity: 0;
 		pointer-events: none;
-		transition: opacity 0.1s;
+		transition: opacity 0.2s;
 
 		&._active {
 			opacity: 1;
@@ -66,7 +67,7 @@
 
 		h3 {
 			@include min_desktop_extra {
-				font-size: calc(16px + 16 * (100vw / 1920));
+				font-size: calc(14px + 14 * (100vw / 1920));
 			}
 			
 			@include medium-16;
@@ -74,7 +75,7 @@
 
 			span {
 				@include min_desktop_extra {
-					font-size: calc(16px + 16 * (100vw / 1920));
+					font-size: calc(14px + 14 * (100vw / 1920));
 				}
 				
 				@include medium-16;
@@ -90,7 +91,7 @@
 
 		h4 {
 			@include min_desktop_extra {
-				font-size: calc(14px + 14 * (100vw / 1920));
+				font-size: calc(12px + 12 * (100vw / 1920));
 			}
 			
 			@include regular-14;
@@ -108,7 +109,7 @@
 
 		li {
 			@include min_desktop_extra {
-				font-size: calc(14px + 14 * (100vw / 1920));
+				font-size: calc(12px + 12 * (100vw / 1920));
 			}
 			
 			@include regular-14;
@@ -129,7 +130,7 @@
 
 			.link {
 				@include min_desktop_extra {
-					font-size: calc(14px + 14 * (100vw / 1920));
+					font-size: calc(12px + 12 * (100vw / 1920));
 				}
 				
 				@include regular-14;
@@ -140,7 +141,7 @@
 
 	&__more {
 		@include min_desktop_extra {
-			font-size: calc(14px + 14 * (100vw / 1920));
+			font-size: calc(12px + 12 * (100vw / 1920));
 		}
 		
 		@include medium-14;

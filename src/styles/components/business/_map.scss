@@ -45,20 +45,25 @@
 	&__image {
 		background-repeat: no-repeat;
 		background-size: 100%;
-		transition: background-image 0.1s;
+		transition: background-image 0.2s;
 		
 		img {
-			transition: opacity 0.1s;
+			transition: opacity 0.2s;
 			position: relative;
 			pointer-events: none;
-			z-index: 5;
+			z-index: 2;
 			width: 100%;
 			height: fit-content;
+		}
+
+		&_preoad {
+			display: none;
 		}
 	}
 
 	&__preloader {
 		display: block;
+		min-height: 700px;
 
 		&._load {
 			display: none;

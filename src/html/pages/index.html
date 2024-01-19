@@ -429,7 +429,7 @@
 	<script>
 		const mapSection = document.querySelector('.map')
 		const mapSVG = mapSection.querySelectorAll('.map__svg path')
-		const mapImage = mapSection.querySelector('.map__image')
+		const mapImage = mapSection.querySelector('.map__image img')
 		const mapWrapper = mapSection.querySelector('.map__wrapper')
 		const mapPreloader = mapSection.querySelector('.map__preloader')
 		
@@ -443,22 +443,31 @@
 			}
 			
 			mapSVG.forEach((path) => {
-				const mapImageLinkChange = (path) => {
-					var preImg = document.createElement('link')
-					// Заменить "./files/images/" на нужный путь
-					preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
-					preImg.rel = 'preload'
-					preImg.as = 'image'
-					document.head.appendChild(preImg)
-				}
-				mapImageLinkChange(path)
+				// const mapImageLinkChange = (path) => {
+				// 	var preImg = document.createElement('link')
+				// 	// Заменить "./files/images/" на нужный путь
+				// 	preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
+				// 	preImg.rel = 'preload'
+				// 	preImg.as = 'image'
+				// 	document.head.appendChild(preImg)
+
+				// 	let pathImage = `background-image: url(./files/images/map-` + path.getAttribute('id') + `.webp)`
+
+					
+					
+				// 	mapImage.setAttribute('style', pathImage)
+
+				// 	console.log(mapImage.getAttribute('style', pathImage))
+				// }
+
+				// mapImageLinkChange(path)
 
 				const mapImageChange = (path) => {
 					// Заменить "./files/images/" на нужный путь
-					let pathImage = `background-image: url(./files/images/map-` + path.getAttribute('id') + `.webp)`
+					let pathImage = `./files/images/map-` + path.getAttribute('id') + `.webp`
 					
-					mapImage.setAttribute('style', pathImage)
-					mapImage.querySelector('img').style.opacity = 0
+					mapImage.setAttribute('src', pathImage)
+					// mapImage.querySelector('img').style.opacity = 0
 				}
 				
 				path.addEventListener('mouseover', () => {
@@ -481,7 +490,9 @@
 			})
 	
 			mapSection.addEventListener('mouseout', () => {
-				mapImage.querySelector('img').style.opacity = 1				
+				let pathImageMain = './files/images/map.png'
+					
+				mapImage.setAttribute('src', pathImageMain)			
 			})			
 		}
 
