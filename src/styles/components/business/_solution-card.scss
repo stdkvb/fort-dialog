@@ -70,6 +70,10 @@
 		right: 0;
 		margin: auto;
 		z-index: -1;
+
+		img {
+			filter: brightness(0.3);
+		}
 	}
 
 	&_secondary {
@@ -170,6 +174,10 @@
 
 			@include tablet {
 				height: 200px;
+			}
+
+			img {
+				filter: brightness(1);
 			}
 		}
 	}

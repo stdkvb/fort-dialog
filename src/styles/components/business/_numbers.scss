@@ -106,14 +106,21 @@
 			padding-bottom: 0;
 			max-width: 850px;
 
+			@include min_tablet {
+				justify-content: flex-end;
+				gap: 40px;
+			}
+
 			@include tablet {
 				@include bold-120-uppercase;
 				max-width: 420px;
+				gap: 20px;
 			}
 
 			@include mobile {
 				@include bold-60-uppercase;
 				max-width: 210px;
+				gap: 0;
 			}
 
 			span {

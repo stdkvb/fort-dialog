@@ -104,7 +104,13 @@
 	&__wrapper {}
 
 	&__text {
-		
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@include tablet {
+			gap: 12px;
+		}
 
 		&_view {
 			max-height: 50px;
@@ -117,6 +123,27 @@
 
 		&_active {
 			max-height: unset !important;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		
+			li {
+				display: flex;
+				gap: 10px;
+				align-items: baseline;
+				@include regular-20;
+		
+				@include tablet {
+					@include regular-16;
+				}
+		
+				&::before {
+					content: url(@icons/list-item-small.svg);
+				}
+			}
 		}
 
 		

@@ -5,23 +5,27 @@
 		padding-top: 50px;
 		padding-bottom: 50px;
 		height: 100%;
-		display: grid;
-		grid-template-rows: minmax(0, 150px) auto max-content;
+		display: flex;
+		flex-direction: column;
 		gap: 12px;
 
+		@include tablet {
+			padding-bottom: 40px;
+		}
+
 		@include mobile {
-			grid-template-rows: minmax(0, 75px) auto max-content;
 			gap: 15px;
 		}
 	}
 
 	.swiper-slide {
 		position: relative;
-		height: 500px;
+		// height: 100%;
+		min-height: 500px;
 
-		@include mobile {
-			height: 350px;
-		}
+		// @include mobile {
+		// 	height: 350px;
+		// }
 	}
 
 	img {
@@ -39,7 +43,7 @@
 	p {
 		max-width: 707px;
 		color: $white;
-		overflow: hidden;
+		// overflow: hidden;
 	}
 
 	h2 {
@@ -59,12 +63,19 @@
 
 		@include mobile {
 			@include regular-16;
-			max-height: 80px;
+			// max-height: 80px;
 		}
 	}
 
 	.link {
 		justify-self: flex-end;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		@include tablet {
+			bottom: 20px !important;
+		}
 	}
 }
 

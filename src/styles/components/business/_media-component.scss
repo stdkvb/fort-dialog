@@ -23,15 +23,37 @@
 	&_secondary {
 		grid-template-columns: repeat(2, 1fr) !important;
 
-		img {
-			max-height: 300px !important;
-		}
+		// img {
+		// 	max-height: 300px !important;
+
+		// 	@include min_desktop_extra {
+		// 		max-height: 500px !important;
+		// 	}
+		// }
 		.news-card {
 			padding-top: 0;
 
-			img {
+			&__image {
+				position: relative;
+				min-height: 300px !important;
 				display: none;
+
+				@include min_desktop_extra {
+					min-height: 600px !important;
+				}
+
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					z-index: 1;
+				}
 			}
+
+			// img {
+			// 	display: none;
+			// }
 		}
 
 		@include tablet_small {
@@ -103,7 +125,7 @@
 				}
 			}
 
-			img {
+			.news-card__image {
 				display: block;
 			}
 		}

@@ -109,6 +109,7 @@ new Swiper('.projects-section__swiper', {
 new Swiper('.banner', {
 	slidesPerView: 1,
 	spaceBetween: 0,
+	autoHeight: true,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
@@ -227,3 +228,11 @@ new CounterItemController({
 	clearHoverDelay: 100
 })
 
+//number with spaces
+setTimeout(() => {
+	const numbers = document.querySelectorAll('.numbers__number span')
+	numbers.forEach((elem) => {
+		let numberWithSpace = elem.outerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+		elem.innerHTML = numberWithSpace
+	})
+}, 5000);
