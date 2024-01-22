@@ -1,7 +1,7 @@
 .fraction {
-    margin-bottom: 80px;
+    margin-bottom: 140px;
 
-    @include tablet {
+    @include desktop_extra_small {
         display: none;
     }
 
@@ -13,19 +13,44 @@
     &__container {
         display: flex;
         justify-content: space-between;
+		gap: 16px;
+		max-width: 1570px;
         height: 746px;
+		margin: 0 auto;
+
+		&_agronom {
+			gap: 74px;
+		}
     }
 
     &__column {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+		gap: 20px;
+
+		&_center {
+			justify-content: center;
+		}
+
+		&_offset {
+			@include min_desktop_large {
+				margin-left: 340px;
+			}
+			@include min_desktop_base {
+				margin-left: 170px;
+			}
+		}
+
+		&_left {
+			margin-left: auto;
+		}
     }
 
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
 
         li {
             &::before {
@@ -34,6 +59,21 @@
         }
     }
 
+	&__item {
+
+		&_offset-130 {
+			margin-left: 130px;
+		}
+		
+		&_offset-80 {
+			margin-left: 80px;
+		}
+
+		&_offsettop {
+			margin: 0 auto;
+		}
+	}
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -41,7 +81,7 @@
 
        
 
-        span {
+        p {
             @include regular-14;
             text-transform: uppercase;
             color: $black;
@@ -69,7 +109,7 @@
         }
 
         &_bold {
-            span {
+            & > p {
                 @include bold-14;
             }
         }
@@ -86,5 +126,13 @@
         img {
             object-fit: contain;
         }
+
+		&_roads {
+			img {
+				@include desktop_extra {
+					object-fit: cover;
+				}
+			}
+		}
     }
 }

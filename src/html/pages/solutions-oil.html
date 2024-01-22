@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Форт Диалог | Решения-нефтегазовый сектор'})
+
+<body>
+  @@include('components/business/_header.html')
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="/" class="link">Главная</a>
+          </li>
+          <li>
+            Решения
+          </li>
+        </ul>
+        <h1>Решения</h1>
+        <div class="dropdown">
+          <div class="dropdown__button">
+            <span>Нефтегазовый сектор</span>
+            <b>&#x25BE;</b>
+          </div>
+          <ul class="dropdown__options">
+            <li class="dropdown__option">
+              <a href="#">Все отрасли</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Здравоохранение</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Образование</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Промышленность</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Транспорт</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Химическое предприятие</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Энергетика</a>
+            </li>
+            <li class="dropdown__option">
+              <a href="#">Государственные организации</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    @@include('components/business/_fraction.html', {
+		oil: 'true'
+	})
+  </main>
+  @@include('components/business/_footer.html')
+
+  @@include('meta/_includeScripts.html')
+</body>
+
+</html>
