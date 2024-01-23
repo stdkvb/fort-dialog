@@ -229,10 +229,10 @@ new CounterItemController({
 })
 
 //number with spaces
-setTimeout(() => {
-	const numbers = document.querySelectorAll('.numbers__number span')
-	numbers.forEach((elem) => {
-		let numberWithSpace = elem.outerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
-		elem.innerHTML = numberWithSpace
-	})
-}, 5000);
+// setTimeout(() => {
+// 	const numbers = document.querySelectorAll('.numbers__number span')
+// 	numbers.forEach((elem) => {
+// 		let numberWithSpace = elem.outerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+// 		elem.innerHTML = numberWithSpace
+// 	})
+// }, 5000);

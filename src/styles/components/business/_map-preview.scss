@@ -94,9 +94,8 @@
 				font-size: calc(12px + 12 * (100vw / 1920));
 			}
 			
-			@include regular-14;
-			color: $gray30;
-			text-transform: uppercase;
+			@include regular-16;
+			color: $gray40;
 		}
 
 		.list {

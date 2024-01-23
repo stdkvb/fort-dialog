@@ -112,6 +112,37 @@
 				}
 			}
 		}
+
+		&_green {
+			border: solid 1px $green50;
+			color: $green50;
+			background-color: $white;
+			border-radius: 60px;
+			height: 38px;
+			padding: 10px 22px;
+
+			.children {
+				color: $green50;
+				@include medium-14-uppercase;
+
+				&:after {
+					content: url(@icons/arrow-green.svg);
+				}
+			}
+
+			&:hover {
+				color: $white;
+				background-color: $green50;
+
+				.children {
+					color: $white;
+	
+					&:after {
+						content: url(@icons/arrow-white.svg);
+					}
+				}
+			}
+		}
 	}
 
 	&_wide {
