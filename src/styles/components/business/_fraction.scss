@@ -67,6 +67,10 @@
 		
 		&_offset-80 {
 			margin-left: 80px;
+
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
 		}
 
 		&_offsettop {

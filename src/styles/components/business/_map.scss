@@ -69,6 +69,10 @@
 			display: none;
 		}
 
+		@include desktop_extra_small {
+			display: none !important;
+		}
+
 		&__item {
 			width: 150px;
 			height: 150px;

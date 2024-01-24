@@ -427,66 +427,68 @@
 
 	@@include('meta/_includeScripts.html')
 	<script>
-		const mapSection = document.querySelector('.map')
-		const mapSVG = mapSection.querySelectorAll('.map__svg path')
-		const mapImage = mapSection.querySelector('.map__image img')
-		const mapWrapper = mapSection.querySelector('.map__wrapper')
-		const mapPreloader = mapSection.querySelector('.map__preloader')
-		
-		if (mapSVG.length > 0) {
-			const mapPreviewActiveRemove = () => {
-				const mapPreviewActive = mapSection.querySelector('.map-preview > ._active')
-
-				if (mapPreviewActive) {
-					mapPreviewActive.classList.remove('_active')				
-				}
-			}
+		if (window.innerWidth > 1024) {
+			const mapSection = document.querySelector('.map')
+			const mapSVG = mapSection.querySelectorAll('.map__svg path')
+			const mapImage = mapSection.querySelector('.map__image img')
+			const mapWrapper = mapSection.querySelector('.map__wrapper')
+			const mapPreloader = mapSection.querySelector('.map__preloader')
 			
-			mapSVG.forEach((path) => {
-				var preImg = document.createElement('link')
-				preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
-				preImg.rel = 'preload'
-				preImg.as = 'image'
-				document.head.appendChild(preImg)
-				
-				const mapImageChange = (path) => {
-					// Заменить "./files/images/" на нужный путь
-					let pathImage = `./files/images/map-` + path.getAttribute('id') + `.webp`
-					
-					mapImage.setAttribute('src', pathImage)
+			if (mapSVG.length > 0) {
+				const mapPreviewActiveRemove = () => {
+					const mapPreviewActive = mapSection.querySelector('.map-preview > ._active')
+
+					if (mapPreviewActive) {
+						mapPreviewActive.classList.remove('_active')				
+					}
 				}
 				
-				path.addEventListener('mouseover', () => {
-					mapPreviewActiveRemove()
-					mapImageChange(path)								
-				})
-
-				path.addEventListener('click', () => {
-					const mapPreviewSelector = `.map-preview__item_` + path.getAttribute('id')
-					const mapPreviewItem = mapSection.querySelector(mapPreviewSelector)
-
-					mapPreviewActiveRemove()
+				mapSVG.forEach((path) => {
+					var preImg = document.createElement('link')
+					preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
+					preImg.rel = 'preload'
+					preImg.as = 'image'
+					document.head.appendChild(preImg)
 					
-					mapPreviewItem.classList.add('_active')
-
-					mapPreviewItem.addEventListener('mouseover', () => {
+					const mapImageChange = (path) => {
+						// Заменить "./files/images/" на нужный путь
+						let pathImage = `./files/images/map-` + path.getAttribute('id') + `.webp`
+						
+						mapImage.setAttribute('src', pathImage)
+					}
+					
+					path.addEventListener('mouseover', () => {
+						mapPreviewActiveRemove()
 						mapImageChange(path)								
 					})
-				})
-			})
-	
-			mapSection.addEventListener('mouseout', () => {
-				// Заменить "./files/images/" на нужный путь
-				let pathImageMain = './files/images/map.png'
-					
-				mapImage.setAttribute('src', pathImageMain)			
-			})			
-		}
 
-		window.onload = () => {
-			mapWrapper.classList.add('_load')
-			mapPreloader.classList.add('_load')
-		}
+					path.addEventListener('click', () => {
+						const mapPreviewSelector = `.map-preview__item_` + path.getAttribute('id')
+						const mapPreviewItem = mapSection.querySelector(mapPreviewSelector)
+
+						mapPreviewActiveRemove()
+						
+						mapPreviewItem.classList.add('_active')
+
+						mapPreviewItem.addEventListener('mouseover', () => {
+							mapImageChange(path)								
+						})
+					})
+				})
+		
+				mapSection.addEventListener('mouseout', () => {
+					// Заменить "./files/images/" на нужный путь
+					let pathImageMain = './files/images/map.png'
+						
+					mapImage.setAttribute('src', pathImageMain)			
+				})			
+			}
+
+			window.onload = () => {
+				mapWrapper.classList.add('_load')
+				mapPreloader.classList.add('_load')
+			}
+		}		
 	</script>
 </body>
 
