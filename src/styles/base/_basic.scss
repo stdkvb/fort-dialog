@@ -44,8 +44,12 @@ section {
 }
 
 h1 {
-	@include medium-60-uppercase;
+	@include medium-48-uppercase;
 	color: $black;
+
+	@include min_desktop_extra {
+		@include medium-60-uppercase;
+	}
 
 	@include tablet {
 		@include medium-30-uppercase;
@@ -57,8 +61,12 @@ h1 {
 }
 
 h2 {
-	@include medium-48-uppercase;
+	@include medium-36-uppercase;
 	color: $black;
+
+	@include min_desktop_extra {
+		@include medium-48-uppercase;
+	}
 
 	@include tablet {
 		@include medium-30-uppercase;
@@ -149,8 +157,8 @@ input {
 	margin-right: 115px;
 
 	@include desktop {
-		margin-left: 50px;
-		margin-right: 50px;
+		margin-left: 60px;
+		margin-right: 60px;
 	}
 
 	@include tablet {

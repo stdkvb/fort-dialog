@@ -1,15 +1,23 @@
 .title {
 	padding: 230px 0 105px 0;
 
+	@include desktop {
+		padding: 150px 55px 120px 0;
+	}
+
 	@include tablet {
 		padding: 85px 0 0 0;
 	}
 
 	h1 {
-		@include bold-80-uppercase;
+		@include min_desktop_extra {
+			@include bold-80-uppercase;
+		}
+		
+		@include bold-60-uppercase;
 		color: $black;
 
-		@include tablet {
+		@include desktop_small {
 			@include bold-40-uppercase;
 		}
 
@@ -33,9 +41,13 @@
 
 		span {
 			display: inline-block;
-			@include bold-80-uppercase;
+			@include min_desktop_extra {
+				@include bold-80-uppercase;
+			}
+			
+			@include bold-60-uppercase;
 
-			@include tablet {
+			@include desktop_small {
 				@include bold-40-uppercase;
 			}
 
@@ -48,10 +60,14 @@
 			}
 
 			b {
-				@include bold-80-uppercase;
+				@include min_desktop_extra {
+					@include bold-80-uppercase;
+				}
+				
+				@include bold-60-uppercase;
 				color: $green50;
 
-				@include tablet {
+				@include desktop_small {
 					@include bold-40-uppercase;
 				}
 
