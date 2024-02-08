@@ -113,10 +113,14 @@
 		}
 
 		&_view {
-			max-height: 50px;
+			max-height: 55px;
 			overflow-y: hidden;
 
 			@include tablet {
+				max-height: 30px;
+			}
+
+			@include tablet_small {
 				max-height: 40px;
 			}
 		}
