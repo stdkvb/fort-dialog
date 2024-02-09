@@ -65,11 +65,25 @@
 
 			& > .btn {
 				@include desktop {
-					padding: 10px 20px;
+					padding: 8px 20px;
 					height: 100%;
-					
-					.children {
-						@include medium-16;
+				}
+
+				@include desktop_small {
+					padding: 6px 16px;
+				}
+
+				@include mobile {
+					padding: 10px 20px;
+				}
+
+				.children {
+					@include desktop {
+						@include medium-14;
+					}
+
+					@include desktop_small {
+						@include medium-12;
 					}
 				}
 			}
