@@ -1,8 +1,8 @@
 .title {
-	padding: 170px 0 70px 0;
+	padding: 170px 0 30px 0;
 
 	@include desktop {
-		padding: 170px 55px 70px 0;
+		padding: 170px 55px 30px 0;
 	}
 
 	@include desktop_extra_small {
@@ -14,23 +14,44 @@
 	}
 
 	h1 {
+		color: $black;
+
 		@include min_desktop_extra {
 			@include bold-80-uppercase;
 		}
 		
 		@include bold-60-uppercase;
-		color: $black;
 
 		@include desktop {
-			@include bold-40-uppercase;
+			@include bold-36-uppercase;
+		}
+
+		@include desktop_base {
+			@include bold-30-uppercase;
 		}
 
 		@include mobile {
-			@include bold-28-uppercase;
+			@include bold-26-uppercase;
 		}
 
 		display: flex;
 		flex-direction: column;
+
+		& > div {
+			display: flex;
+			flex-direction: column;
+
+			@include desktop {
+				flex-direction: row;
+				align-items: center;
+				gap: 10px;
+			}
+			@include desktop_small {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0;
+			}
+		}
 
 		strong {
 			display: flex;
@@ -40,6 +61,17 @@
 			@include mobile {
 				flex-direction: column;
 				align-items: flex-start;
+			}
+
+			& > .btn {
+				@include desktop {
+					padding: 10px 20px;
+					height: 100%;
+					
+					.children {
+						@include medium-16;
+					}
+				}
 			}
 		}
 
@@ -52,16 +84,20 @@
 			@include bold-60-uppercase;
 
 			@include desktop {
-				@include bold-40-uppercase;
+				@include bold-36-uppercase;
+			}
+
+			@include desktop_base {
+				@include bold-30-uppercase;
 			}
 
 			@include mobile {
-				@include bold-28-uppercase;
+				@include bold-26-uppercase;
 			}
 
-			&:nth-child(2) {
-				align-self: flex-end;
-			}
+			// &:nth-child(2) {
+			// 	align-self: flex-end;
+			// }
 
 			b {
 				@include min_desktop_extra {
@@ -72,11 +108,15 @@
 				color: $green50;
 
 				@include desktop {
-					@include bold-40-uppercase;
+					@include bold-36-uppercase;
+				}
+
+				@include desktop_base {
+					@include bold-30-uppercase;
 				}
 
 				@include mobile {
-					@include bold-28-uppercase;
+					@include bold-26-uppercase;
 				}
 			}
 		}
