@@ -69,7 +69,7 @@
 					height: 100%;
 				}
 
-				@include desktop_small {
+				@include desktop_base {
 					padding: 6px 16px;
 				}
 
@@ -82,7 +82,7 @@
 						@include medium-14;
 					}
 
-					@include desktop_small {
+					@include desktop_base {
 						@include medium-12;
 					}
 				}
