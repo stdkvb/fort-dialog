@@ -176,8 +176,7 @@
 
 			@include tablet {
 				margin-top: 40px;
-				height: 400px;
-				object-fit: cover;
+				max-height: 400px;
 			}
 		}
 
@@ -198,7 +197,5 @@
 			margin-top: 20px;
 		}
 	}
-
-	
 }
 
