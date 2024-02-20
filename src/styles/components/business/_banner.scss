@@ -52,6 +52,7 @@
 	}
 
 	h2 {
+		flex-grow: 1;
 		@include bold-40-uppercase;
 
 		@include tablet {
