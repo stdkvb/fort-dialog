@@ -109,7 +109,7 @@ new Swiper('.projects-section__swiper', {
 new Swiper('.banner', {
 	slidesPerView: 1,
 	spaceBetween: 0,
-	autoHeight: true,
+	autoHeight: false,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
@@ -236,3 +236,4 @@ new CounterItemController({
 // 		elem.innerHTML = numberWithSpace
 // 	})
 // }, 5000);
+

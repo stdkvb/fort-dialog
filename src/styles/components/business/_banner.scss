@@ -20,7 +20,7 @@
 
 	.swiper-slide {
 		position: relative;
-		// height: 100%;
+		height: auto;
 		min-height: 500px;
 
 		// @include mobile {
@@ -41,9 +41,14 @@
 
 	h2,
 	p {
-		max-width: 707px;
+		// max-width: 707px;
 		color: $white;
 		// overflow: hidden;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 6;
+		-webkit-box-orient: vertical;
 	}
 
 	h2 {
@@ -63,6 +68,7 @@
 
 		@include mobile {
 			@include regular-16;
+			-webkit-line-clamp: 10;
 			// max-height: 80px;
 		}
 	}
