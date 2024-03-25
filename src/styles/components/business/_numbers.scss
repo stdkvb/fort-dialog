@@ -31,7 +31,7 @@
 			'a c'
 			'b c';
 
-		@include desktop_large {
+		@include desktop_small {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-areas:
 				'c c'
@@ -67,6 +67,11 @@
 			flex-direction: column;
 			gap: 25px;
 			justify-content: space-between;
+			width: min-content;
+
+			@include desktop_small {
+				width: unset;
+			}
 
 			@include mobile {
 				margin-bottom: 20px;
@@ -111,6 +116,10 @@
 				gap: 40px;
 			}
 
+			@include desktop_large {
+				@include bold-150-uppercase;
+			}
+
 			@include tablet {
 				@include bold-120-uppercase;
 				max-width: 420px;
@@ -125,6 +134,10 @@
 
 			span {
 				@include bold-240-uppercase;
+
+				@include desktop_large {
+					@include bold-150-uppercase;
+				}
 
 				@include tablet {
 					@include bold-120-uppercase;

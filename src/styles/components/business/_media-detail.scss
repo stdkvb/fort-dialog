@@ -30,6 +30,15 @@
 				@include regular-16;
 			}
 		}
+
+		iframe {
+			width: 50%;
+			aspect-ratio: 16 / 9;
+
+			@include tablet {
+				width: 100%;
+			}
+		}
 	}
 }
 

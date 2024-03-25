@@ -101,7 +101,8 @@
 		}
 	}
 
-	&__wrapper {}
+	&__wrapper {
+	}
 
 	&__text {
 		display: flex;
@@ -113,7 +114,7 @@
 		}
 
 		&_view {
-			max-height: 55px;
+			max-height: 52px;
 			overflow-y: hidden;
 
 			@include tablet {
@@ -132,25 +133,23 @@
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 5px;
-		
+			gap: 12px;
+
 			li {
 				display: flex;
 				gap: 10px;
 				align-items: baseline;
 				@include regular-20;
-		
+
 				@include tablet {
 					@include regular-16;
 				}
-		
+
 				&::before {
-					content: url(@icons/list-item-small.svg);
+					content: url(@icons/list-item.svg);
 				}
 			}
 		}
-
-		
 	}
 
 	&__link {
@@ -158,24 +157,24 @@
 
 		&_active {
 			display: inline-block;
-            width: fit-content;
-            border-bottom: 1px solid $green50;
-            @include transition;
+			width: fit-content;
+			border-bottom: 1px solid $green50;
+			@include transition;
 			font-size: 14px !important;
 			margin-top: 12px;
 
-            &,
-            &:active,
-            &:visited,
-            &:focus,
-            &:focus-visible {
-                color: $green50;
-            }
-        
-            &:hover {
-                color: $green60 !important;
-                border-color: $green60;
-            }
+			&,
+			&:active,
+			&:visited,
+			&:focus,
+			&:focus-visible {
+				color: $green50;
+			}
+
+			&:hover {
+				color: $green60 !important;
+				border-color: $green60;
+			}
 		}
 	}
 }
