@@ -1,0 +1,70 @@
+.univercity {
+	margin-bottom: 80px;
+	@include tablet {
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 40px;
+		gap: 32px;
+
+		@include tablet {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			margin-bottom: 20px;
+		}
+
+		img {
+			max-width: 167px;
+
+			@include mobile {
+				width: 79px;
+			}
+		}
+
+		h2 {
+			text-align: right;
+
+			@include tablet {
+				text-align: left;
+			}
+			span {
+				font-size: inherit;
+				color: $green50;
+			}
+		}
+	}
+
+	&__text {
+		max-width: 1173px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 80px;
+
+		@include tablet {
+			margin-bottom: 40px;
+		}
+
+		span {
+			@include medium-20;
+			color: $gray60;
+
+			@include mobile {
+				@include medium-16;
+			}
+		}
+		p {
+			color: $gray60;
+			@include regular-20;
+
+			@include mobile {
+				@include regular-16;
+			}
+		}
+	}
+}
+

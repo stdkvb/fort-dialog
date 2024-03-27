@@ -219,6 +219,24 @@ new Swiper('.media-detail__swiper', {
 	}
 })
 
+new Swiper('.benefits__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
+new Swiper('.univercity__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	}
+})
+
 // counter
 new CounterItemController({
 	countersElementsWrapperSelector: '.numbers',

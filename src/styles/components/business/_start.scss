@@ -1,0 +1,43 @@
+.start {
+	background-color: $gray10;
+	padding-top: 140px;
+	padding-bottom: 140px;
+	margin-bottom: 140px;
+
+	@include tablet {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		margin-bottom: 80px;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@include mobile {
+			gap: 20px;
+		}
+	}
+
+	h2 {
+		max-width: 1200px;
+
+		span {
+			font-size: inherit;
+			color: $green50;
+		}
+	}
+
+	&__text {
+		max-width: 988px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@include mobile {
+			gap: 10px;
+		}
+	}
+}
+

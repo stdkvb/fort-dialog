@@ -1,4 +1,10 @@
 .enumeration {
+	&__ancor {
+		opacity: 0;
+		position: absolute;
+		top: -150px;
+	}
+
 	&__item {
 		padding: 40px 0 40px 0;
 		border-top: solid 1px $gray10;
@@ -114,7 +120,7 @@
 		}
 
 		&_view {
-			max-height: 52px;
+			max-height: 70px;
 			overflow-y: hidden;
 
 			@include tablet {
@@ -133,7 +139,7 @@
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 12px;
+			gap: 15px;
 
 			li {
 				display: flex;
