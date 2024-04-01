@@ -125,6 +125,9 @@
 		@include mobile {
 			@include medium-16-uppercase;
 			padding: 10px 24px;
+			height: unset;
+			white-space: wrap;
+			line-height: unset;
 		}
 	}
 }
