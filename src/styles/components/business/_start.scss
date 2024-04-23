@@ -1,19 +1,25 @@
 .start {
-	background-color: $gray10;
-	padding-top: 140px;
-	padding-bottom: 140px;
+	display: flex;
 	margin-bottom: 140px;
+	background-color: $gray10;
 
 	@include tablet {
-		padding-top: 80px;
-		padding-bottom: 80px;
 		margin-bottom: 80px;
+		flex-direction: column-reverse;
 	}
 
 	.container {
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
+		max-width: 70%;
+		padding-top: 140px;
+		padding-bottom: 140px;
+
+		@include tablet {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
 
 		@include mobile {
 			gap: 20px;
@@ -26,6 +32,24 @@
 		span {
 			font-size: inherit;
 			color: $green50;
+		}
+	}
+
+	&__video {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		min-height: 100%;
+
+		@include tablet {
+			height: 360px;
+		}
+
+		video {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
 		}
 	}
 
