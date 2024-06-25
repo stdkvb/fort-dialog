@@ -237,6 +237,16 @@ new Swiper('.univercity__swiper', {
 	}
 })
 
+new Swiper('.employees__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: 'true'
+	},
+	autoHeight: false
+})
+
 // counter
 new CounterItemController({
 	countersElementsWrapperSelector: '.numbers',

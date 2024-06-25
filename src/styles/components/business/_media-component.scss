@@ -8,17 +8,17 @@
 		gap: 40px;
 	}
 
-	img {
-		height: unset;
+	// img {
+	// 	height: unset;
 
-		@include desktop_medium {
-			max-height: 780px;
-		}
+	// 	@include desktop_medium {
+	// 		max-height: 780px;
+	// 	}
 
-		@include mobile {
-			max-height: 400px;
-		}
-	}
+	// 	@include mobile {
+	// 		max-height: 400px;
+	// 	}
+	// }
 
 	&_secondary {
 		grid-template-columns: repeat(2, 1fr) !important;
@@ -35,19 +35,17 @@
 
 			&__image {
 				position: relative;
-				min-height: 300px !important;
+				// min-height: 300px !important;
 				display: none;
 
-				@include min_desktop_extra {
-					min-height: 600px !important;
-				}
+				// @include min_desktop_extra {
+				// 	min-height: 600px !important;
+				// }
 
 				img {
-					position: absolute;
-					top: 0;
-					left: 0;
 					width: 100%;
 					z-index: 1;
+					object-fit: cover;
 				}
 			}
 

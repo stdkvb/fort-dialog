@@ -45,6 +45,9 @@
 
 	&__info {
 		grid-area: info;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__phone {
@@ -75,7 +78,7 @@
 	&__socials {
 		display: flex;
 		gap: 12px;
-		margin-bottom: 200px;
+		margin-bottom: 40px;
 
 		a {
 			@include transition;
@@ -100,6 +103,10 @@
 		align-items: center;
 		gap: 50px;
 
+		@include desktop {
+			flex-wrap: wrap;
+		}
+
 		@include tablet {
 			flex-direction: column;
 			align-items: flex-start;
@@ -122,6 +129,44 @@
 
 		@include tablet {
 			@include regular-14;
+		}
+	}
+
+	&__group {
+		margin-bottom: 40px;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__group-mobile {
+		@include min_tablet {
+			display: none;
+		}
+	}
+
+	&__group-title {
+		@include medium-20;
+		color: $white;
+		margin-bottom: 20px;
+
+		@include tablet {
+			margin-bottom: 0;
+		}
+	}
+
+	&__group-list {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		span {
+			color: $gray20;
+			@include regular-16;
+
+			@include mobile {
+				@include regular-14;
+			}
 		}
 	}
 
@@ -157,12 +202,17 @@
 		}
 
 		.accordion__content {
-			.link {
+			.link,
+			span {
 				@include regular-16;
 
 				@include mobile {
 					@include regular-14;
 				}
+			}
+
+			span {
+				color: $gray20;
 			}
 
 			@include min_tablet {
