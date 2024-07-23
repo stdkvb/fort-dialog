@@ -176,6 +176,7 @@
 		grid-template-columns: minmax(195px, 363px) minmax(195px, 317px) 195px;
 		justify-content: space-between;
 		gap: 20px;
+		height: fit-content;
 
 		@include tablet {
 			display: block;
