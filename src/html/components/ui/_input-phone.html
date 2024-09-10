@@ -8,6 +8,6 @@
 	}
 	}
 	<input @@if (context.name) {name="@@name" } type="hidden" />
-	<input class="form-control" @@if (context.placeholder) {placeholder="@@placeholder" } @@if (!context.placeholder) {placeholder="Номер телефона" } @@if (context.required) {required} @@if (context.id) {id="@@id" } @@if (context.value) {value="@@value" } data-type="tel" type="tel" @@if (context.errorMessage) {data-pristine-required-message="@@errorMessage" } @@if (!context.errorMessage) {data-pristine-required-message="Введите номер телефона" }>
+	<input class="form-control" @@if (context.placeholder) {placeholder="@@placeholder" } @@if (!context.placeholder) {placeholder="Номер телефона" } @@if (context.required) {required} @@if (context.id) {id="@@id" } @@if (context.value) {value="@@value" } data-type="tel" type="text" @@if (context.errorMessage) {data-pristine-required-message="@@errorMessage" } @@if (!context.errorMessage) {data-pristine-required-message="Введите номер телефона" }>
 	<div class="pristine-success"></div>
 </div>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Форт Диалог | Сервис и гарантия'})
+
+<body>
+  @@include('components/business/_header.html')
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="/" class="link">Главная</a>
+          </li>
+          <li>
+            Сервис и гарантия
+          </li>
+        </ul>
+        <h1>Сервис и гарантия</h1>
+      </div>
+    </section>
+    <section class="warranty">
+      <div class="container">
+        <div class="warranty__form">
+          <form>
+            @@include('components/ui/_select.html', {class: 'custom-select_input', placeholder: 'Гарантийное обращение', selectItems: [ { text: 'Гарантийное обращение', value: 'warranty' }, { text: 'Сервисное обслуживание', value: 'service' }], default: 'Гарантийное обращение' })
+
+            <div class="warranty__form-row warranty__inputs">
+              @@include('components/ui/_input-text.html', {placeholder: 'Номер УПД (документ реализации)/номер накладной*', errorMessage: 'Введите номер', name:
+              'number-upd', required: true})
+              @@include('components/ui/_input-text.html', {placeholder: 'Дата УПД/дата накладной*', errorMessage: 'Введите дату', name: 'date-upd', required:
+              true})
+            </div>
+            <div class="warranty__form-row warranty__inputs">
+              @@include('components/ui/_input-text.html', {placeholder: 'Номер госконтракта или договора', errorMessage: 'Введите номер', name:
+              'number', required: false})
+              @@include('components/ui/_input-text.html', {placeholder: 'Дата госконтракта или договора', errorMessage: 'Введите дату', name: 'date', required:
+              false})
+            </div>
+            @@include('components/ui/_input-text.html', {placeholder: 'Местонахождение оборудования (город)*', errorMessage: 'Введите город', name:
+            'city', required: true})
+            @@include('components/ui/_input-text.html', {placeholder: 'Название организации*', errorMessage: 'Введите название', name:
+            'company', required: true})
+            <div class="warranty__form-row">
+              @@include('components/ui/_input-text.html', {placeholder: 'ФИО контактного лица*', errorMessage: 'Введите ФИО', name:
+              'name', required: true})
+              @@include('components/ui/_input-phone.html', {placeholder: '+7 (000) 000-00-00*', name: 'phone', required:
+              true})
+            </div>
+            <div class="warranty__form-row warranty__form-row_right">
+              @@include('components/ui/_input-text.html', {placeholder: 'Внутренний номер', errorMessage: 'Введите номер', name:
+              'inner-number', required: false})
+            </div>
+            <div class="warranty__form-row warranty__form-row_right">
+              @@include('components/ui/_input-email.html', {placeholder: 'Email контактного лица*', name: 'email', required:
+              true})
+            </div>
+            <div class="warranty__form-row">
+              @@include('components/ui/_input-text.html', {placeholder: 'Наименование неисправного оборудования*', errorMessage: 'Введите наименование', name:
+              'equipment', required: true})
+              @@include('components/ui/_input-text.html', {placeholder: 'Серийный номер неисправного оборудования*', errorMessage: 'Введите номер', name: 'serial-number', required:
+              true})
+            </div>
+            @@include('components/ui/_input-file.html', {button:'Фотография шильда/серийного номера неисправного оборудования*', required:
+            true})
+            @@include('components/ui/_textarea.html', {placeholder: 'Подробное описание запроса*',
+            errorMessage: 'Введите описание', name: 'description', required: true})
+
+            <div class="warranty__form-row warranty__form-row_right">
+              <div class="warranty__form-submit">
+                <div class="form__privacy">
+                  Отправляя форму, вы даете свое согласие
+                  на <a href="#" class="link link_green" target="_blank">обработку своих персональных данных</a>
+                </div>
+                @@include('components/ui/_button.html',
+                {type: 'submit', class: 'btn_green',children:'отправить'})
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  @@include('components/business/_footer.html')
+
+  @@include('meta/_includeScripts.html')
+</body>
+
+</html>

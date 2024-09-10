@@ -11,6 +11,7 @@ import takeControlHistoryScroll from './ElementsControllers/HistoryScrollControl
 import takeControlCookie from './ElementsControllers/CookieController'
 import takeControlUpButton from './ElementsControllers/UpButton'
 import CounterItemController from './ElementsControllers/CounterItemController'
+import takeControlCustomSelect from './ElementsControllers/CustomSelectController'
 
 addFormListeners()
 addFileNameListeners()
@@ -23,6 +24,7 @@ takeControlMenu()
 takeControlTabs()
 takeControlHistoryScroll()
 takeControlCookie()
+takeControlCustomSelect('custom-select')
 
 // accordions init
 takeControlAccordion('.footer__top', '.accordion__list', {
@@ -264,4 +266,26 @@ new CounterItemController({
 // 		elem.innerHTML = numberWithSpace
 // 	})
 // }, 5000);
+
+//warranty form
+const warrantyForm = document.querySelector('.warranty__form')
+const selectItems = document.querySelectorAll('.warranty__form .select-items li')
+const hiddenInputs = document.querySelectorAll('.warranty__inputs input')
+
+selectItems.forEach((el) => {
+	el.addEventListener('click', () => {
+		const selectedValue = document.querySelector('.select-selected__value').innerHTML
+		if (selectedValue == 'Сервисное обслуживание') {
+			warrantyForm.classList.add('active')
+			hiddenInputs.forEach((input) => {
+				input.setAttribute('type', 'hidden')
+			})
+		} else {
+			warrantyForm.classList.remove('active')
+			hiddenInputs.forEach((input) => {
+				input.setAttribute('type', 'text')
+			})
+		}
+	})
+})
 

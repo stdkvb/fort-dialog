@@ -1,0 +1,13 @@
+<div class="form-group custom-select @@if (context.class) {@@class}">
+	@@if (context.label) {
+	<label>@@label@@if (context.required) {*}</label>
+	}
+	<select class="form-control" @@if (context.required) {required}>
+		@@if(context.placeholder) {
+		<option value="">@@placeholder</option>
+		<option></option>
+		} @@if(context.selectItems?.length) { @@for(let i = 0; i < selectItems.length; i++) { <option data-value="`+selectItems[i].value+`">`+selectItems[i].text+`</option>
+			} }
+	</select>
+	<input class="select-input" type="hidden" value="@@if (context.default) {@@default}" data-id="selector">
+</div>

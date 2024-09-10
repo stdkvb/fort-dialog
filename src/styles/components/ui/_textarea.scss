@@ -19,7 +19,30 @@ textarea {
 	}
 	&:disabled {
 	}
+
 	&::placeholder {
+		color: $black;
+		opacity: 1;
+	}
+
+	&:placeholder-shown {
+		text-overflow: ellipsis;
+	}
+
+	&::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		color: $black;
+	}
+	&::-moz-placeholder {
+		/* Firefox 19+ */
+		color: $black;
+	}
+	&:-ms-input-placeholder {
+		/* IE 10+ */
+		color: $black;
+	}
+	&:-moz-placeholder {
+		/* Firefox 18- */
 		color: $black;
 	}
 

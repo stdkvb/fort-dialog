@@ -1,0 +1,106 @@
+.warranty {
+	padding-bottom: 140px;
+
+	@include tablet {
+		padding-bottom: 80px;
+	}
+
+	&__form {
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+
+			@include mobile {
+				gap: 5px;
+			}
+		}
+
+		.custom-select {
+			@include mobile {
+				margin-bottom: 30px;
+			}
+		}
+
+		.input__container_file {
+			gap: 0;
+			@media screen and (max-width: 652px) {
+				height: 90px;
+			}
+
+			@include mobile {
+				height: 72px;
+
+				&.has-danger {
+					margin-bottom: 25px;
+					& .pristine-error {
+						margin-bottom: -25px;
+					}
+				}
+			}
+
+			@media screen and (max-width: 400px) {
+				height: 93px;
+			}
+		}
+
+		.file-button {
+			height: 100%;
+			color: $black;
+
+			&::after {
+				content: url(@icons/clip-black.svg);
+			}
+
+			@include tablet {
+				justify-content: flex-start;
+			}
+		}
+
+		.textarea__container {
+			margin-top: 5px;
+		}
+
+		&.active {
+			.warranty__inputs {
+				display: none;
+
+				input {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__form-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 15px;
+
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
+
+		@include mobile {
+			gap: 5px;
+		}
+
+		&_right {
+			@include min_tablet {
+				.input__container,
+				.warranty__form-submit {
+					grid-column: 2;
+				}
+			}
+		}
+	}
+
+	&__form-submit {
+		display: flex;
+
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+}
+

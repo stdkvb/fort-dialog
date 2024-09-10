@@ -19,6 +19,27 @@ input {
 	}
 	&::placeholder {
 		color: $black;
+		opacity: 1;
+	}
+
+	&:placeholder-shown {
+		text-overflow: ellipsis;
+	}
+	&::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		color: $black;
+	}
+	&::-moz-placeholder {
+		/* Firefox 19+ */
+		color: $black;
+	}
+	&:-ms-input-placeholder {
+		/* IE 10+ */
+		color: $black;
+	}
+	&:-moz-placeholder {
+		/* Firefox 18- */
+		color: $black;
 	}
 
 	& ~ .pristine-error {
@@ -98,7 +119,7 @@ input {
 			border: 1px solid $gray30;
 			width: 100%;
 			justify-content: center;
-			color: $gray30;
+			color: $white;
 
 			&::after {
 				content: url(@icons/clip.svg);

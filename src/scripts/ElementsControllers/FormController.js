@@ -32,6 +32,16 @@ const takeControlForms = () => {
 		})
 	}
 
+	const warrantyForm = document.querySelector('.warranty__form form')
+	if (warrantyForm !== null) {
+		const warrantyValidator = new Pristine(warrantyForm)
+		warrantyForm.addEventListener('submit', function (e) {
+			if (warrantyValidator.validate() != true) {
+				e.preventDefault()
+			}
+		})
+	}
+
 	// password toggle
 	// const passwordToggle = document.querySelectorAll('.toggle-show-password-btn')
 	// passwordToggle.forEach((elem) => {
