@@ -27,13 +27,13 @@
             <div class="warranty__form-row warranty__inputs">
               @@include('components/ui/_input-text.html', {placeholder: 'Номер УПД (документ реализации)/номер накладной*', errorMessage: 'Введите номер', name:
               'number-upd', required: true})
-              @@include('components/ui/_input-text.html', {placeholder: 'Дата УПД/дата накладной*', errorMessage: 'Введите дату', name: 'date-upd', required:
+              @@include('components/ui/_input-text.html', {class: 'date-mask', placeholder: 'Дата УПД/дата накладной*', errorMessage: 'Введите дату', name: 'date-upd', required:
               true})
             </div>
             <div class="warranty__form-row warranty__inputs">
               @@include('components/ui/_input-text.html', {placeholder: 'Номер госконтракта или договора', errorMessage: 'Введите номер', name:
               'number', required: false})
-              @@include('components/ui/_input-text.html', {placeholder: 'Дата госконтракта или договора', errorMessage: 'Введите дату', name: 'date', required:
+              @@include('components/ui/_input-text.html', {class: 'date-mask',placeholder: 'Дата госконтракта или договора', errorMessage: 'Введите дату', name: 'date', required:
               false})
             </div>
             @@include('components/ui/_input-text.html', {placeholder: 'Местонахождение оборудования (город)*', errorMessage: 'Введите город', name:

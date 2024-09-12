@@ -289,3 +289,37 @@ selectItems.forEach((el) => {
 	})
 })
 
+//date mask
+const dateInputs = document.querySelectorAll('.date-mask')
+dateInputs.forEach((input) => {
+	input.addEventListener('input', function (e) {
+		let value = e.target.value.replace(/\D/g, '')
+
+		if (value.length > 8) value = value.slice(0, 8)
+
+		if (value.length >= 2) {
+			let day = value.slice(0, 2)
+			if (parseInt(day) > 31) day = '31'
+			if (parseInt(day) < 1) day = '01'
+			value = day + value.slice(2)
+		}
+
+		if (value.length >= 4) {
+			let month = value.slice(2, 4)
+			if (parseInt(month) > 12) month = '12'
+			if (parseInt(month) < 1) month = '01'
+			value = value.slice(0, 2) + month + value.slice(4)
+		}
+
+		if (value.length > 4) {
+			let year = value.slice(4, 8)
+			value = value.slice(0, 4) + year
+		}
+
+		if (value.length > 2) value = value.slice(0, 2) + '.' + value.slice(2)
+		if (value.length > 5) value = value.slice(0, 5) + '.' + value.slice(5)
+
+		e.target.value = value
+	})
+})
+

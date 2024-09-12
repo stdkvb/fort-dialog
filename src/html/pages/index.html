@@ -16,13 +16,13 @@
 							@@include('components/ui/_button-link.html', {href:'#', class: 'btn_secondary',children:'подробнее'})
 						</strong>
 					</div>
-					
+
 				</h1>
 			</div>
 		</section>
 
 		@@include('components/business/_map.html')
-		
+
 		<section class="numbers">
 			<div class="container">
 				<div class="numbers__wrapper">
@@ -276,12 +276,12 @@
 				<p>Мы определяем стандарты и вектор развития индустрии высоких технологий, изменяя мир к лучшему, формируя
 					команды ярких единомышленников по всей России.</p>
 				<div class="career-section__vacancys">
-					<div class="career-section__vacancy">инженер-наладчик</div>
-					<div class="career-section__vacancy">Менеджер</div>
-					<div class="career-section__vacancy">Бухгалтер</div>
-					<div class="career-section__vacancy">Монтажник</div>
-					<div class="career-section__vacancy">Электрик</div>
-					<div class="career-section__vacancy">программист</div>
+					<a href="#" class="career-section__vacancy btn btn_secondary">Мастер СМР по общестроительным работам (КЖ, АР, АС) (Уфа)</a>
+					<a href="#" class="career-section__vacancy btn btn_secondary">Менеджер</a>
+					<a href="#" class="career-section__vacancy btn btn_secondary">Бухгалтер</a>
+					<a href="#" class="career-section__vacancy btn btn_secondary">Монтажник</a>
+					<a href="#" class="career-section__vacancy btn btn_secondary">Электрик</a>
+					<a href="#" class="career-section__vacancy btn btn_secondary">программист</a>
 					<a href="#" class="career-section__vacancy btn btn_secondary">и еще 12+ вакансий</a>
 				</div>
 			</div>
@@ -435,33 +435,33 @@
 			const mapImage = mapSection.querySelector('.map__image img')
 			const mapWrapper = mapSection.querySelector('.map__wrapper')
 			const mapPreloader = mapSection.querySelector('.map__preloader')
-			
+
 			if (mapSVG.length > 0) {
 				const mapPreviewActiveRemove = () => {
 					const mapPreviewActive = mapSection.querySelector('.map-preview > ._active')
 
 					if (mapPreviewActive) {
-						mapPreviewActive.classList.remove('_active')				
+						mapPreviewActive.classList.remove('_active')
 					}
 				}
-				
+
 				mapSVG.forEach((path) => {
 					var preImg = document.createElement('link')
 					preImg.href = `./files/images/map-` + path.getAttribute('id') + `.webp`
 					preImg.rel = 'preload'
 					preImg.as = 'image'
 					document.head.appendChild(preImg)
-					
+
 					const mapImageChange = (path) => {
 						// Заменить "./files/images/" на нужный путь
 						let pathImage = `./files/images/map-` + path.getAttribute('id') + `.webp`
-						
+
 						mapImage.setAttribute('src', pathImage)
 					}
-					
+
 					path.addEventListener('mouseover', () => {
 						mapPreviewActiveRemove()
-						mapImageChange(path)								
+						mapImageChange(path)
 					})
 
 					path.addEventListener('click', () => {
@@ -469,21 +469,21 @@
 						const mapPreviewItem = mapSection.querySelector(mapPreviewSelector)
 
 						mapPreviewActiveRemove()
-						
+
 						mapPreviewItem.classList.add('_active')
 
 						mapPreviewItem.addEventListener('mouseover', () => {
-							mapImageChange(path)								
+							mapImageChange(path)
 						})
 					})
 				})
-		
+
 				mapSection.addEventListener('mouseout', () => {
 					// Заменить "./files/images/" на нужный путь
 					let pathImageMain = './files/images/map.png'
-						
-					mapImage.setAttribute('src', pathImageMain)			
-				})			
+
+					mapImage.setAttribute('src', pathImageMain)
+				})
 			}
 
 			window.onload = () => {
