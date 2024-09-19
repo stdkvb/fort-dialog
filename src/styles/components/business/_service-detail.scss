@@ -53,6 +53,16 @@
 		}
 	}
 
+	ol {
+		li {
+			@include regular-18;
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
+	}
+
 	.enumeration {
 		margin-top: 70px;
 
