@@ -2,7 +2,7 @@ import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from './ElementsControllers/DropdownController'
 import takeControlModal from './ElementsControllers/ModalController'
 import takeControlTabs from './ElementsControllers/TabsController'
-import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
+// import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
 import takeControlAccordion from './ElementsControllers/AccordionController'
 import addFileNameListeners from './listeners/addFileNameListener'
 import addFormListeners from './listeners/addFormListeners'
@@ -12,10 +12,12 @@ import takeControlCookie from './ElementsControllers/CookieController'
 import takeControlUpButton from './ElementsControllers/UpButton'
 import CounterItemController from './ElementsControllers/CounterItemController'
 import takeControlCustomSelect from './ElementsControllers/CustomSelectController'
+import { PhoneInputController } from './ElementsControllers/PhoneMask'
 
 addFormListeners()
 addFileNameListeners()
-addPhoneMaskListeners()
+// addPhoneMaskListeners()
+PhoneInputController()
 addModalListener()
 takeControlUpButton()
 takeControlModal()

@@ -7,11 +7,18 @@ const addFileNameListeners = () => {
 			const inputButton = elem.querySelector('.file-button')
 
 			inputFile.addEventListener('change', () => {
-				inputButton.innerText = inputFile.files[0].name
+				const filesNames = []
+				console.log(inputFile.files)
+
+				;[...inputFile.files].forEach((file) => {
+					filesNames.push(file.name)
+				})
+
+				inputButton.innerText = filesNames.join(', ')
 			})
 		})
 	}
-	
 }
 
 export default addFileNameListeners
+

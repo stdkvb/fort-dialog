@@ -60,7 +60,7 @@
               @@include('components/ui/_input-text.html', {placeholder: 'Серийный номер неисправного оборудования*', errorMessage: 'Введите номер', name: 'serial-number', required:
               true})
             </div>
-            @@include('components/ui/_input-file.html', {button:'Фотография шильда/серийного номера неисправного оборудования*', required:
+            @@include('components/ui/_input-file.html', {multiple: true, button:'Фотография шильда/серийного номера неисправного оборудования*', required:
             true})
             @@include('components/ui/_textarea.html', {placeholder: 'Подробное описание запроса*',
             errorMessage: 'Введите описание', name: 'description', required: true})

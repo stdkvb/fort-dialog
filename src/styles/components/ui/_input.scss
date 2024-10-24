@@ -120,6 +120,11 @@ input {
 			width: 100%;
 			justify-content: center;
 			color: $white;
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			text-align: center;
 
 			&::after {
 				content: url(@icons/clip.svg);
